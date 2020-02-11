@@ -4,5 +4,15 @@
   "private": true,
   "repository": "https://github.com/potpiedigital/cognitionbrewingcompany.com.git",
   "author": "Mark Hayes <mark.m.hayes1@gmail.com>",
-  "license": "UNLICENSED"
+  "license": "UNLICENSED",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "^9.2.1",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  }
 }
