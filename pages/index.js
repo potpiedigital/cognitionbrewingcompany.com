@@ -33,7 +33,7 @@ const PostLink = ({ post }) => (
   </li>
 );
 
-export default function Blog() {
+const Blog = () => {
   return (
     <Layout>
       <h1>My Blog</h1>
@@ -49,4 +49,6 @@ export default function Blog() {
       `}</style>
     </Layout>
   );
-}
+};
+
+export default Blog;

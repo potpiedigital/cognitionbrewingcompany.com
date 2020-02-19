@@ -10,9 +10,9 @@ export default () => {
       <div className="markdown">
         <Markdown
           source={`
-        This is our blog post. Yes. We can have a [link](/link). And we can have a title as well.
-        ### This is a title
-        And here's the content.
+This is our blog post. Yes. We can have a [link](/link). And we can have a title as well.
+### This is a title
+And here's the content.
       `}
         />
       </div>
