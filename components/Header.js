@@ -1,21 +1,24 @@
 import Link from "next/link";
 
-// const linkStyle = {
-//   marginRight: 15
-// };
-
 const Header = () => (
   <div>
     <Link href="/">
       <a>Home</a>
     </Link>
-    <Link href="/about">
+    <Link href="../components/AboutNew">
       <a>About</a>
     </Link>
     <style jsx>
       {`
         a {
           margin-right: 15px;
+          text-decoration: none;
+          color: black;
+        }
+
+        a:hover {
+          text-decoration: underline;
+          color: grey;
         }
       `}
     </style>
