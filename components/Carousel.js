@@ -41,13 +41,14 @@ const Carousel = () => {
         }
 
         .horizontal-scroll-wrapper {
-          position: absolute;
-          display: block;
+          /* display: block;
           top: 0;
-          left: 0;
+          left: 0; */
           width: 80px;
-          max-height: 500px;
+          height: 100%;
+          max-height: 1000px;
           margin: 0;
+          padding: 2px 0;
           background: #abc;
           overflow-y: auto;
           overflow-x: hidden;
@@ -63,12 +64,11 @@ const Carousel = () => {
         }
 
         .rectangles {
-          top: 100px;
-          padding: 100px 0 0 0;
+          padding: 400px 0 0 0;
         }
         .rectangles > div {
-          width: 140px;
-          height: 60px;
+          width: 400px;
+          height: 400px;
           margin: 50px 10px;
           padding: 5px;
           background: #cab;

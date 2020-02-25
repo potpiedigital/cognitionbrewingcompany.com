@@ -1,6 +1,6 @@
 const TapList = () => {
   return (
-    <div>
+    <div id="tap-list">
       <h2>Tap List section</h2>
     </div>
   );

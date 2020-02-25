@@ -1,6 +1,8 @@
+const aboutStyle = {};
+
 const About = () => {
   return (
-    <div>
+    <div id="about-new">
       <h2>New About Section</h2>
     </div>
   );
