@@ -1,7 +1,9 @@
 const Events = () => {
-  <div>
-    <h2>Events section</h2>
-  </div>;
+  return (
+    <div>
+      <h2>Events section</h2>
+    </div>
+  );
 };
 
 export default Events;
