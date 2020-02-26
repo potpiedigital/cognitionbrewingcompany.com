@@ -21,6 +21,11 @@ const Header = () => (
     </ul>
     <style jsx>
       {`
+        ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+        }
         a {
           margin-right: 15px;
           text-decoration: none;
