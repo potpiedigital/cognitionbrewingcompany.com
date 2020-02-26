@@ -11,12 +11,20 @@ const Nav = ({ children }) => (
     </ul>
     <style jsx>{`
       nav {
+        // 1. take it out of "page flow"
+        position: absolute;
+
+        // 2. make it as wide as the page is tall
         width: 100vh;
-        background-color: ${randomHsl()};
-        transform: rotate(-90deg) translateX(-100vh);
+
+        // 3. from the top left corner
         transform-origin: top left;
 
-        position: absolute;
+        // 4. rotate 90deg counter-clockwise
+        // 5. translate "left" 100% of its width
+        transform: rotate(-90deg) translateX(-100%);
+
+        background-color: ${randomHsl()};
         display: flex;
       }
 
