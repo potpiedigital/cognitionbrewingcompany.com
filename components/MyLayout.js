@@ -2,15 +2,14 @@ import Header from "./Header";
 import Carousel from "./Carousel";
 
 const layoutStyle = {
-  margin: 20,
-  padding: 20,
-  border: "1px solid #DDD"
+  margin: 0,
+  padding: 0
 };
 
 const Layout = props => (
   <div style={layoutStyle}>
-    <Header />
-    {props.children}
+    {/* <Header />
+    {props.children} */}
     <Carousel />
   </div>
 );
