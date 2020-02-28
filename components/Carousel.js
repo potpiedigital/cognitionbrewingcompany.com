@@ -6,92 +6,75 @@ import Events from "./Events";
 
 const Carousel = () => {
   return (
-    <div id="container">
-      <div id="container2">
-        <div id="about-new" className="box one">
-          <AboutNew />
-        </div>
-        <div id="tap-list" className="box two">
-          <TapList />
-        </div>
-        <div id="events" className="box three">
-          <Events />
-        </div>
-        <div id="blog" className="box four">
-          <Blog />
-        </div>
-        <div id="brews" className="box five">
-          <div>
-            <Brews />
-          </div>
-        </div>
+    <div className="horizontal-scroll-wrapper  rectangles">
+      <div>
+        <AboutNew />
+      </div>
+      <div>
+        <TapList />
+      </div>
+      <div>
+        <Events />
+      </div>
+      <div>
+        <Blog />
+      </div>
+      <div>
+        <Brews />
       </div>
       <style jsx>{`
-        #container .box {
-          width: 100vw;
-          height: 100vh;
-          display: inline-block;
-          position: relative;
+        ::-webkit-scrollbar {
+          width: 2px;
+          height: 2px;
         }
-        #container .box > div {
-          /*width: 100%;
-          height: 100%;
-          color: #fff;
+        ::-webkit-scrollbar-button {
+          width: 2px;
+          height: 2px;
+        }
+
+        div {
+          box-sizing: border-box;
+        }
+
+        body {
+          background: #111;
+        }
+
+        .horizontal-scroll-wrapper {
           position: absolute;
-          top: 50%;
-          left: 50%;
-          margin: -50px 0 0 -50px; */
-          line-height: 0.7;
-        }
-        #container {
-          overflow-y: scroll;
+          display: block;
+          top: 0;
+          left: 0;
+          width: 80px;
+          max-height: 500px;
+          margin: 0;
+          background: #abc;
+          overflow-y: auto;
           overflow-x: hidden;
-          transform: rotate(270deg) translateX(-100%);
-          transform-origin: top left;
-          background-color: #999;
-          position: absolute;
-          width: 100vh;
-          height: 100vw;
+          transform: rotate(-90deg) translateY(-80px);
+          transform-origin: right top;
         }
-        #container2 {
-          transform: rotate(90deg) translateY(-100vh);
-          transform-origin: top left;
-          white-space: nowrap;
+        .horizontal-scroll-wrapper > div {
+          display: block;
+          padding: 5px;
+          background: #cab;
+          transform: rotate(90deg);
+          transform-origin: right top;
         }
 
-        .one {
-          background-color: #45ccff;
+        .rectangles {
+          top: 100px;
+          padding: 100px 0 0 0;
         }
-        .two {
-          background-color: #49e83e;
+        .rectangles > div {
+          width: 140px;
+          height: 60px;
+          margin: 50px 10px;
+          padding: 5px;
+          background: #cab;
+          transform: rotate(90deg) translateY(80px);
+          transform-origin: right top;
         }
-        .three {
-          background-color: #edde05;
-        }
-        .four {
-          background-color: #e84b30;
-        }
-        .five {
-          background: #ededed;
-        }
-
-        /* Translating the content's X ruines the scrollbar length. */
-        /*
-#container {
-  overflow:scroll;
-  transform: rotate(90deg) translateY(-100%);
-  transform-origin: top left;
-  background-color:#999;
-  position:absolute;
-  width:100vh;
-  height:100vw;
-}
-#container2 {
-  transform: rotate(-90deg) translateX(-100vw);
-  transform-origin: top left;
-  white-space:nowrap;
-}
-*/
       `}</style>
     </div>
   );

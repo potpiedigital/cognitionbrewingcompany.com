@@ -1,7 +1,7 @@
 const Blog = () => {
   return (
     <div>
-      <h2>Blog Section</h2>
+      <h2>Brews Section</h2>
     </div>
   );
 };
