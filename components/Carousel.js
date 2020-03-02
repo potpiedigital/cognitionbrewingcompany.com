@@ -1,83 +1,51 @@
-import Brews from "./Brews";
-import Blog from "./Blog";
-import AboutNew from "./AboutNew";
-import TapList from "./TapList";
-import Events from "./Events";
+// import Brews from "./Brews";
+// import Blog from "./Blog";
+import About from "./About";
+// import TapList from "./TapList";
+// import Events from "./Events";
+import Nav from "../components/Nav";
+import Section from "./Section";
 
-const Carousel = () => {
-  return (
-    <div id="container">
-      <div id="container2">
-        <div id="about-new" className="box one">
-          <AboutNew />
-        </div>
-        <div id="tap-list" className="box two">
-          <TapList />
-        </div>
-        <div id="events" className="box three">
-          <Events />
-        </div>
-        <div id="blog" className="box four">
-          <Blog />
-        </div>
-        <div id="brews" className="box five">
-          <Brews />
-        </div>
-      </div>
-      <style jsx>{`
-        #container .box {
-          width: 100vw;
-          height: 100vh;
-          display: inline-block;
-          position: relative;
-        }
-        #container .box > div {
-          width: 2px;
-          /*width: 100%;
-          height: 100%;
-          color: #fff;
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          margin: -50px 0 0 -50px;
-          */
-          line-height: 0.7;
-        }
-        #container {
-          overflow-y: scroll;
-          overflow-x: hidden;
-          transform: rotate(270deg) translateX(-100%);
-          transform-origin: top left;
-          background-color: #999;
-          position: absolute;
-          width: 100vh;
-          height: 100vw;
-        }
-        #container2 {
-          transform: rotate(90deg) translateY(-100vh);
-          transform-origin: top left;
-          white-space: nowrap;
-        }
-        .one {
-          background-color: #45ccff;
-        }
-        .two {
-          background-color: #49e83e;
-        }
-        .three {
-          background-color: #edde05;
-        }
-        .four {
-          background-color: #e84b30;
-        }
-        .five {
-          background-color: #ededed;
-        }
-        /* Translating the content's X ruines the scrollbar length.
-        */
-      `}</style>
-    </div>
-  );
-};
+const Coursel = ({ children }) => (
+  <div>
+    {children}
+    <style jsx>{`
+      div {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+      }
+    `}</style>
+  </div>
+);
 
-export default Carousel;
+const CarouselContainer = () => (
+  <main>
+    <Nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#two">two</a>
+      <a href="#three">three</a>
+      <a href="#four">four</a>
+      <a href="#five">five</a>
+    </Nav>
+    <Coursel>
+      <Section id="Home"></Section>
+      <Section id="one">
+        <About />
+      </Section>
+      <Section id="two">two</Section>
+      <Section id="three">three</Section>
+      <Section id="four">four</Section>
+      <Section id="five">five</Section>
+    </Coursel>
+    <style jsx>{`
+      main {
+        overflow: hidden;
+      }
+    `}</style>
+  </main>
+);
+
+export default CarouselContainer;
