@@ -1,21 +1,22 @@
-import Layout from "../components/MyLayout";
-// import Link from "next/link";
+import CarouselContainer from "../components/Carousel";
 
-const Blog = () => {
-  return (
-    <Layout>
-      {/* <h1>My Blog</h1> */}
-      <style jsx>{`
-        body {
-          margin: 0;
-          font-family: Georgia;
-        }
-        h1 {
-          font-family: "Arial";
-        }
-      `}</style>
-    </Layout>
-  );
-};
+const MainPage = () => (
+  <div>
+    <CarouselContainer />
+    <style jsx global>{`
+      html,
+      body,
+      #__next,
+      div,
+      main {
+        width: 100%;
+        height: 100%;
+      }
+      body {
+        margin: 0;
+      }
+    `}</style>
+  </div>
+);
 
-export default Blog;
+export default MainPage;
