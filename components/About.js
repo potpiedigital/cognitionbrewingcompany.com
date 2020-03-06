@@ -10,19 +10,17 @@ const About = () => (
       cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
       est laborum.
     </p>
-    <style jsx>
-      {`
-        div {
-          width: 90%;
-          margin: 0 auto;
-          padding-top: 2em;
-          white-space: normal;
-        }
-        h2 {
-          margin: 0;
-        }
-      `}
-    </style>
+    <style jsx>{`
+      div {
+        width: 90%;
+        margin: 0 auto;
+        /* padding-top: 2em; */
+        white-space: normal;
+      }
+      h2 {
+        margin: 0;
+      }
+    `}</style>
   </div>
 );
 

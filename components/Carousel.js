@@ -6,6 +6,11 @@ import About from "./About";
 import Nav from "../components/Nav";
 import Section from "./Section";
 
+const aboutStyle = {
+  width: "150vw",
+  backgroundColor: "#ededed"
+};
+
 const Coursel = ({ children }) => (
   <div>
     {children}
@@ -31,8 +36,8 @@ const CarouselContainer = () => (
       <a href="#five">five</a>
     </Nav>
     <Coursel>
-      <Section id="Home"></Section>
-      <Section id="one">
+      <Section id="home"></Section>
+      <Section style={aboutStyle} id="about">
         <About />
       </Section>
       <Section id="two">two</Section>
