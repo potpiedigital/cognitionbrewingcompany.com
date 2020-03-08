@@ -13,6 +13,7 @@ const About = () => (
     <style jsx>{`
       div {
         width: 90%;
+        background-color: pink;
         margin: 0 auto;
         /* padding-top: 2em; */
         white-space: normal;

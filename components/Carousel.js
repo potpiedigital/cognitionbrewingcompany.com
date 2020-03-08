@@ -1,13 +1,12 @@
 // import Brews from "./Brews";
 // import Blog from "./Blog";
 import About from "./About";
-// import TapList from "./TapList";
+import TapList from "./TapList";
 // import Events from "./Events";
 import Nav from "../components/Nav";
 import Section from "./Section";
 
-const aboutStyle = {
-  width: "150vw",
+const bigStyle = {
   backgroundColor: "#ededed"
 };
 
@@ -37,10 +36,12 @@ const CarouselContainer = () => (
     </Nav>
     <Coursel>
       <Section id="home"></Section>
-      <Section style={aboutStyle} id="about">
+      <Section id="about">
         <About />
       </Section>
-      <Section id="two">two</Section>
+      <Section style={bigStyle} id="tapList">
+        <TapList />
+      </Section>
       <Section id="three">three</Section>
       <Section id="four">four</Section>
       <Section id="five">five</Section>
