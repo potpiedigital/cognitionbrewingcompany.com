@@ -7,6 +7,7 @@ import Nav from "../components/Nav";
 import Section from "./Section";
 
 const bigStyle = {
+  width: "200vw",
   backgroundColor: "#ededed"
 };
 
