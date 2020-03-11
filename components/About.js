@@ -36,12 +36,12 @@ const About = () => (
         white-space: normal;*/
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
         grid-gap: 1em;
         background-color: #a73a3a;
       }
       img {
         padding-top: 2em;
-        /* padding-left: 2em; */
         height: 250px;
         width: 270px;
         grid-column-start: 2;
@@ -49,16 +49,16 @@ const About = () => (
       }
       h2 {
         margin: 0;
-        /* padding-left: 0.5em; */
         grid-column-start: 2;
         grid-column-end: 7;
-        /* grid-row-start: 2; */
+        grid-row-start: 2;
         color: #ffffff;
         font-size: 60px;
       }
       .text-blocks {
         padding-top: 2em;
         grid-row-start: 1;
+        grid-row-end: 5;
         grid-column-start: 8;
         grid-column-end: 11;
         display: flex;
@@ -68,18 +68,17 @@ const About = () => (
       p {
         display: inline-block;
       }
-       {
-        /* hr {
+      /* hr {
         grid-column: span 10;
         border: 1px solid black;
         width: 665px;
       } */
-      }
       span {
         font-size: 260px;
         color: black;
         grid-column-start: 2;
         grid-column-end: 5;
+        grid-row-start: 8;
       }
     `}</style>
   </div>
