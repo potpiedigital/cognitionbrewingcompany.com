@@ -1,6 +1,6 @@
 const About = () => (
   <div>
-    <h2>New About Section</h2>
+    <h1>About Section</h1>
     <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
       tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
@@ -18,7 +18,7 @@ const About = () => (
           padding-top: 2em;
           white-space: normal;
         }
-        h2 {
+        h1 {
           margin: 0;
         }
       `}
