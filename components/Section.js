@@ -3,7 +3,7 @@ const Section = ({ id, children, style }) => (
     {children}
     <style jsx>{`
       section {
-        width: auto;
+        width: 100vw;
         height: 100vh;
         background-color: white;
         display: flex;

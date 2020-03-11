@@ -8,7 +8,8 @@ import Section from "./Section";
 
 const bigStyle = {
   width: "200vw",
-  backgroundColor: "#ededed"
+  backgroundColor: "#ededed",
+  flexBasis: "auto"
 };
 
 const Coursel = ({ children }) => (
