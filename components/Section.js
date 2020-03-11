@@ -1,6 +1,6 @@
 const Section = ({ id, children }) => (
   <section id={id}>
-    {children}
+    <h1>{children}</h1>
     <style jsx>{`
       section {
         width: 100vw;
