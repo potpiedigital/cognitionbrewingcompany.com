@@ -2,6 +2,7 @@
 // import Blog from "./Blog";
 import About from "./About";
 import TapList from "./TapList";
+import Hero from "./Hero";
 // import Events from "./Events";
 import Nav from "../components/Nav";
 import Section from "./Section";
@@ -37,7 +38,9 @@ const CarouselContainer = () => (
       <a href="#five">five</a>
     </Nav>
     <Coursel>
-      <Section id="home"></Section>
+      <Section id="Home">
+        <Hero />
+      </Section>
       <Section id="about">
         <About />
       </Section>

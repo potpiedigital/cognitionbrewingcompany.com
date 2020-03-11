@@ -11,6 +11,9 @@ const Section = ({ id, children, style }) => (
         justify-content: center;
         flex: 1 0 100%;
       }
+      h1 {
+        margin: 0;
+      }
     `}</style>
   </section>
 );
