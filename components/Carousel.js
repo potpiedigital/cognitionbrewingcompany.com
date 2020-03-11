@@ -1,6 +1,7 @@
 // import Brews from "./Brews";
 // import Blog from "./Blog";
 import About from "./About";
+import Hero from "./Hero";
 // import TapList from "./TapList";
 // import Events from "./Events";
 import Nav from "../components/Nav";
@@ -31,7 +32,9 @@ const CarouselContainer = () => (
       <a href="#five">five</a>
     </Nav>
     <Coursel>
-      <Section id="Home"></Section>
+      <Section id="Home">
+        <Hero />
+      </Section>
       <Section id="one">
         <About />
       </Section>
