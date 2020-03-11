@@ -35,8 +35,9 @@ const About = () => (
         padding: 0 2em;
         white-space: normal;*/
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: repeat(12, 1fr);
+        /* grid-template-rows: repeat(3, 1fr); */
+        grid-auto-rows: auto;
         grid-gap: 1em;
         background-color: #a73a3a;
       }
@@ -44,21 +45,20 @@ const About = () => (
         padding-top: 2em;
         height: 250px;
         width: 270px;
-        grid-column-start: 2;
-        grid-column-end: 5;
+        grid-column: 2 / 5;
+        /* grid-column-end: 5; */
       }
       h2 {
         margin: 0;
-        grid-column-start: 2;
-        grid-column-end: 7;
+        grid-column: 2 / 7;
+        /* grid-column-end: 7; */
         grid-row-start: 2;
         color: #ffffff;
         font-size: 60px;
       }
       .text-blocks {
         padding-top: 2em;
-        grid-row-start: 1;
-        grid-row-end: 5;
+        grid-row: 1 / 3;
         grid-column-start: 8;
         grid-column-end: 11;
         display: flex;
@@ -76,9 +76,9 @@ const About = () => (
       span {
         font-size: 260px;
         color: black;
-        grid-column-start: 2;
-        grid-column-end: 5;
-        grid-row-start: 8;
+        grid-column: 2 / 6;
+        /* grid-column-end: 5; */
+        /* grid-row-start: 4; */
       }
     `}</style>
   </div>

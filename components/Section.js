@@ -5,6 +5,7 @@ const Section = ({ id, children }) => (
       section {
         width: 100vw;
         height: 100vh;
+        overflow: hidden;
         background-color: white;
         display: flex;
         align-items: center;
