@@ -1,5 +1,5 @@
-const Section = ({ id, children }) => (
-  <section id={id}>
+const Section = ({ id, children, style }) => (
+  <section style={style} id={id}>
     {children}
     <style jsx>{`
       section {

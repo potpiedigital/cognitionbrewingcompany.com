@@ -1,12 +1,18 @@
 // import Brews from "./Brews";
 // import Blog from "./Blog";
 import About from "./About";
+import TapList from "./TapList";
 import Hero from "./Hero";
-// import TapList from "./TapList";
 // import Events from "./Events";
 import Nav from "../components/Nav";
 import Section from "./Section";
 import { useState } from "react";
+
+const bigStyle = {
+  width: "200vw",
+  backgroundColor: "#ededed",
+  flexBasis: "auto"
+};
 
 const Coursel = ({ children }) => (
   <div>
@@ -42,7 +48,9 @@ const CarouselContainer = () => {
         <Section id="about">
           <About />
         </Section>
-        <Section id="two">two</Section>
+        <Section style={bigStyle} id="two">
+          two
+        </Section>
         <Section id="three">three</Section>
         <Section id="four">four</Section>
         <Section id="five">five</Section>
