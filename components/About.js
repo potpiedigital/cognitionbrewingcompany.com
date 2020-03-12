@@ -1,7 +1,7 @@
 const About = () => (
   <div>
     <img src="https://source.unsplash.com/random/270x250" />
-    <h2>In the wilderness there is Cognition</h2>
+    <h3>In the wilderness there is Cognition</h3>
     <div className="text-blocks">
       <p>
         Cognition Brewing Company is the newest addition to the growing craft
@@ -27,7 +27,7 @@ const About = () => (
       </p>
     </div>
     {/* <hr /> */}
-    <span>About</span>
+    <h2>About</h2>
     <style jsx>{`
       div {
         width: 100%;
@@ -48,7 +48,7 @@ const About = () => (
         grid-column: 2 / 5;
         /* grid-column-end: 5; */
       }
-      h2 {
+      h3 {
         margin: 0;
         grid-column: 2 / 7;
         /* grid-column-end: 7; */
@@ -73,10 +73,11 @@ const About = () => (
         border: 1px solid black;
         width: 665px;
       } */
-      span {
+      h2 {
         font-size: 260px;
         color: black;
         grid-column: 2 / 6;
+        margin: 0 auto;
         /* grid-column-end: 5; */
         /* grid-row-start: 4; */
       }
