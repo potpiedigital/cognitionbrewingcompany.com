@@ -48,7 +48,9 @@ const CarouselContainer = () => {
         <Section id="about">
           <About />
         </Section>
-        <Section id="two">two</Section>
+        <Section style={bigStyle} id="two">
+          two
+        </Section>
         <Section id="three">three</Section>
         <Section id="four">four</Section>
         <Section id="five">five</Section>
