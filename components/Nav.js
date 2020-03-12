@@ -1,13 +1,13 @@
 import Hamburger from "./Hamburger";
-const Nav = ({ children }) => (
+const Nav = ({ children, isNavShowing, setIsNavShowing }) => (
   <nav>
-    <h1>Cognition Brewery</h1>
-    <ul>
+    <Hamburger isNavShowing={isNavShowing} setIsNavShowing={setIsNavShowing} />
+    <ul className={!isNavShowing && "hiding"}>
       {React.Children.map(children, child => (
         <li>{child}</li>
       ))}
     </ul>
-    <Hamburger />
+    <h1>Cognition Brewery</h1>
     <style jsx>{`
       nav {
         /* 1. take it out of "page flow" */
@@ -18,15 +18,17 @@ const Nav = ({ children }) => (
         transform-origin: top left;
         /* 4. rotate 90deg counter-clockwise */
         /* 5. translate "left" 100% of its width */
-        transform: rotate(-90deg) translateX(-100%);
+        transform: rotate(90deg) translateY(-100%);
         background-color: #ededed;
         display: flex;
         align-items: center;
       }
+      .hiding {
+        display: none;
+      }
       h1 {
         margin: 0;
         padding: 20px 0;
-        transform: rotate(180deg);
         width: 50%;
       }
       ul {
@@ -34,8 +36,13 @@ const Nav = ({ children }) => (
         padding: 0;
         list-style-type: none;
         display: flex;
-        /* flex-direction: column; */
         flex: 1;
+        flex-direction: column;
+        position: absolute;
+        bottom: 100%;
+        left: 0;
+        transform: rotate(-90deg) translateY(100%);
+        transform-origin: bottom left;
       }
       li {
         display: inline-block;

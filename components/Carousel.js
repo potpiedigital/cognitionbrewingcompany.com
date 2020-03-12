@@ -6,6 +6,7 @@ import Hero from "./Hero";
 // import Events from "./Events";
 import Nav from "../components/Nav";
 import Section from "./Section";
+import { useState } from "react";
 
 const Coursel = ({ children }) => (
   <div>
@@ -21,34 +22,38 @@ const Coursel = ({ children }) => (
   </div>
 );
 
-const CarouselContainer = () => (
-  <main>
-    <Nav>
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#two">two</a>
-      <a href="#three">three</a>
-      <a href="#four">four</a>
-      <a href="#five">five</a>
-    </Nav>
-    <Coursel>
-      <Section id="Home">
-        <Hero />
-      </Section>
-      <Section id="one">
-        <About />
-      </Section>
-      <Section id="two">two</Section>
-      <Section id="three">three</Section>
-      <Section id="four">four</Section>
-      <Section id="five">five</Section>
-    </Coursel>
-    <style jsx>{`
-      main {
-        overflow: hidden;
-      }
-    `}</style>
-  </main>
-);
+const CarouselContainer = () => {
+  const [isNavShowing, setIsNavShowing] = useState(false);
+
+  return (
+    <main>
+      <Nav isNavShowing={isNavShowing} setIsNavShowing={setIsNavShowing}>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#two">two</a>
+        <a href="#three">three</a>
+        <a href="#four">four</a>
+        <a href="#five">five</a>
+      </Nav>
+      <Coursel>
+        <Section id="home">
+          <Hero />
+        </Section>
+        <Section id="about">
+          <About />
+        </Section>
+        <Section id="two">two</Section>
+        <Section id="three">three</Section>
+        <Section id="four">four</Section>
+        <Section id="five">five</Section>
+      </Coursel>
+      <style jsx>{`
+        main {
+          overflow: hidden;
+        }
+      `}</style>
+    </main>
+  );
+};
 
 export default CarouselContainer;
