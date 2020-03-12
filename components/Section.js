@@ -1,10 +1,11 @@
 const Section = ({ id, children }) => (
   <section id={id}>
-    <h1>{children}</h1>
+    {children}
     <style jsx>{`
       section {
         width: 100vw;
         height: 100vh;
+        overflow: hidden;
         background-color: white;
         display: flex;
         align-items: center;
