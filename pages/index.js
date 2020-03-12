@@ -1,5 +1,6 @@
 import CarouselContainer from "../components/Carousel";
 import Head from "next/head";
+import { useState } from "react";
 
 const MainPage = () => (
   <div>
