@@ -1,25 +1,85 @@
 const About = () => (
   <div>
-    <h1>About Section</h1>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-      est laborum.
-    </p>
+    <img src="https://source.unsplash.com/random/270x250" />
+    <h3>In the wilderness there is Cognition</h3>
+    <div className="text-blocks">
+      <p>
+        Cognition Brewing Company is the newest addition to the growing craft
+        beer scene here in Michigan’s Upper Peninsula. We are located right in
+        the heart of the U.P. where the winters are long but enjoyed. We are
+        proud to be located in an area that has such strong appreciation for
+        community and locally made products. It only makes sense that the people
+        that live here have strong work ethics and aren’t afraid to help one
+        another out because that is what it takes to get by up here.
+      </p>
+      <p>
+        It has been a long journey for us at Cognition Brewing Company and we
+        are really excited to be bringing you a product that we have worked hard
+        to produce. Whether you come visit us at the tap room or find our beer
+        on tap somewhere else, we truly hope that you enjoy it to the fullest.
+        Our beers are brewed in small batches in our humble 7 barrel brewery
+        that is located in the historic Mather Inn.
+      </p>
+      <p>
+        We want our beer to be more than just a beverage. We hope that when you
+        sit down to a pint, you do so in great company and experience the beer
+        to every degree.
+      </p>
+    </div>
+    {/* <hr /> */}
+    <h2>About</h2>
     <style jsx>{`
       div {
-        width: 90%;
-        background-color: pink;
-        margin: 0 auto;
-        /* padding-top: 2em; */
-        white-space: normal;
+        width: 100%;
+        /* margin: 0 auto;
+        padding: 0 2em;
+        white-space: normal;*/
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        /* grid-template-rows: repeat(3, 1fr); */
+        grid-auto-rows: auto;
+        grid-gap: 1em;
+        background-color: #a73a3a;
       }
-      h2 {
+      img {
+        padding-top: 2em;
+        height: 250px;
+        width: 270px;
+        grid-column: 2 / 5;
+        /* grid-column-end: 5; */
+      }
+      h3 {
         margin: 0;
+        grid-column: 2 / 7;
+        /* grid-column-end: 7; */
+        grid-row-start: 2;
+        color: #ffffff;
+        font-size: 60px;
+      }
+      .text-blocks {
+        padding-top: 2em;
+        grid-row: 1 / 3;
+        grid-column-start: 8;
+        grid-column-end: 11;
+        display: flex;
+        flex-direction: column;
+      }
+
+      p {
+        display: inline-block;
+      }
+      /* hr {
+        grid-column: span 10;
+        border: 1px solid black;
+        width: 665px;
+      } */
+      h2 {
+        font-size: 260px;
+        color: black;
+        grid-column: 2 / 6;
+        margin: 0 auto;
+        /* grid-column-end: 5; */
+        /* grid-row-start: 4; */
       }
     `}</style>
   </div>

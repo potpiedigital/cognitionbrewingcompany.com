@@ -1,6 +1,10 @@
-const Hamburger = () => (
+const Hamburger = ({ isNavShowing, setIsNavShowing }) => (
   <div className="menuToggle">
-    <input type="checkbox" />
+    <input
+      checked={isNavShowing}
+      onChange={() => setIsNavShowing(!isNavShowing)}
+      type="checkbox"
+    />
 
     <span></span>
     <span></span>
