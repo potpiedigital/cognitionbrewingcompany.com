@@ -3,7 +3,7 @@ const Hero = () => (
     <h1>Cognition Brewing Company</h1>
     <style jsx>{`
       div {
-        background-image: url("https://source.unsplash.com/random");
+        background-image: url("/Cognition-Brewing-hero.png");
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;

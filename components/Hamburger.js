@@ -23,14 +23,14 @@ const Hamburger = ({ isNavShowing, setIsNavShowing }) => (
 
       .menuToggle a {
         text-decoration: none;
-        color: #232323;
+        color: #fff;
 
         transition: color 0.3s ease;
       }
 
-      .menuToggle a:hover {
+      /* .menuToggle a:hover {
         color: tomato;
-      }
+      } */
 
       .menuToggle input {
         display: block;
@@ -54,11 +54,10 @@ const Hamburger = ({ isNavShowing, setIsNavShowing }) => (
       .menuToggle span {
         display: block;
         width: 33px;
-        height: 4px;
+        height: 2px;
         margin-bottom: 5px;
         position: relative;
-
-        background: #cdcdcd;
+        background: #fff;
         border-radius: 3px;
 
         z-index: 1;
@@ -84,7 +83,7 @@ const Hamburger = ({ isNavShowing, setIsNavShowing }) => (
       .menuToggle input:checked ~ span {
         opacity: 1;
         transform: rotate(-45deg) translate(-12px, 20px);
-        background: #232323;
+        background: #fff;
       }
 
       /*
@@ -99,7 +98,7 @@ const Hamburger = ({ isNavShowing, setIsNavShowing }) => (
  * Ohyeah and the last one should go the other direction
  */
       .menuToggle input:checked ~ span:nth-last-child(2) {
-        transform: rotate(45deg) translate(0, -10px);
+        transform: rotate(45deg) translate(0, -8px);
       }
 
       /* .menu {

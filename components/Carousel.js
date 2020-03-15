@@ -1,16 +1,16 @@
-// import Brews from "./Brews";
-// import Blog from "./Blog";
+import Brews from "./Brews";
+import Blog from "./Blog";
 import About from "./About";
 import TapList from "./TapList";
 import Hero from "./Hero";
-// import Events from "./Events";
+import Events from "./Events";
 import Nav from "../components/Nav";
 import Section from "./Section";
 import { useState } from "react";
 
 const bigStyle = {
   width: "200vw",
-  backgroundColor: "#ededed",
+  backgroundColor: "pink",
   flexBasis: "auto"
 };
 
@@ -36,10 +36,10 @@ const CarouselContainer = () => {
       <Nav isNavShowing={isNavShowing} setIsNavShowing={setIsNavShowing}>
         <a href="#home">Home</a>
         <a href="#about">About</a>
-        <a href="#two">two</a>
-        <a href="#three">three</a>
-        <a href="#four">four</a>
-        <a href="#five">five</a>
+        <a href="#tap-list">Tap List</a>
+        <a href="#events">Cog Events</a>
+        <a href="#blog">Cog Blog</a>
+        <a href="#brews">Cog Brews</a>
       </Nav>
       <Coursel>
         <Section id="home">
@@ -48,16 +48,36 @@ const CarouselContainer = () => {
         <Section id="about">
           <About />
         </Section>
-        <Section style={bigStyle} id="two">
-          two
+
+        <Section style={bigStyle} id="tap-list">
+          <TapList />
         </Section>
-        <Section id="three">three</Section>
-        <Section id="four">four</Section>
-        <Section id="five">five</Section>
+        <Section id="events">
+          <Events />
+        </Section>
+        <Section id="blog">
+          <Blog />
+        </Section>
+        <Section style={bigStyle} id="brews">
+          <Brews />
+        </Section>
       </Coursel>
       <style jsx>{`
         main {
           overflow: hidden;
+        }
+
+        a {
+          text-decoration: none;
+          color: #000000;
+          font-size: 12vh;
+          line-height: 105px;
+          font-family: "Libre Franklin", sans-serif;
+          font-weight: bold;
+        }
+        a:active {
+          text-decoration: line-through;
+          color: #fff;
         }
       `}</style>
     </main>
