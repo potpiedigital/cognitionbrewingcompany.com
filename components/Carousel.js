@@ -42,9 +42,9 @@ const CarouselContainer = () => {
         <a href="#five">five</a>
       </Nav>
       <Coursel>
-        <Section id="home">
+        {/* <Section id="home">
           <Hero />
-        </Section>
+        </Section> */}
         <Section id="about">
           <About />
         </Section>

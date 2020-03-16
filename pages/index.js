@@ -6,7 +6,7 @@ const MainPage = () => (
   <div>
     <Head>
       <link
-        href="https://fonts.googleapis.com/css?family=Libre+Franklin:400,600,700|Source+Serif+Pro&display=swap"
+        href="https://fonts.googleapis.com/css?family=Libre+Franklin:400,600,700|Source+Serif+Pro300,400&display=swap"
         rel="stylesheet"
       />
     </Head>
