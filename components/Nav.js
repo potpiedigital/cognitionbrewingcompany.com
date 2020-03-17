@@ -1,4 +1,6 @@
 import Hamburger from "./Hamburger";
+import Social from "./Social-icons.js";
+
 const Nav = ({ children, isNavShowing, setIsNavShowing }) => (
   <nav>
     <Hamburger isNavShowing={isNavShowing} setIsNavShowing={setIsNavShowing} />
@@ -7,7 +9,11 @@ const Nav = ({ children, isNavShowing, setIsNavShowing }) => (
         <li>{child}</li>
       ))}
     </ul>
-    <h1>Cognition Brewery</h1>
+    <div className="bar-content">
+      <h1>Cognition Brewery</h1>
+      <Social />
+      <p>Ishperming | Michigan</p>
+    </div>
     <style jsx>{`
       nav {
         /* 1. take it out of "page flow" */
@@ -19,7 +25,8 @@ const Nav = ({ children, isNavShowing, setIsNavShowing }) => (
         /* 4. rotate 90deg counter-clockwise */
         /* 5. translate "left" 100% of its width */
         transform: rotate(90deg) translateY(-100%);
-        background-color: #ededed;
+        background: transparent;
+        border-top: 1px solid #000;
         display: flex;
         align-items: center;
       }
@@ -29,24 +36,36 @@ const Nav = ({ children, isNavShowing, setIsNavShowing }) => (
       h1 {
         margin: 0;
         padding: 20px 0;
-        width: 50%;
+        color: #fff;
+      }
+      p {
+        color: #fff;
       }
       ul {
-        margin: 0;
-        padding: 0;
+        margin: auto 0;
+        padding: 0 0 0 5em;
         list-style-type: none;
         display: flex;
         flex: 1;
         flex-direction: column;
+        justify-content: center;
         position: absolute;
         bottom: 100%;
         left: 0;
+        background-color: #a73a3a;
+        width: 85vw;
+        height: 100vh;
         transform: rotate(-90deg) translateY(100%);
         transform-origin: bottom left;
       }
       li {
         display: inline-block;
         margin-left: 1em;
+      }
+      .bar-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
       }
     `}</style>
   </nav>
