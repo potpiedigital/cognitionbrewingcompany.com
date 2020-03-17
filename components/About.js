@@ -25,8 +25,11 @@ const About = () => (
         sit down to a pint, you do so in great company and experience the beer
         to every degree.
       </p>
+      <p>
+        Right <br /> what's on tap
+      </p>
     </div>
-    {/* <hr /> */}
+    <hr />
     <h2>About</h2>
     <style jsx>{`
       div {
@@ -36,7 +39,6 @@ const About = () => (
         white-space: normal;*/
         display: grid;
         grid-template-columns: repeat(12, 1fr);
-        /* grid-template-rows: repeat(3, 1fr); */
         grid-auto-rows: auto;
         grid-gap: 1em;
         background-color: #a73a3a;
@@ -44,7 +46,7 @@ const About = () => (
       img {
         padding-top: 2em;
         height: 250px;
-        width: 270px;
+        width: auto;
         grid-column: 2 / 5;
         /* grid-column-end: 5; */
       }
@@ -60,26 +62,50 @@ const About = () => (
         padding-top: 2em;
         grid-row: 1 / 3;
         grid-column-start: 8;
-        grid-column-end: 11;
+        grid-column-end: 12;
         display: flex;
         flex-direction: column;
       }
 
       p {
         display: inline-block;
+        font-size: 16px;
+        font-weight: 300;
+        margin-top: 0;
+        color: #fff;
       }
-      /* hr {
-        grid-column: span 10;
-        border: 1px solid black;
+      p:last-child {
+        color: #000000;
+      }
+      hr {
+        grid-column: 2 / 7;
+        border: 1px solid #fff;
         width: 665px;
-      } */
+      }
       h2 {
         font-size: 260px;
+        line-height: 165px;
         color: black;
         grid-column: 2 / 6;
         margin: 0 auto;
         /* grid-column-end: 5; */
         /* grid-row-start: 4; */
+      }
+
+      @media screen and (max-width: 1280px) {
+        p {
+          font-size: 14px;
+        }
+
+        h2 {
+          font-size: 200px;
+        }
+        h3 {
+          font-size: 50px;
+        }
+        img {
+          height: 220px;
+        }
       }
     `}</style>
   </div>
