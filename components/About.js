@@ -81,6 +81,7 @@ const About = () => (
         grid-column: 2 / 7;
         border: 1px solid #fff;
         width: 665px;
+        height: 0;
       }
       h2 {
         font-size: 260px;
