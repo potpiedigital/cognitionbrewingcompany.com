@@ -39,7 +39,9 @@ const About = () => (
         white-space: normal;*/
         display: grid;
         grid-template-columns: repeat(12, 1fr);
-        grid-auto-rows: auto;
+        grid-template-rows: repeat(3, minmax(0, 1fr));
+        min-height: 0;
+        min-width: 0;
         grid-gap: 1em;
         background-color: #a73a3a;
       }
@@ -54,7 +56,7 @@ const About = () => (
         margin: 0;
         grid-column: 2 / 7;
         /* grid-column-end: 7; */
-        grid-row-start: 2;
+        grid-row-start: 3;
         color: #ffffff;
         font-size: 60px;
       }
@@ -80,6 +82,7 @@ const About = () => (
       hr {
         grid-column: 2 / 7;
         border: 1px solid #fff;
+        grid-row-start: 4;
         width: 665px;
         height: 0;
       }
@@ -88,9 +91,8 @@ const About = () => (
         line-height: 165px;
         color: black;
         grid-column: 2 / 6;
+        grid-row-start: 5;
         margin: 0 auto;
-        /* grid-column-end: 5; */
-        /* grid-row-start: 4; */
       }
 
       @media screen and (max-width: 1280px) {
