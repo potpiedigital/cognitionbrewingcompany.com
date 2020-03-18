@@ -28,18 +28,68 @@ const Coursel = ({ children }) => (
   </div>
 );
 
+const getSection = event => {
+  const { href } = event.target;
+  const indexOf = href.indexOf("#") + 1;
+  return href.substring(indexOf);
+};
+
 const CarouselContainer = () => {
   const [isNavShowing, setIsNavShowing] = useState(false);
+  const [activeSection, setActiveSection] = useState("home");
 
+  const onClickNavItem = event => {
+    setActiveSection(getSection(event));
+  };
   return (
     <main>
-      <Nav isNavShowing={isNavShowing} setIsNavShowing={setIsNavShowing}>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#tap-list">Tap List</a>
-        <a href="#events">Cog Events</a>
-        <a href="#blog">Cog Blog</a>
-        <a href="#brews">Cog Brews</a>
+      <Nav
+        isNavShowing={isNavShowing}
+        setIsNavShowing={setIsNavShowing}
+        activeSection={activeSection}
+      >
+        <a
+          className={activeSection === "home" && "active"}
+          onClick={onClickNavItem}
+          href="#home"
+        >
+          Home
+        </a>
+        <a
+          className={activeSection === "about" && "active"}
+          onClick={onClickNavItem}
+          href="#about"
+        >
+          About
+        </a>
+        <a
+          className={activeSection === "tap-list" && "active"}
+          onClick={onClickNavItem}
+          href="#tap-list"
+        >
+          Tap List
+        </a>
+        <a
+          className={activeSection === "events" && "active"}
+          onClick={onClickNavItem}
+          href="#events"
+        >
+          Cog Events
+        </a>
+        <a
+          className={activeSection === "blog" && "active"}
+          onClick={onClickNavItem}
+          href="#blog"
+        >
+          Cog Blog
+        </a>
+        <a
+          className={activeSection === "brews" && "active"}
+          onClick={onClickNavItem}
+          href="#brews"
+        >
+          Cog Brews
+        </a>
       </Nav>
       <Coursel>
         <Section id="home">
@@ -69,15 +119,22 @@ const CarouselContainer = () => {
 
         a {
           text-decoration: none;
+          position: relative;
           color: #000000;
           font-size: 12vh;
           line-height: 105px;
           font-family: "Libre Franklin", sans-serif;
           font-weight: bold;
         }
-        a:active {
-          text-decoration: line-through;
-          color: #fff;
+        a.active::after,
+        a:active::after {
+          content: "";
+          width: 100%;
+          height: 1px;
+          background: #fff;
+          position: absolute;
+          top: 50%;
+          left: 0;
         }
       `}</style>
     </main>
