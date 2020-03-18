@@ -1,8 +1,23 @@
 const Hero = () => (
-  <div>
+  <div className="main">
     <h1>Cognition Brewing Company</h1>
+    <div className="actions">
+    <ul>
+      <li>Mon - Thur</li>
+      <li>Fri and Sat</li>
+      <li>Sun</li>
+    </ul>
+    <ul>
+      <li>4pm - 10pm</li>
+      <li>12pm - 12am</li>
+      <li>12pm - 10pm</li>
+    </ul>
+    <address>113 E Canada St. Ishperming, MI</address>
+    <a href="tel:906-204-2724"> (906) 204-2724</a>
+    <h3>SCROLL/DRAG</h3>
+    </div>
     <style jsx>{`
-      div {
+      .main {
         background-image: url("/Cognition-Brewing-hero.png");
         background-repeat: no-repeat;
         background-position: center;
@@ -15,7 +30,12 @@ const Hero = () => (
         flex: 1 0 100%;
       }
       h1 {
-        color: black;
+        color: #fff;
+        font-size: 160px;
+        text-align: center;
+        line-height: 160px;
+        width: 50%;
+        margin-top: 0;
       }
     `}</style>
   </div>
