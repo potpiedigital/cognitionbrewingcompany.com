@@ -1,8 +1,8 @@
 import Hamburger from "./Hamburger";
 import Social from "./Social-icons.js";
 
-const Nav = ({ children, isNavShowing, setIsNavShowing }) => (
-  <nav>
+const Nav = ({ children, isNavShowing, setIsNavShowing, activeSection }) => (
+  <nav className={activeSection}>
     <Hamburger isNavShowing={isNavShowing} setIsNavShowing={setIsNavShowing} />
     <ul className={!isNavShowing && "hiding"}>
       {React.Children.map(children, child => (
@@ -29,6 +29,9 @@ const Nav = ({ children, isNavShowing, setIsNavShowing }) => (
         border-top: 1px solid #000;
         display: flex;
         align-items: center;
+      }
+      nav.about {
+        background-color: #a73a3a;
       }
       .hiding {
         display: none;
