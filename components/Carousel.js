@@ -98,7 +98,7 @@ const CarouselContainer = () => {
         <Section id="about">
           <About />
         </Section>
-
+        
         <Section style={bigStyle} id="tap-list">
           <TapList />
         </Section>
