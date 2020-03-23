@@ -4,6 +4,7 @@ const Section = ({ id, children, style }) => (
     <style jsx>{`
       section {
         width: 100vw;
+        max-width: 1250px;
         height: 100vh;
         overflow: hidden;
         background-color: white;
