@@ -4,11 +4,11 @@ const TapList = () => {
   return (
     <div className="main">
       <div className="intro">
-      <h2>Tap List section</h2>
+      <h2>Tap List</h2>
       <p>To truly experience our Cognition Brewing Company offerings, come and see us and enjoy a pint right were it was created. Share a memory of the “old” tap room. Please support our local downtown restaurants and share a pizza like you won’t find anywhere else.</p>
       </div>
       <div className="on-tap">
-      <h3>On Tap Now</h3>
+      <h4>On Tap Now</h4>
       <div className="flow">
       <ListingItem 
         title="Gnome Wrecker belgian style Pale"
@@ -55,7 +55,7 @@ const TapList = () => {
       </div>
       </div>
       <div className="barrel">
-      <h3>Barrel Offerings</h3>
+      <h4>Barrel Offerings</h4>
       <p>these beers are limited and not available in Growlers</p>
       <div className="flow">
         <ListingItem 

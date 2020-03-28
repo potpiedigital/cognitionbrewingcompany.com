@@ -26,7 +26,7 @@ const About = () => (
         to every degree.
       </p>
       <p>
-        Right <br /> what's on tap
+        Right <br /> Tap List
       </p>
     </div>
     <hr />
@@ -39,7 +39,7 @@ const About = () => (
         white-space: normal;*/
         display: grid;
         grid-template-columns: repeat(12, 1fr);
-        grid-template-rows: repeat(3, minmax(0, 1fr));
+        grid-template-rows: repeat(4, minmax(0, 1fr));
         min-height: 0;
         min-width: 0;
         grid-gap: 1em;
@@ -53,12 +53,12 @@ const About = () => (
         /* grid-column-end: 5; */
       }
       h3 {
-        margin: 0;
-        grid-column: 2 / 7;
+        margin: 15vh 0 0 0;
+        grid-column: 2 / 8;
         /* grid-column-end: 7; */
-        grid-row-start: 3;
+        grid-row-start: 2;
         color: #ffffff;
-        font-size: 60px;
+        /* font-size: 60px; */
       }
       .text-blocks {
         padding-top: 2em;
@@ -78,20 +78,22 @@ const About = () => (
       }
       p:last-child {
         color: #000000;
+        padding-top: 6vh;
       }
       hr {
         grid-column: 2 / 7;
-        border: 1px solid #fff;
-        grid-row-start: 4;
-        width: 665px;
+        border: 2px solid #fff;
+        grid-row-start: 3;
+        width: 40vw;
+        margin-top: 17vh;
         height: 0;
       }
       h2 {
-        font-size: 260px;
-        line-height: 165px;
         color: black;
+        font-size: 33vh;
+        line-height: 0.5;
         grid-column: 2 / 6;
-        grid-row-start: 5;
+        grid-row-start: 4;
         margin: 0 auto;
       }
 

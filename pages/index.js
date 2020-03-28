@@ -23,6 +23,7 @@ const MainPage = () => (
       body {
         margin: 0;
         font-family: "Source Serif Pro", serif;
+        line-height: 1.25;
       }
       h1,
       h2,
@@ -31,6 +32,36 @@ const MainPage = () => (
       h5,
       h6 {
         font-family: "Libre Franklin", sans-serif;
+      }
+
+      h1 {
+        font-size: 12.1vw;
+      }
+
+      h2 {
+        font-size: 7.8vh;
+        margin-bottom: 0;
+      }
+
+      h3 {
+        font-size: 4vw;
+      }
+
+      h4 {
+        font-size: 1.5vw;
+        margin: 0;
+      }
+
+      h5 {
+        margin: 0;
+      }
+
+      h6 {
+        font-family: "Source Serif Pro", serif;
+        font-size: 1.7vw;
+        color: #fff;
+        font-weight: normal;
+        margin: 0;
       }
     `}</style>
   </div>

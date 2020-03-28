@@ -1,6 +1,6 @@
 const ListingItem = ({title, desc, numbers, rating}) => (
 		<div className="listing">
-			<h4>{title}</h4>
+			<h5>{title}</h5>
 			<p>{desc}</p>
 			<p>{numbers}</p>
 			<p>{rating}</p>
