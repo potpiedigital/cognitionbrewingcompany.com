@@ -10,7 +10,7 @@ const Nav = ({ children, isNavShowing, setIsNavShowing, activeSection }) => (
       ))}
     </ul>
     <div className="bar-content">
-      <h1>Cognition Brewery</h1>
+      <h6>Cognition Brewery</h6>
       <Social />
       <p>Ishperming | Michigan</p>
     </div>

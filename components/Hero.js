@@ -11,7 +11,7 @@ const Hero = () => (
         <address>113 E Canada St. Ishperming, MI</address>
         <a href="tel:906-204-2724"> (906) 204-2724</a>
     </div>
-    <h3>SCROLL/DRAG</h3>
+    <h4>SCROLL/DRAG</h4>
     </div>
     <style jsx>{`
       .main {
@@ -24,24 +24,22 @@ const Hero = () => (
         width: 100vw;
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: space-evenly;
         flex-direction: column;
         flex: 1 0 100%;
       }
 
       h1 {
         color: #fff;
-        font-size: 160px;
         text-align: center;
-        line-height: 160px;
-        width: 50%;
-        margin-top: 0;
-        margin-bottom: 0.5em;
+        line-height: 20vh;
+        width: 80%;
+        margin: 0.5em 0 0 0;
       }
 
       .information {
         display: flex;
-        align-items: center;
+        align-items: flex-end;
         height: auto;
         width: 80%;
       }
@@ -49,23 +47,40 @@ const Hero = () => (
       .information a {
         color: #fff;
         text-decoration: none;
+        font-size: 1.5vw;
       }
 
       .information address {
         color: #fff;
         font-style: normal;
+        font-size: 1.5vw;
       }
 
       ul {
-        width: 25%;
+        width: 35%;
         padding: 0;
-        margin-bottom: 0;
+        margin-bottom: 0.5em;
       }
 
       li {
         display:flex;
         justify-content: space-between;
         color: #fff;
+        font-size: 1.5vw;
+      }
+
+      h3 {
+        font-family: "Source Serif Pro", serif;
+      }
+
+      @media screen and (max-width: 1024px) {
+        h1 {
+          width: 100%;
+        }
+
+        ul {
+          width: 50%;
+        }
       }
     `}</style>
   </div>

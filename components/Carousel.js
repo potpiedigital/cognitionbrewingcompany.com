@@ -15,6 +15,10 @@ const bigStyle = {
   flexBasis: "auto"
 };
 
+const fullStyle = {
+  maxWidth:"100vw"
+};
+
 const Coursel = ({ children }) => (
   <div>
     {children}
@@ -93,7 +97,7 @@ const CarouselContainer = () => {
         </a>
       </Nav>
       <Coursel>
-       <Section id="home">
+       <Section style={fullStyle} id="home">
           <Hero />
         </Section>
         <Section id="about">
