@@ -10,7 +10,7 @@ const ListingItem = ({title, desc, numbers, rating}) => (
 			flex-direction: column;
 			height: auto;
 			width: auto;
-			padding: 1em 1em 0 0;
+			padding: 1em 2em 0 0;
 		}
 
 		h4, p {

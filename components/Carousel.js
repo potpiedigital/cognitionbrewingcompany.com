@@ -11,7 +11,6 @@ import { useState } from "react";
 const bigStyle = {
   width: "200vw",
   maxWidth: "2400px",
-  backgroundColor: "pink",
   flexBasis: "auto"
 };
 
@@ -97,12 +96,12 @@ const CarouselContainer = () => {
         </a>
       </Nav>
       <Coursel>
-       <Section style={fullStyle} id="home">
+       {/* <Section style={fullStyle} id="home">
           <Hero />
         </Section>
         <Section id="about">
           <About />
-        </Section>
+        </Section> */}
          
         <Section style={bigStyle} id="tap-list">
           <TapList />
