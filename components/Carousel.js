@@ -97,7 +97,7 @@ const CarouselContainer = () => {
         </a>
       </Nav>
       <Coursel>
-       <Section style={fullStyle} id="home">
+       {/* <Section style={fullStyle} id="home">
           <Hero />
         </Section>
         <Section id="about">
@@ -106,7 +106,7 @@ const CarouselContainer = () => {
          
         <Section style={bigStyle} id="tap-list">
           <TapList />
-        </Section>
+        </Section> */}
         <Section id="events">
           <Events />
         </Section>

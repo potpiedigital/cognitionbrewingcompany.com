@@ -24,6 +24,7 @@ const Blog = () => {
           right
           <br /> Cog Brews
         </p>
+        <a className="more-posts" href="www.facebook.com">More Stories</a>
       </div>
       <style jsx>{`
         .blog-main {
@@ -36,11 +37,14 @@ const Blog = () => {
           grid-column: 1 / 4;
         }
         .post-details {
-          grid-column: 6 / 12;
+          grid-column: 6 / 13;
           display: grid;
           grid-template-columns: repeat(6, 1fr);
           grid-template-rows: 0.25fr 0.5fr 1fr 0.5fr;
           grid-gap: 1em;
+        }
+        span {
+          color: #a73a3a;
         }
         h2 {
           grid-column: 1 / 4;
@@ -62,15 +66,24 @@ const Blog = () => {
           margin: 0;
         }
         .event-copy {
-          grid-column: 3 / 6;
+          grid-column: 4 / 7;
           grid-row-start: 3;
           padding-top: 6em;
+          padding-right: 2em;
           margin: 0;
         }
         .next-block {
-          grid-column: 5;
+          grid-column: 6;
           grid-row-start: 4;
           text-align: right;
+          padding-right: 2em;
+        }
+        .more-posts {
+          grid-column: 1 / 3;
+          grid-row-start: 4;
+          text-decoration: none;
+          color: #a73a3a;
+          font-size: 2em;
         }
       `}</style>
     </div>
