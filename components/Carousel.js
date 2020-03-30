@@ -96,13 +96,12 @@ const CarouselContainer = () => {
         </a>
       </Nav>
       <Coursel>
-       {/* <Section style={fullStyle} id="home">
+       <Section style={fullStyle} id="home">
           <Hero />
         </Section>
         <Section id="about">
           <About />
-        </Section> */}
-         
+        </Section>
         <Section style={bigStyle} id="tap-list">
           <TapList />
         </Section>
