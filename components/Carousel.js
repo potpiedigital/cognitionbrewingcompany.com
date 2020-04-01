@@ -117,7 +117,7 @@ const CarouselContainer = () => {
       </Coursel>
       <style jsx>{`
         main {
-          overflow: hidden;
+          /* overflow: hidden; */
         }
 
         a {

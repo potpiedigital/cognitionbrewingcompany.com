@@ -12,6 +12,7 @@ const TapList = () => {
       <OnTap />
       <BarrelOffering />
       <OnDeck />
+      <h3>Cognition</h3>
       <style jsx>{`
       .main {
         width: 100%;
@@ -22,13 +23,20 @@ const TapList = () => {
         min-width: 0;
         grid-gap: 1em;
       }
-      h3 {
-        margin: 0;
-      }
       .intro {
         margin: 0;
         grid-column: 2 / 7;
         grid-row-start: 1;
+      }
+      h3 {
+        font-size: 33vh;
+        line-height: 1;
+        color: #a73a3a;
+        margin: 0;
+        grid-column: 17 / 24;
+        grid-row: 1 / 4;
+        word-wrap: break-word;
+        text-transform: uppercase;
       }
       `}</style>
     </div>

@@ -32,19 +32,23 @@ const OnDeck = () => {
 			</div>
 			<style jsx>{`
 				.on-deck {
-					background-color: #ededed;
-					border-left: 3px solid #a73a3a;
-					border-right: 3px solid #a73a3a;
+					background-color: #a73a3a;
 					display: flex;
 					flex-direction: column;
 					grid-column: 13 / 16;
 					grid-row: 1 / 3;
+					-webkit-clip-path: polygon(0 0, 100% 0, 100% 83%, 0% 100%);
 					clip-path: polygon(0 0, 100% 0, 100% 83%, 0% 100%);
 				}
 				.on-deck-content {
-					margin-top: 2em;
-					margin-left: 2em;
+					-webkit-clip-path: polygon(0 0, 100% 0, 100% 83%, 0% 100%);
+					clip-path: polygon(0 0, 100% 0, 100% 83%, 0% 100%);
+					background-color: #ededed;
+					width: 98%;
+    			height: 99%;
+    			margin: 0 auto;
 				}
+
 				`}</style>
 		</div>
 	)
