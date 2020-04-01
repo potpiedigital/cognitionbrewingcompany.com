@@ -11,7 +11,6 @@ import { useState } from "react";
 const bigStyle = {
   width: "200vw",
   maxWidth: "2400px",
-  backgroundColor: "pink",
   flexBasis: "auto"
 };
 
@@ -103,7 +102,6 @@ const CarouselContainer = () => {
         <Section id="about">
           <About />
         </Section>
-         
         <Section style={bigStyle} id="tap-list">
           <TapList />
         </Section>
