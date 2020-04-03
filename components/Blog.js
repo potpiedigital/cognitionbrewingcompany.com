@@ -20,11 +20,12 @@ const Blog = () => {
           downtown restaurants and share a pizza like you won’t find anywhere
           else. <a href="www.facebook.com">read more</a>
         </p>
-        <p className="next-block">
-          right
-          <br /> Cog Brews
-        </p>
-        <a className="more-posts" href="www.facebook.com">More Stories</a>
+        <div className="more-info">
+          <button className="more-posts" href="www.facebook.com">More Stories</button>
+          <p className="next-block">
+            right Cog Brews
+          </p>
+        </div>
       </div>
       <style jsx>{`
         .blog-main {
@@ -42,7 +43,9 @@ const Blog = () => {
           grid-column: 6 / 13;
           display: grid;
           grid-template-columns: repeat(6, 1fr);
-          grid-template-rows: 0.25fr 0.5fr 1fr 0.5fr;
+          grid-template-rows: repeat(8, minmax(0, 1fr));
+          min-height: 0;
+          min-width: 0;
           grid-gap: 1em;
         }
         span {
@@ -53,12 +56,13 @@ const Blog = () => {
         }
         .date-title {
           grid-column: 1 / 7;
-          grid-row-start: 2;
+          grid-row-start: 3;
+          margin-top: -1em;
         }
         hr {
           border: 5px solid #a73a3a;
           grid-column: 1 / 3;
-          grid-row: 3;
+          grid-row: 5;
           width: 240px;
           height: 0;
         }
@@ -69,25 +73,30 @@ const Blog = () => {
         }
         .event-copy {
           grid-column: 4 / 7;
-          grid-row-start: 3;
-          padding-top: 6em;
+          grid-row-start: 5;
+          padding-top: 0;
           padding-right: 2em;
           margin: 0;
         }
+        .more-info {
+          grid-column: 1 / 7;
+          grid-row-start: 8;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
         .next-block {
-          grid-column: 6;
-          grid-row-start: 4;
           text-align: right;
           padding-right: 2em;
+          word-wrap: break-word;
+          width: 5vw;
         }
         .more-posts {
-          grid-column: 1 / 3;
-          grid-row-start: 4;
           text-decoration: none;
           color: #a73a3a;
           font-size: 2em;
-          /* background-color: transparent; 
-          border: none;*/
+          background-color: transparent; 
+          border: none;
         }
       `}</style>
     </div>

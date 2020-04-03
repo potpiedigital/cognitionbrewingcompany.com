@@ -51,7 +51,7 @@ return (
 			<style jsx>{`
 			.on-tap {
         grid-column: 2 / 12;
-        grid-row-start: 2;
+        grid-row: 4 / 6;
       }
 
 			.flow {

@@ -41,27 +41,27 @@ const About = () => (
         width: 100%;
         display: grid;
         grid-template-columns: repeat(12, 1fr);
-        grid-template-rows: repeat(4, minmax(0, 1fr));
+        grid-template-rows: repeat(8, minmax(0, 1fr));
         min-height: 0;
         min-width: 0;
         grid-gap: 1em;
         background-color: #a73a3a;
       }
       img {
-        padding-top: 2em;
+        margin-top: -2em;
         height: 250px;
         width: auto;
         grid-column: 2 / 5;
+        grid-row-start: 2
       }
       h3 {
-        margin: 15vh 0 0 0;
         grid-column: 2 / 8;
-        grid-row-start: 2;
+        grid-row-start: 4;
         color: #ffffff;
       }
       .text-blocks {
-        padding-top: 2em;
-        grid-row: 1 / 3;
+        margin-top: -2em;
+        grid-row-start: 2;
         grid-column-start: 8;
         grid-column-end: 12;
         display: flex;
@@ -82,17 +82,17 @@ const About = () => (
       hr {
         grid-column: 2 / 7;
         border: 2px solid #fff;
-        grid-row-start: 3;
-        width: 40vw;
-        margin-top: 17vh;
+        grid-row-start: 6;
+        width: 50vw;
+        margin-top: 4vh;
         height: 0;
       }
 
       h2 {
-        font-size: 33vh;
-        line-height: 0.5;
+        font-size: 28vh;
+        /* line-height: 0.5; */
         grid-column: 2 /6;
-        grid-row-start: 4;
+        grid-row-start: 6;
         margin: 0 auto;
       }
       /* .big-text {

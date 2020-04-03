@@ -36,7 +36,7 @@ const OnDeck = () => {
 					display: flex;
 					flex-direction: column;
 					grid-column: 13 / 16;
-					grid-row: 1 / 3;
+					grid-row: 1 / 7;
 					-webkit-clip-path: polygon(0 0, 100% 0, 100% 83%, 0% 100%);
 					clip-path: polygon(0 0, 100% 0, 100% 83%, 0% 100%);
 				}
