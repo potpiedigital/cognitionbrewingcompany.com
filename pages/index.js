@@ -39,6 +39,7 @@ const MainPage = () => (
       }
 
       h2 {
+        color: black;
         font-size: 7.8vh;
         margin-bottom: 0;
       }
@@ -50,6 +51,7 @@ const MainPage = () => (
       h4 {
         font-size: 1.5vw;
         margin: 0;
+        color: #a73a3a;
       }
 
       h5 {

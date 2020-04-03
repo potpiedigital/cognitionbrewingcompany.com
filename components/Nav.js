@@ -29,6 +29,7 @@ const Nav = ({ children, isNavShowing, setIsNavShowing, activeSection }) => (
         border-top: 1px solid #000;
         display: flex;
         align-items: center;
+        z-index: 3;
       }
       nav.about {
         background-color: #a73a3a;

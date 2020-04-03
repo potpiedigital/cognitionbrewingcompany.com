@@ -1,3 +1,5 @@
+// import BigText from './Big-text';
+
 const About = () => (
   <div>
     <img src="https://source.unsplash.com/random/270x250" />
@@ -30,13 +32,13 @@ const About = () => (
       </p>
     </div>
     <hr />
+    {/* <BigText className="big-text"
+    text= "About"
+    /> */}
     <h2>About</h2>
     <style jsx>{`
       div {
         width: 100%;
-        /* margin: 0 auto;
-        padding: 0 2em;
-        white-space: normal;*/
         display: grid;
         grid-template-columns: repeat(12, 1fr);
         grid-template-rows: repeat(4, minmax(0, 1fr));
@@ -50,15 +52,12 @@ const About = () => (
         height: 250px;
         width: auto;
         grid-column: 2 / 5;
-        /* grid-column-end: 5; */
       }
       h3 {
         margin: 15vh 0 0 0;
         grid-column: 2 / 8;
-        /* grid-column-end: 7; */
         grid-row-start: 2;
         color: #ffffff;
-        /* font-size: 60px; */
       }
       .text-blocks {
         padding-top: 2em;
@@ -88,14 +87,19 @@ const About = () => (
         margin-top: 17vh;
         height: 0;
       }
+
       h2 {
-        color: black;
         font-size: 33vh;
         line-height: 0.5;
-        grid-column: 2 / 6;
+        grid-column: 2 /6;
         grid-row-start: 4;
         margin: 0 auto;
       }
+      /* .big-text {
+        grid-column: 2 / 6;
+        grid-row-start: 4;
+        margin: 0 auto;
+      } */
 
       @media screen and (max-width: 1280px) {
         p {

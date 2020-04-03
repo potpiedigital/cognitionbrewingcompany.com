@@ -1,7 +1,7 @@
 const Blog = () => {
   return (
     <div className="blog-main">
-      <img src="https://source.unsplash.com/random/500x1100" />
+      <img src="https://source.unsplash.com/random" />
       <div className="post-details">
         <h2>Cog Blog</h2>
         <div className="date-title">
@@ -34,6 +34,8 @@ const Blog = () => {
           grid-gap: 1em;
         }
         img {
+          width: 500px;
+          height: 100vh;
           grid-column: 1 / 4;
         }
         .post-details {
@@ -84,6 +86,8 @@ const Blog = () => {
           text-decoration: none;
           color: #a73a3a;
           font-size: 2em;
+          /* background-color: transparent; 
+          border: none;*/
         }
       `}</style>
     </div>
