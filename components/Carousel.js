@@ -15,7 +15,7 @@ const bigStyle = {
 };
 
 const fullStyle = {
-  maxWidth:"100vw"
+  maxWidth: "100vw"
 };
 
 const Coursel = ({ children }) => (
@@ -96,7 +96,7 @@ const CarouselContainer = () => {
         </a>
       </Nav>
       <Coursel>
-       <Section style={fullStyle} id="home">
+        {/* <Section style={fullStyle} id="home">
           <Hero />
         </Section>
         <Section id="about">
@@ -104,22 +104,18 @@ const CarouselContainer = () => {
         </Section>
         <Section style={bigStyle} id="tap-list">
           <TapList />
-        </Section> 
+        </Section>
         <Section id="events">
           <Events />
-        </Section>
+        </Section> 
         <Section id="blog">
           <Blog />
-        </Section>
-        <Section style={bigStyle} id="brews">
+        </Section>*/}
+        <Section id="brews">
           <Brews />
         </Section>
       </Coursel>
       <style jsx>{`
-        main {
-          /* overflow: hidden; */
-        }
-
         a {
           text-decoration: none;
           position: relative;

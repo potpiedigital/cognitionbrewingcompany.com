@@ -21,10 +21,10 @@ const Blog = () => {
           else. <a href="www.facebook.com">read more</a>
         </p>
         <div className="more-info">
-          <button className="more-posts" href="www.facebook.com">More Stories</button>
-          <p className="next-block">
-            right Cog Brews
-          </p>
+          <button className="more-posts" href="www.facebook.com">
+            More Stories
+          </button>
+          <p className="next-block">right Cog Brews</p>
         </div>
       </div>
       <style jsx>{`
@@ -95,8 +95,15 @@ const Blog = () => {
           text-decoration: none;
           color: #a73a3a;
           font-size: 2em;
-          background-color: transparent; 
+          background-color: transparent;
           border: none;
+        }
+        button:before {
+          content: "&#8595";
+          color: #fff;
+          border: 1px solid #a73a3a;
+          border-radius: 100%;
+          background-color: #a73a3a;
         }
       `}</style>
     </div>
