@@ -104,7 +104,7 @@ const CarouselContainer = () => {
         </Section>
         <Section style={bigStyle} id="tap-list">
           <TapList />
-        </Section>
+        </Section> 
         <Section id="events">
           <Events />
         </Section>

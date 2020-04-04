@@ -9,7 +9,7 @@ const Events = () => (
       </div>
       <h5>Cog Events</h5>
       <div className="event-img">
-        <img src="https://source.unsplash.com/random/" />
+        <img src="https://source.unsplash.com/random/beer" />
       </div>
       <style jsx>{`
         .main-container-event {
@@ -17,7 +17,7 @@ const Events = () => (
           display: grid;
           position: relative;
           grid-template-columns: repeat(12, 1fr);
-          grid-template-rows: 2fr 3fr 3fr;
+          grid-template-rows: repeat(8, minmax(0, 1fr));
           min-height: 0;
           min-width: 0;
           grid-gap: 1em;
@@ -35,17 +35,17 @@ const Events = () => (
           margin: 0;
         }
         h5 {
-          font-size: 25vh;
+          font-size: 21vh;
           line-height: 1;
           text-transform: uppercase;
           color: #973434;
           position: absolute;
           grid-column-start: 3;
-          bottom: 0;
+          bottom: 21px;
         }
         .event {
           grid-column: 3 / 10;
-          grid-row-start: 2;
+          grid-row-start: 3;
           display: flex;
           flex-direction: column;
           z-index: 1;
@@ -57,13 +57,13 @@ const Events = () => (
         }
 
         .event-img {
-          grid-row-start: 2;
+          grid-row-start: 3;
           grid-column-start: 12;
-          transform: rotate(15deg);
           margin-top: -4em;
+          transform: rotate(15deg);
           box-shadow: 10px 0 60px rgba(0, 0, 0, .1);
-          width: 40vw;
-          height: 60vh;
+          width: 30vw;
+          height: 50vh;
         }
         img {
           width: 100%;

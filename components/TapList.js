@@ -18,7 +18,7 @@ const TapList = () => {
         width: 100%;
         display: grid;
         grid-template-columns: repeat(24, 1fr);
-        grid-template-rows: 1fr 2fr 2fr;
+        grid-template-rows: repeat(8, minmax(0, 1fr));
         min-height: 0;
         min-width: 0;
         grid-gap: 1em;
@@ -29,12 +29,12 @@ const TapList = () => {
         grid-row-start: 1;
       }
       h3 {
-        font-size: 33vh;
+        font-size: 30vh;
         line-height: 1;
         color: #a73a3a;
-        margin: 0;
+        margin: -0.25em 0 0 0;
         grid-column: 17 / 24;
-        grid-row: 1 / 4;
+        grid-row-start: 2;
         word-wrap: break-word;
         text-transform: uppercase;
       }

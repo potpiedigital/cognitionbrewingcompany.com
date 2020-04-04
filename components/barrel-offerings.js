@@ -41,7 +41,7 @@ return (
 			<style jsx>{`
 			.barrel {
         grid-column: 2 / 12;
-        grid-row-start: 3;
+        grid-row-start: 7;
       }
 
 			.flow {
