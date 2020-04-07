@@ -35,6 +35,9 @@ const Forage = ({ className }) => (
       hr {
         grid-row: 4;
         grid-column: 2 / 5;
+        border: 5px solid #a73a3a;
+        width: 240px;
+        height: 0;
       }
       .forage-text {
         display: flex;
@@ -44,14 +47,18 @@ const Forage = ({ className }) => (
       }
       .forage-list {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
         list-style: none;
         grid-row: 5 / 7;
+        grid-column: 2 / 6;
         padding: 0;
       }
-      /* li {
-        width: 30%;
-      } */
+      li {
+        width: 21em;
+        color: #a73a3a;
+      }
       h2 {
         font-size: 28vh;
         grid-column: 2 / 6;

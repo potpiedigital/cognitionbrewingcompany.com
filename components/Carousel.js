@@ -11,11 +11,11 @@ import { useState } from "react";
 const bigStyle = {
   width: "200vw",
   maxWidth: "2400px",
-  flexBasis: "auto"
+  flexBasis: "auto",
 };
 
 const fullStyle = {
-  maxWidth: "100vw"
+  maxWidth: "100vw",
 };
 
 const Coursel = ({ children }) => (
@@ -32,7 +32,7 @@ const Coursel = ({ children }) => (
   </div>
 );
 
-const getSection = event => {
+const getSection = (event) => {
   const { href } = event.target;
   const indexOf = href.indexOf("#") + 1;
   return href.substring(indexOf);
@@ -42,7 +42,7 @@ const CarouselContainer = () => {
   const [isNavShowing, setIsNavShowing] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
 
-  const onClickNavItem = event => {
+  const onClickNavItem = (event) => {
     setActiveSection(getSection(event));
   };
   return (
@@ -96,7 +96,7 @@ const CarouselContainer = () => {
         </a>
       </Nav>
       <Coursel>
-        {/* <Section style={fullStyle} id="home">
+        <Section style={fullStyle} id="home">
           <Hero />
         </Section>
         <Section id="about">
@@ -107,10 +107,10 @@ const CarouselContainer = () => {
         </Section>
         <Section id="events">
           <Events />
-        </Section> 
+        </Section>
         <Section id="blog">
           <Blog />
-        </Section>*/}
+        </Section>
         <Section id="brews">
           <Brews />
         </Section>

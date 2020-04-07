@@ -19,25 +19,23 @@ const Header = () => (
         <a href="#brews">Cog Brews</a>
       </li>
     </ul>
-    <style jsx>
-      {`
-        ul {
-          list-style-type: none;
-          margin: 0;
-          padding: 0;
-        }
-        a {
-          margin-right: 15px;
-          text-decoration: none;
-          color: black;
-        }
+    <style jsx>{`
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+      a {
+        margin-right: 15px;
+        text-decoration: none;
+        color: black;
+      }
 
-        a:hover {
-          text-decoration: underline;
-          color: grey;
-        }
-      `}
-    </style>
+      a:hover {
+        text-decoration: underline;
+        color: grey;
+      }
+    `}</style>
   </div>
 );
 

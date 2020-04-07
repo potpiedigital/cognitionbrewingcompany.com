@@ -1,4 +1,4 @@
-import Forage from "./forage";
+import Forage from "./Forage";
 
 const Brews = () => {
   return (
@@ -24,6 +24,7 @@ const Brews = () => {
           min-height: 0;
           min-width: 0;
           grid-gap: 1em;
+          overflow: hidden;
         }
         .brew-main-content {
           grid-column: 2 / 6;

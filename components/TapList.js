@@ -38,7 +38,7 @@ const TapList = () => {
           margin-bottom: 0;
         }
         h3 {
-          font-size: 30vh;
+          font-size: 29vh;
           line-height: 1;
           color: #a73a3a;
           margin: -0.25em 0 0 0;
@@ -46,6 +46,12 @@ const TapList = () => {
           grid-row-start: 2;
           word-wrap: break-word;
           text-transform: uppercase;
+        }
+        @media screen and (max-width: 1280px) {
+          h3 {
+            grid-column: 17 / 23;
+            font-size: 32vh;
+          }
         }
       `}</style>
     </div>

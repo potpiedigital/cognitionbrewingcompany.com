@@ -23,7 +23,7 @@ const MainPage = () => (
       body {
         margin: 0;
         font-family: "Source Serif Pro", serif;
-        line-height: 1.25;
+        /* line-height: 1.25; */
       }
       h1,
       h2,
