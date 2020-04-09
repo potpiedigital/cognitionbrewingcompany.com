@@ -8,6 +8,13 @@ import Nav from "../components/Nav";
 import Section from "./Section";
 import { useState } from "react";
 
+import {
+  SnapList,
+  SnapItem,
+  useVisibleElements,
+  useScroll,
+} from "react-snaplist-carousel";
+
 const bigStyle = {
   width: "200vw",
   maxWidth: "2400px",
@@ -96,24 +103,38 @@ const CarouselContainer = () => {
         </a>
       </Nav>
       <Coursel>
-        <Section style={fullStyle} id="home">
-          <Hero />
-        </Section>
-        <Section id="about">
-          <About />
-        </Section>
-        <Section style={bigStyle} id="tap-list">
-          <TapList />
-        </Section>
-        <Section id="events">
-          <Events />
-        </Section>
-        <Section id="blog">
-          <Blog />
-        </Section>
-        <Section id="brews">
-          <Brews />
-        </Section>
+        <SnapList width="auto">
+          <SnapItem width="auto" snapAlign="none">
+            <Section style={fullStyle} id="home">
+              <Hero />
+            </Section>
+          </SnapItem>
+          <SnapItem width="auto" snapAlign="none">
+            <Section id="about">
+              <About />
+            </Section>
+          </SnapItem>
+          <SnapItem width="auto" snapAlign="none">
+            <Section style={bigStyle} id="tap-list">
+              <TapList />
+            </Section>
+          </SnapItem>
+          <SnapItem width="auto" snapAlign="none">
+            <Section id="events">
+              <Events />
+            </Section>
+          </SnapItem>
+          <SnapItem width="auto" snapAlign="none">
+            <Section id="blog">
+              <Blog />
+            </Section>
+          </SnapItem>
+          <SnapItem width="auto" snapAlign="none">
+            <Section style={bigStyle} id="brews">
+              <Brews />
+            </Section>
+          </SnapItem>
+        </SnapList>
       </Coursel>
       <style jsx>{`
         a {
