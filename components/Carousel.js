@@ -137,10 +137,6 @@ const CarouselContainer = () => {
         </SnapList>
       </Coursel>
       <style jsx>{`
-        main {
-          /* overflow: hidden; */
-        }
-
         a {
           text-decoration: none;
           position: relative;

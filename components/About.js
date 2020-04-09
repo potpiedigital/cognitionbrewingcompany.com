@@ -48,11 +48,11 @@ const About = () => (
         background-color: #a73a3a;
       }
       img {
-        margin-top: -2em;
+        margin-top: 2em;
         height: 250px;
         width: auto;
         grid-column: 2 / 5;
-        grid-row-start: 2
+        grid-row-start: 1;
       }
       h3 {
         grid-column: 2 / 8;
@@ -60,8 +60,8 @@ const About = () => (
         color: #ffffff;
       }
       .text-blocks {
-        margin-top: -2em;
-        grid-row-start: 2;
+        margin-top: 2em;
+        grid-row-start: 1;
         grid-column-start: 8;
         grid-column-end: 12;
         display: flex;
