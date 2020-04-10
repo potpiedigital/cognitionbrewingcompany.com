@@ -1,6 +1,8 @@
+import { Grid } from "./Grid";
+
 const Blog = () => {
   return (
-    <div className="blog-main">
+    <Grid>
       <img src="https://source.unsplash.com/random" />
       <div className="post-details">
         <h2>Cog Blog</h2>
@@ -28,12 +30,6 @@ const Blog = () => {
         </div>
       </div>
       <style jsx>{`
-        .blog-main {
-          width: 100%;
-          display: grid;
-          grid-template-columns: repeat(12, 1fr);
-          grid-gap: 1em;
-        }
         img {
           width: 500px;
           height: 100vh;
@@ -106,7 +102,7 @@ const Blog = () => {
           background-color: #a73a3a;
         }
       `}</style>
-    </div>
+    </Grid>
   );
 };
 

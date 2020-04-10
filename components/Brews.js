@@ -1,8 +1,9 @@
 import Forage from "./Forage";
+import { Grid } from "./Grid";
 
 const Brews = () => {
   return (
-    <div>
+    <Grid columns={36}>
       <div className="brew-main-content">
         <h2>Cog Brews</h2>
         <p className="brew-text">
@@ -16,16 +17,6 @@ const Brews = () => {
       </div>
       <Forage className="forage-grid" />
       <style jsx>{`
-        div {
-          width: 100%;
-          display: grid;
-          grid-template-columns: repeat(12, 1fr);
-          grid-template-rows: repeat(8, minmax(0, 1fr));
-          min-height: 0;
-          min-width: 0;
-          grid-gap: 1em;
-          overflow: hidden;
-        }
         .brew-main-content {
           grid-column: 2 / 6;
           grid-row: 1;
@@ -36,7 +27,7 @@ const Brews = () => {
           grid-row-start: 3;
         }
       `}</style>
-    </div>
+    </Grid>
   );
 };
 
