@@ -99,7 +99,7 @@ const Blog = () => {
           border: none;
         }
         button:before {
-          content: "&#8595";
+          content: "↓";
           color: #fff;
           border: 1px solid #a73a3a;
           border-radius: 100%;
