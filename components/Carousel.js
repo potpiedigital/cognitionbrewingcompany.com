@@ -108,7 +108,7 @@ const CarouselContainer = () => {
         </Section>
         <Section id="about">
           <About />
-        </Section> */}
+        </Section> 
         <Section style={bigStyle} id="tap-list">
           <TapList />
         </Section>
@@ -117,7 +117,7 @@ const CarouselContainer = () => {
         </Section>
         <Section id="blog">
           <Blog />
-        </Section>
+        </Section> */}
         <Section style={bigStyle} id="brews">
           <Brews />
         </Section>
