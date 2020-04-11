@@ -51,14 +51,19 @@ const OnTap = () => {
       <style jsx>{`
         .on-tap {
           grid-column: 2 / 12;
-          grid-row: 3 / 6;
-          margin-top: 2em;
+          grid-row: 4 / 7;
+          margin-top: -1rem;
+        }
+
+        h4 {
+          padding-bottom: 1.5rem;
         }
 
         .flow {
           display: flex;
           flex-wrap: wrap;
           justify-content: start;
+          height: 80%;
         }
       `}</style>
     </div>

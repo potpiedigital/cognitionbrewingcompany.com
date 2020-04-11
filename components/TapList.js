@@ -1,10 +1,11 @@
 import OnTap from "./On-tap";
 import BarrelOffering from "./barrel-offerings";
 import OnDeck from "./On-deck";
+import { Grid } from "./Grid";
 
 const TapList = () => {
   return (
-    <div className="main">
+    <Grid columns={24}>
       <div className="intro">
         <h2>Tap List</h2>
         <p>
@@ -19,19 +20,10 @@ const TapList = () => {
       <OnDeck />
       <h3>Cognition</h3>
       <style jsx>{`
-        .main {
-          width: 100%;
-          display: grid;
-          grid-template-columns: repeat(24, 1fr);
-          grid-template-rows: repeat(8, minmax(0, 1fr));
-          min-height: 0;
-          min-width: 0;
-          grid-gap: 1em;
-        }
         .intro {
           margin: 0;
           grid-column: 2 / 7;
-          grid-row-start: 1;
+          grid-row: 1 / 3;
         }
 
         .intro p {
@@ -54,7 +46,7 @@ const TapList = () => {
           }
         }
       `}</style>
-    </div>
+    </Grid>
   );
 };
 

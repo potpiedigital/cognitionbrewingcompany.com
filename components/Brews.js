@@ -1,10 +1,11 @@
 import Forage from "./Forage";
+import { Grid } from "./Grid";
 
 const Brews = () => {
   return (
-    <div>
+    <Grid columns={3}>
       <Forage />
-    </div>
+    </Grid>
   );
 };
 
