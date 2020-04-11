@@ -38,11 +38,11 @@ const TapList = () => {
           margin-bottom: 0;
         }
         h3 {
-          font-size: 29vh;
+          font-size: 31vh;
           line-height: 1;
           color: #a73a3a;
           margin: -0.25em 0 0 0;
-          grid-column: 17 / 24;
+          grid-column: 18 / 24;
           grid-row-start: 2;
           word-wrap: break-word;
           text-transform: uppercase;

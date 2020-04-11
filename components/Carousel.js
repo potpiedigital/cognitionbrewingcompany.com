@@ -103,38 +103,24 @@ const CarouselContainer = () => {
         </a>
       </Nav>
       <Coursel>
-        <SnapList width="auto">
-          <SnapItem width="auto" snapAlign="none">
-            <Section style={fullStyle} id="home">
-              <Hero />
-            </Section>
-          </SnapItem>
-          <SnapItem width="auto" snapAlign="none">
-            <Section id="about">
-              <About />
-            </Section>
-          </SnapItem>
-          <SnapItem width="auto" snapAlign="none">
-            <Section style={bigStyle} id="tap-list">
-              <TapList />
-            </Section>
-          </SnapItem>
-          <SnapItem width="auto" snapAlign="none">
-            <Section id="events">
-              <Events />
-            </Section>
-          </SnapItem>
-          <SnapItem width="auto" snapAlign="none">
-            <Section id="blog">
-              <Blog />
-            </Section>
-          </SnapItem>
-          <SnapItem width="auto" snapAlign="none">
-            <Section style={bigStyle} id="brews">
-              <Brews />
-            </Section>
-          </SnapItem>
-        </SnapList>
+        <Section style={fullStyle} id="home">
+          <Hero />
+        </Section>
+        <Section id="about">
+          <About />
+        </Section>
+        <Section style={bigStyle} id="tap-list">
+          <TapList />
+        </Section>
+        <Section id="events">
+          <Events />
+        </Section>
+        <Section id="blog">
+          <Blog />
+        </Section>
+        <Section style={bigStyle} id="brews">
+          <Brews />
+        </Section>
       </Coursel>
       <style jsx>{`
         a {
