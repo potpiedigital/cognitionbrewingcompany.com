@@ -1,4 +1,4 @@
-import Forage from "./Forage";
+import Forage from "./forage";
 
 const Brews = () => {
   return (
