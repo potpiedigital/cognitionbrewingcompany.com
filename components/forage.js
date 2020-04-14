@@ -1,7 +1,7 @@
 import { Grid } from "./Grid";
 
 const Forage = () => (
-  <Grid>
+  <Grid columns={16}>
     <div className="brew-main-content">
       <h2>Cog Brews</h2>
       <p className="brew-text">
@@ -12,7 +12,9 @@ const Forage = () => (
         that will be featured very briefly in the pub and mostly at beer
         festivals.
       </p>
+      <img className="gear" src="/gear.png" />
     </div>
+    <img className="main-img" src="/forage-1.png" />
     <hr />
     <div className="forage-text">
       <p>
@@ -42,14 +44,28 @@ const Forage = () => (
     <h3>Forage</h3>
     <style jsx>{`
       .brew-main-content {
-        grid-column: 2 / 7;
+        grid-column: 2 / 9;
         grid-row: 1;
         display: flex;
         flex-direction: column;
+        position: relative;
       }
-      div {
-        grid-row: 4 / 9;
-        grid-column: 2 / 12;
+      .main-img {
+        grid-column: 10 / 15;
+        grid-row: 1;
+        width: auto;
+        height: 32vh;
+        margin-top: 4rem;
+        transform: rotate(-15deg);
+        box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.1);
+        z-index: 1;
+      }
+      .gear {
+        position: absolute;
+        width: auto;
+        height: 35vh;
+        left: 575px;
+        top: -40px;
       }
       hr {
         grid-row: 4;
@@ -57,13 +73,14 @@ const Forage = () => (
         border: 5px solid #a73a3a;
         width: 240px;
         height: 0;
+        margin-top: 3rem;
       }
       .forage-text {
         display: flex;
         grid-row: 4 / 5;
-        grid-column: 2 / 13;
+        grid-column: 2 / 17;
         height: auto;
-        padding-top: 1em;
+        padding-top: 3rem;
       }
       .forage-text p {
         padding-right: 2em;
@@ -74,19 +91,20 @@ const Forage = () => (
         flex-wrap: wrap;
         justify-content: space-between;
         list-style: none;
-        grid-row: 5 / 7;
-        grid-column: 2 / 12;
+        grid-row: 6 / 7;
+        grid-column: 2 / 17;
         padding: 0;
       }
       li {
-        width: 21em;
+        width: 30%;
         color: #a73a3a;
       }
       h3 {
         font-size: 28vh;
         grid-column: 2 / 6;
         grid-row-start: 6;
-        margin: 0 auto;
+        margin-top: 4rem;
+        color: #a73a3a;
       }
     `}</style>
   </Grid>

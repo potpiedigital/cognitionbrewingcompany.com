@@ -8,13 +8,6 @@ import Nav from "../components/Nav";
 import Section from "./Section";
 import { useState } from "react";
 
-import {
-  SnapList,
-  SnapItem,
-  useVisibleElements,
-  useScroll,
-} from "react-snaplist-carousel";
-
 const bigStyle = {
   width: "200vw",
   maxWidth: "2400px",
@@ -103,12 +96,12 @@ const CarouselContainer = () => {
         </a>
       </Nav>
       <Coursel>
-        {/* <Section style={fullStyle} id="home">
+        <Section style={fullStyle} id="home">
           <Hero />
         </Section>
         <Section id="about">
           <About />
-        </Section> 
+        </Section>
         <Section style={bigStyle} id="tap-list">
           <TapList />
         </Section>
@@ -117,7 +110,7 @@ const CarouselContainer = () => {
         </Section>
         <Section id="blog">
           <Blog />
-        </Section> */}
+        </Section>
         <Section style={bigStyle} id="brews">
           <Brews />
         </Section>

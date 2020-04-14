@@ -69,7 +69,7 @@ const Events = () => (
         grid-column-start: 12;
         margin-top: -4em;
         transform: rotate(15deg);
-        box-shadow: 10px 0 60px rgba(0, 0, 0, 0.1);
+        box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.1);
         width: 30vw;
         height: 50vh;
       }

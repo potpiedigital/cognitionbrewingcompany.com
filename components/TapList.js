@@ -14,6 +14,7 @@ const TapList = () => {
           the “old” tap room. Please support our local downtown restaurants and
           share a pizza like you won’t find anywhere else.
         </p>
+        <img src="/hops-1.png" />
       </div>
       <OnTap />
       <BarrelOffering />
@@ -24,10 +25,17 @@ const TapList = () => {
           margin: 0;
           grid-column: 2 / 7;
           grid-row: 1 / 3;
+          position: relative;
         }
-
         .intro p {
           margin-bottom: 0;
+        }
+        img {
+          position: absolute;
+          width: auto;
+          height: 60vh;
+          top: -120px;
+          right: -350px;
         }
         h3 {
           font-size: 31vh;

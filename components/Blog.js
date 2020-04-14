@@ -39,7 +39,7 @@ const Blog = () => (
         color: #a73a3a;
       }
       .date-title {
-        grid-column: 6 / 12;
+        grid-column: 6 / 13;
         grid-row-start: 3;
         margin-top: -1em;
       }
@@ -52,8 +52,8 @@ const Blog = () => (
         margin-left: 0;
       }
       h4 {
-        font-size: 10.1vh;
-        line-height: 97px;
+        font-size: 6rem;
+        line-height: 85px;
         margin: 0;
         color: #000000;
       }

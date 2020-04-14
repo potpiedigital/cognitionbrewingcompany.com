@@ -3,7 +3,7 @@ import { Grid } from "./Grid";
 
 const About = () => (
   <Grid backgroundColor="#a73a3a">
-    <img src="https://source.unsplash.com/random/270x250" />
+    <img src="/Logo.png" />
     <h3>In the wilderness there is Cognition</h3>
     <div className="text-blocks">
       <p>
@@ -61,7 +61,6 @@ const About = () => (
 
       p {
         display: inline-block;
-        font-size: 16px;
         font-weight: 300;
         margin-top: 0;
         color: #fff;
