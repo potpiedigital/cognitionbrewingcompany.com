@@ -1,6 +1,7 @@
-import Forage from "./Forage";
+import Forage from "./forage";
 import { Grid } from "./Grid";
 import Historic from "./Historic";
+
 
 const Brews = () => {
   return (
