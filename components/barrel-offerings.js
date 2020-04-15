@@ -41,14 +41,15 @@ const BarrelOffering = () => {
       <style jsx>{`
         .barrel {
           grid-column: 2 / 12;
-          grid-row: 6 / 8;
-          margin-top: 2em;
+          grid-row: 7 / 9;
+          margin-top: -1rem;
         }
 
         .flow {
           display: flex;
           flex-wrap: wrap;
           justify-content: start;
+          height: 80%;
         }
       `}</style>
     </div>

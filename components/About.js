@@ -1,8 +1,9 @@
 // import BigText from './Big-text';
+import { Grid } from "./Grid";
 
 const About = () => (
-  <div>
-    <img src="https://source.unsplash.com/random/270x250" />
+  <Grid backgroundColor="#a73a3a">
+    <img src="/Logo.png" />
     <h3>In the wilderness there is Cognition</h3>
     <div className="text-blocks">
       <p>
@@ -37,16 +38,6 @@ const About = () => (
     /> */}
     <h2>About</h2>
     <style jsx>{`
-      div {
-        width: 100%;
-        display: grid;
-        grid-template-columns: repeat(12, 1fr);
-        grid-template-rows: repeat(8, minmax(0, 1fr));
-        min-height: 0;
-        min-width: 0;
-        grid-gap: 1em;
-        background-color: #a73a3a;
-      }
       img {
         margin-top: 2em;
         height: 250px;
@@ -61,7 +52,7 @@ const About = () => (
       }
       .text-blocks {
         margin-top: 2em;
-        grid-row-start: 1;
+        grid-row: 1 / 6;
         grid-column-start: 8;
         grid-column-end: 12;
         display: flex;
@@ -70,7 +61,6 @@ const About = () => (
 
       p {
         display: inline-block;
-        font-size: 16px;
         font-weight: 300;
         margin-top: 0;
         color: #fff;
@@ -94,6 +84,7 @@ const About = () => (
         grid-column: 2 /6;
         grid-row-start: 6;
         margin: 0 auto;
+        padding-top: 3rem;
       }
       /* .big-text {
         grid-column: 2 / 6;
@@ -117,7 +108,7 @@ const About = () => (
         }
       }
     `}</style>
-  </div>
+  </Grid>
 );
 
 export default About;

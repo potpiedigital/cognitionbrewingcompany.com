@@ -4,19 +4,25 @@ const Hero = () => (
     <div className="information">
       <div>
         <ul>
-          <li>Mon - Thur <span>4pm - 10pm</span></li>
-          <li>Fri and Sat <span>12pm - 12am</span></li>
-          <li>Sun <span>12pm - 10pm</span></li>
+          <li>
+            Mon - Thur <span>4pm - 10pm</span>
+          </li>
+          <li>
+            Fri and Sat <span>12pm - 12am</span>
+          </li>
+          <li>
+            Sun <span>12pm - 10pm</span>
+          </li>
         </ul>
         <address>113 E Canada St. Ishperming, MI</address>
         <a href="tel:906-204-2724"> (906) 204-2724</a>
-    </div>
-    <h4>SCROLL/DRAG</h4>
+      </div>
+      <h4>SCROLL/DRAG</h4>
     </div>
     <style jsx>{`
       .main {
         background-image: url("/Cognition-Brewing-hero.png");
-        box-shadow: inset 0 0 0 50vw rgba(0,0,0,0.3);
+        box-shadow: inset 0 0 0 50vw rgba(0, 0, 0, 0.3);
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
@@ -63,7 +69,7 @@ const Hero = () => (
       }
 
       li {
-        display:flex;
+        display: flex;
         justify-content: space-between;
         color: #fff;
         font-size: 1.5vw;

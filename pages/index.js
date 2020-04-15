@@ -24,6 +24,7 @@ const MainPage = () => (
         margin: 0;
         font-family: "Source Serif Pro", serif;
         /* line-height: 1.25; */
+        font-size: 0.875rem;
       }
       h1,
       h2,
