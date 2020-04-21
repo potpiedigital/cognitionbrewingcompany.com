@@ -8,18 +8,21 @@ import Nav from "../components/Nav";
 import Section from "./Section";
 import { useState } from "react";
 
-const bigStyle = {
-  width: "200vw",
-  maxWidth: "2400px",
-  flexBasis: "auto",
-};
-
 const fullStyle = {
   maxWidth: "100vw",
 };
 
 const Coursel = ({ children }) => (
-  <div>
+  <div
+  // onWheel={(event) => {
+  //   console.log(
+  //     event.currentTarget.scrollLeft,
+  //     event.deltaX,
+  //     event.deltaY,
+  //     event.deltaMode
+  //   );
+  // }}
+  >
     {children}
     <style jsx>{`
       div {
@@ -96,22 +99,22 @@ const CarouselContainer = () => {
         </a>
       </Nav>
       <Coursel>
-        <Section style={fullStyle} id="home">
+        {/* <Section style={fullStyle} id="home">
           <Hero />
         </Section>
-        <Section id="about">
+        <Section style={fullStyle} id="about">
           <About />
         </Section>
-        <Section style={bigStyle} id="tap-list">
+        <Section id="tap-list">
           <TapList />
         </Section>
-        <Section id="events">
+        <Section style={fullStyle} id="events">
           <Events />
         </Section>
-        <Section id="blog">
+        <Section style={fullStyle} id="blog">
           <Blog />
-        </Section>
-        <Section style={bigStyle} id="brews">
+        </Section> */}
+        <Section id="brews">
           <Brews />
         </Section>
       </Coursel>
