@@ -3,15 +3,15 @@ const Section = ({ id, children, style }) => (
     {children}
     <style jsx>{`
       section {
-        width: 100vw;
-        max-width: 1250px;
+        /* width: 100vw;
+        max-width: 1250px; */
         height: 100vh;
-        overflow: hidden;
+        overflow-y: hidden;
         background-color: white;
         display: flex;
         align-items: center;
         justify-content: center;
-        flex: 1 0 100%;
+        flex: 1 0 auto;
       }
       h1 {
         margin: 0;
