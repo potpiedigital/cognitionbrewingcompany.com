@@ -1,7 +1,7 @@
 import { Grid } from "./Grid";
 
 const Forage = () => (
-  <Grid columns={16} width="93.5vw">
+  <Grid columns={16}>
     <div className="brew-main-content">
       <h2>Cog Brews</h2>
       <p className="brew-text">
@@ -30,7 +30,7 @@ const Forage = () => (
         a pizza like you won’t find anywhere else.
       </p>
     </div>
-    <ul className="beer-list">
+    <ul className="forage-list">
       <li>The Unicorn in Captivity</li>
       <li>Faded Reality</li>
       <li>Rett Farm</li>
@@ -64,35 +64,35 @@ const Forage = () => (
         position: absolute;
         width: auto;
         height: 35vh;
-        left: 135%;
-        top: -85%;
+        left: 575px;
+        top: -40px;
       }
       hr {
         grid-row: 4;
-        grid-column: 2 / 7;
+        grid-column: 2 / 5;
         border: 5px solid #a73a3a;
-        width: 100%;
+        width: 240px;
         height: 0;
-        margin-top: 2rem;
+        margin-top: 3rem;
       }
       .forage-text {
         display: flex;
         grid-row: 4 / 5;
-        grid-column: 2 / 14;
+        grid-column: 2 / 17;
         height: auto;
         padding-top: 3rem;
       }
       .forage-text p {
         padding-right: 2em;
       }
-      .beer-list {
+      .forage-list {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
         list-style: none;
         grid-row: 6 / 7;
-        grid-column: 2 / 11;
+        grid-column: 2 / 17;
         padding: 0;
       }
       li {

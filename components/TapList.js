@@ -5,7 +5,7 @@ import { Grid } from "./Grid";
 
 const TapList = () => {
   return (
-    <Grid columns={24} width="2400px">
+    <Grid columns={24}>
       <div className="intro">
         <h2>Tap List</h2>
         <p>
@@ -14,7 +14,7 @@ const TapList = () => {
           the “old” tap room. Please support our local downtown restaurants and
           share a pizza like you won’t find anywhere else.
         </p>
-        <img src="/hops.svg" />
+        <img src="/hops-1.png" />
       </div>
       <OnTap />
       <BarrelOffering />

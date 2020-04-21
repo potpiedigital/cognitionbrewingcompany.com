@@ -26,9 +26,10 @@ const Events = () => (
       </p>
       <a href="www.facebook.com">More Details</a>
       <h5>Cog Events</h5>
+    </div>
+    <div className="event-img">
       <img src="https://source.unsplash.com/random/beer" />
     </div>
-    <div className="event-img"></div>
     <style jsx>{`
       h2 {
         grid-column: 3 / 9;
@@ -49,7 +50,7 @@ const Events = () => (
         top: 18rem;
       }
       .event {
-        grid-column: 3 / 8;
+        grid-column: 3 / 10;
         grid-row-start: 3;
         display: flex;
         flex-direction: column;
@@ -63,18 +64,18 @@ const Events = () => (
         z-index: 1;
       }
 
-      /* .event-img {
+      .event-img {
         grid-row-start: 3;
         grid-column-start: 12;
-        position: relative; 
-      }*/
-
-      img {
-        width: 30vw;
-        height: 50vh;
+        margin-top: -4em;
         transform: rotate(15deg);
         box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.1);
-        position: absolute;
+        width: 30vw;
+        height: 50vh;
+      }
+      img {
+        width: 100%;
+        height: 100%;
       }
     `}</style>
   </Grid>
