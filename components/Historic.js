@@ -101,11 +101,6 @@ const Historic = () => (
         margin-top: 4rem;
         z-index: 1;
       }
-      @media screen and (max-width: 1280px) {
-        h3 {
-          font-size: 24vh;
-        }
-      }
     `}</style>
   </Grid>
 );
