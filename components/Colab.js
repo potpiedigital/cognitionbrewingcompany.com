@@ -20,6 +20,10 @@ const Colab = () => (
         </p>
       </div>
     </div>
+    <img className="colab-img" src="/colab-1.jpg" />
+    <button>
+      <a href="cognitionbrewery.com">Contact Us</a>
+    </button>
     <ul className="beer-list">
       <li>The Unicorn in Captivity</li>
       <li>Faded Reality</li>
@@ -51,7 +55,7 @@ const Colab = () => (
         height: 0;
         margin-top: 3rem;
       }
-      yarn .colab-text {
+      .colab-text {
         margin-top: 2rem;
       }
       .beer-list {
@@ -69,16 +73,52 @@ const Colab = () => (
         width: 50%;
         color: #a73a3a;
       }
+      .colab-img {
+        grid-column: 11 / 17;
+        transform: rotate(15deg);
+        box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.1);
+        width: 24vw;
+        height: auto;
+      }
+      button {
+        grid-column: 14 / 16;
+        grid-row: 5 / 7;
+        background-color: #a73a3a;
+        border: none;
+        border-radius: 50%;
+        padding: 0;
+        margin: 1rem 0;
+      }
+      a {
+        text-decoration: none;
+        font-size: 1rem;
+        color: #ffff;
+      }
       h3 {
         font-size: 28vh;
         line-height: 0.8;
         word-wrap: break-word;
         color: #a73a3a;
-        grid-column: 3 / 14;
+        grid-column: 3 / 16;
         grid-row-start: 5;
-        margin-top: 4rem;
+        margin-top: 7rem;
         z-index: 1;
         hyphens: auto;
+      }
+      @media screen and (max-width: 1280px) {
+        h3 {
+          font-size: 25.5vh;
+          margin-top: 2rem;
+          grid-column: 2 / 17;
+          grid-row-start: 7;
+        }
+        .beer-list {
+          grid-row-start: 5;
+        }
+        .teaser-beer {
+          left: -10%;
+          top: -540%;
+        }
       }
     `}</style>
   </Grid>

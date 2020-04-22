@@ -7,6 +7,7 @@ import Events from "./Events";
 import Nav from "../components/Nav";
 import Section from "./Section";
 import { useState } from "react";
+import { ImageBreak } from "./Image-break";
 
 const fullStyle = {
   maxWidth: "100vw",
@@ -14,14 +15,14 @@ const fullStyle = {
 
 const Coursel = ({ children }) => (
   <div
-  // onWheel={(event) => {
-  //   console.log(
-  //     event.currentTarget.scrollLeft,
-  //     event.deltaX,
-  //     event.deltaY,
-  //     event.deltaMode
-  //   );
-  // }}
+    onWheel={(event) => {
+      console.log(
+        event.currentTarget.scrollLeft,
+        event.deltaX,
+        event.deltaY,
+        event.deltaMode
+      );
+    }}
   >
     {children}
     <style jsx>{`
@@ -99,21 +100,25 @@ const CarouselContainer = () => {
         </a>
       </Nav>
       <Coursel>
-        {/* <Section style={fullStyle} id="home">
+        <Section style={fullStyle} id="home">
           <Hero />
         </Section>
         <Section style={fullStyle} id="about">
           <About />
         </Section>
+        <ImageBreak src="https://source.unsplash.com/random/chocolate" />
         <Section id="tap-list">
           <TapList />
         </Section>
+        <ImageBreak src="https://source.unsplash.com/random/wine" />
         <Section style={fullStyle} id="events">
           <Events />
         </Section>
+        <ImageBreak src="https://source.unsplash.com/random/beer" />
         <Section style={fullStyle} id="blog">
           <Blog />
-        </Section> */}
+        </Section>
+        <ImageBreak src="https://source.unsplash.com/random/" />
         <Section id="brews">
           <Brews />
         </Section>
