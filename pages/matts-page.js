@@ -5,7 +5,7 @@ const Nav = ({ children }) => (
   <nav>
     <h1>This is Matt's page</h1>
     <ul>
-      {React.Children.map(children, child => (
+      {React.Children.map(children, (child) => (
         <li>{child}</li>
       ))}
     </ul>
@@ -44,7 +44,7 @@ const Nav = ({ children }) => (
 
 const Section = ({ id, bkgd = randomHsl(), children }) => (
   <section id={id}>
-    <h1>{children}</h1>
+    {children}
     <style jsx>{`
       section {
         width: 100vw;
@@ -73,6 +73,37 @@ const Coursel = ({ children }) => (
   </div>
 );
 
+const One = () => {
+  const w = Math.floor(Math.random() * 300) + 200;
+  const h = Math.floor(Math.random() * 300) + 200;
+
+  return (
+    <div className="grid">
+      <div className="el">A</div>
+      <div className="el">
+        B<img src={`https://source.unsplash.com/${w}x${h}/?cute,dog`} />
+      </div>
+      <div className="el">C</div>
+      <div className="el">D</div>
+      <style jsx>{`
+        .grid {
+          display: grid;
+          grid-template-rows: repeat(2, 1fr);
+          grid-template-columns: repeat(2, 1fr);
+          grid-gap: 1em;
+        }
+        .el {
+          position: relative;
+        }
+        img {
+          position: absolute;
+          transform: translate(200px, 0) rotate(30deg);
+        }
+      `}</style>
+    </div>
+  );
+};
+
 const CarouselContainer = () => (
   <main>
     <Nav>
@@ -83,7 +114,9 @@ const CarouselContainer = () => (
       <a href="#five">five</a>
     </Nav>
     <Coursel>
-      <Section id="one">one</Section>
+      <Section id="one">
+        <One />
+      </Section>
       <Section id="two">two</Section>
       <Section id="three">three</Section>
       <Section id="four">four</Section>
