@@ -6,13 +6,20 @@ import Forage from "./Forage";
 
 const Brews = () => {
   return (
-    <Grid columns={5} rows={1} width="max-content">
+    <div>
       <Forage />
-      <ImageBreak src="https://source.unsplash.com/random/wine" />
+      <ImageBreak src="https://source.unsplash.com/1600x900/?nature,water" />
       <Historic />
-      <ImageBreak src="https://source.unsplash.com/random/chocolate" />
+      <ImageBreak src="https://source.unsplash.com/1600x900/?nature,water" />
       <Colab />
-    </Grid>
+      <style jsx>{`
+        div {
+          display: flex;
+          flex-direction: row;
+          width: auto;
+        }
+      `}</style>
+    </div>
   );
 };
 

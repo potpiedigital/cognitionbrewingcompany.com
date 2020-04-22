@@ -82,7 +82,8 @@ const About = () => (
         font-size: 28vh;
         /* line-height: 0.5; */
         grid-column: 2 /6;
-        grid-row-start: 6;
+        grid-row: 6 / 9;
+        overflow: hidden;
         margin: 0 auto;
         padding-top: 3rem;
       }

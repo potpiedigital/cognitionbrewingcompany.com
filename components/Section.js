@@ -3,8 +3,6 @@ const Section = ({ id, children, style }) => (
     {children}
     <style jsx>{`
       section {
-        /* width: 100vw;
-        max-width: 1250px; */
         height: 100vh;
         overflow-y: hidden;
         background-color: white;

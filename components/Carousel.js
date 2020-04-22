@@ -10,7 +10,8 @@ import { useState } from "react";
 import { ImageBreak } from "./Image-break";
 
 const fullStyle = {
-  maxWidth: "100vw",
+  width: "100vw",
+  overflow: "visible",
 };
 
 const Coursel = ({ children }) => (
@@ -106,19 +107,19 @@ const CarouselContainer = () => {
         <Section style={fullStyle} id="about">
           <About />
         </Section>
-        <ImageBreak src="https://source.unsplash.com/random/chocolate" />
+        <ImageBreak src="https://source.unsplash.com/1600x900/?nature,water" />
         <Section id="tap-list">
           <TapList />
         </Section>
-        <ImageBreak src="https://source.unsplash.com/random/wine" />
+        <ImageBreak src="https://source.unsplash.com/1600x900/?nature,water" />
         <Section style={fullStyle} id="events">
           <Events />
         </Section>
-        <ImageBreak src="https://source.unsplash.com/random/beer" />
+        <ImageBreak src="https://source.unsplash.com/1600x900/?nature,water" />
         <Section style={fullStyle} id="blog">
           <Blog />
         </Section>
-        <ImageBreak src="https://source.unsplash.com/random/" />
+        <ImageBreak src="https://source.unsplash.com/1600x900/?nature,water" />
         <Section id="brews">
           <Brews />
         </Section>

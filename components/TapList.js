@@ -33,7 +33,7 @@ const TapList = () => {
         img {
           position: absolute;
           width: auto;
-          height: 60vh;
+          height: 50vh;
           top: -120px;
           right: -350px;
         }

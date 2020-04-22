@@ -25,10 +25,11 @@ const Events = () => (
         mollit anim id est laborum.
       </p>
       <a href="www.facebook.com">More Details</a>
-      <h5>Cog Events</h5>
+    </div>
+    <h5>Cog Events</h5>
+    <div className="event-img">
       <img src="https://source.unsplash.com/random/beer" />
     </div>
-    <div className="event-img"></div>
     <style jsx>{`
       h2 {
         grid-column: 3 / 9;
@@ -41,16 +42,18 @@ const Events = () => (
         margin: 0;
       }
       h5 {
+        grid-column: 3 / 11;
+        grid-row: 6 / 9;
+        overflow: hidden;
         font-size: 21vh;
         line-height: 1;
         text-transform: uppercase;
         color: #973434;
-        position: absolute;
-        top: 18rem;
       }
       .event {
         grid-column: 3 / 8;
-        grid-row-start: 3;
+        grid-row: 3 / 9;
+        overflow: hidden;
         display: flex;
         flex-direction: column;
         z-index: 1;
@@ -63,18 +66,17 @@ const Events = () => (
         z-index: 1;
       }
 
-      /* .event-img {
+      .event-img {
         grid-row-start: 3;
-        grid-column-start: 12;
-        position: relative; 
-      }*/
+        grid-column-start: 10;
+        position: relative;
+      }
 
       img {
         width: 30vw;
         height: 50vh;
         transform: rotate(15deg);
         box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.1);
-        position: absolute;
       }
     `}</style>
   </Grid>
