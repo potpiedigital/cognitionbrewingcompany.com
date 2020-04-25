@@ -1,7 +1,7 @@
 import { Grid } from "./Grid";
 
 const Historic = () => (
-  <Grid backgroundColor="#a73a3a" columns={16} width="93.5vw">
+  <Grid backgroundColor="#a73a3a" columns={14} width="90vw">
     <hr />
     <div className="historic-text">
       <p>

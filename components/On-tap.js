@@ -50,7 +50,7 @@ const OnTap = () => {
       </div>
       <style jsx>{`
         .on-tap {
-          grid-column: 2 / 12;
+          grid-column: 2 / 15;
           grid-row: 4 / 7;
           margin-top: -1rem;
         }

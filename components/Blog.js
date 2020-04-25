@@ -1,7 +1,7 @@
 import { Grid } from "./Grid";
 
 const Blog = () => (
-  <Grid>
+  <Grid width="90vw">
     <img src="https://source.unsplash.com/random" />
     <h2>Cog Blog</h2>
     <div className="date-title">
@@ -30,6 +30,8 @@ const Blog = () => (
       img {
         width: 500px;
         height: 100vh;
+        object-fit: cover;
+        display: block;
         grid-column: 1 / 4;
       }
       h2 {

@@ -1,7 +1,7 @@
 import { Grid } from "./Grid";
 
 const Forage = () => (
-  <Grid columns={16} width="93.5vw">
+  <Grid columns={14} width="90vw">
     <div className="brew-main-content">
       <h2>Cog Brews</h2>
       <p className="brew-text">

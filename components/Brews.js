@@ -8,15 +8,15 @@ const Brews = () => {
   return (
     <div>
       <Forage />
-      <ImageBreak src="https://source.unsplash.com/1600x900/?nature,water" />
+      <ImageBreak src="/Cognition-Brewing-2.jpg" />
       <Historic />
-      <ImageBreak src="https://source.unsplash.com/1600x900/?nature,water" />
+      <ImageBreak src="/Cognition-Brewing-2.jpg" />
       <Colab />
       <style jsx>{`
         div {
           display: flex;
           flex-direction: row;
-          width: auto;
+          /* width: auto; */
         }
       `}</style>
     </div>

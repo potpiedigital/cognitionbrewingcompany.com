@@ -40,7 +40,7 @@ const BarrelOffering = () => {
 
       <style jsx>{`
         .barrel {
-          grid-column: 2 / 12;
+          grid-column: 2 / 15;
           grid-row: 7 / 9;
           margin-top: -1rem;
         }

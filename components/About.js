@@ -2,7 +2,7 @@
 import { Grid } from "./Grid";
 
 const About = () => (
-  <Grid backgroundColor="#a73a3a">
+  <Grid backgroundColor="#a73a3a" width="100vw">
     <img src="/Logo.png" />
     <h3>In the wilderness there is Cognition</h3>
     <div className="text-blocks">
@@ -46,7 +46,7 @@ const About = () => (
         grid-row-start: 1;
       }
       h3 {
-        grid-column: 2 / 8;
+        grid-column: 2 / 7;
         grid-row-start: 4;
         color: #ffffff;
       }
@@ -73,7 +73,7 @@ const About = () => (
         grid-column: 2 / 7;
         border: 2px solid #fff;
         grid-row-start: 6;
-        width: 50vw;
+        width: 100%;
         margin-top: 4vh;
         height: 0;
       }

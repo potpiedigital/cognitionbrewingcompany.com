@@ -1,7 +1,7 @@
 import { Grid } from "./Grid";
 
 const Colab = () => (
-  <Grid columns={16} width="93.5vw">
+  <Grid columns={14} width="90vw">
     <div className="colab-info">
       <img className="teaser-beer" src="/beer-glass.png" />
       <hr />

@@ -1,4 +1,4 @@
-const ListingItem = ({ title, desc, numbers, rating }) => (
+const ListingItem = ({ title, desc, numbers, rating, marginTop="0" }) => (
   <div className="listing">
     <h5>{title}</h5>
     <p>{desc}</p>
@@ -11,9 +11,11 @@ const ListingItem = ({ title, desc, numbers, rating }) => (
         height: auto;
         width: auto;
         padding-right: 2rem;
+        margin-top:${marginTop};
       }
       p {
         margin: 0;
+        font-size: 0.825rem;
       }
     `}</style>
   </div>

@@ -5,7 +5,7 @@ import { Grid } from "./Grid";
 
 const TapList = () => {
   return (
-    <Grid columns={24} width="2400px">
+    <Grid columns={24} width="125vw">
       <div className="intro">
         <h2>Tap List</h2>
         <p>
@@ -23,7 +23,7 @@ const TapList = () => {
       <style jsx>{`
         .intro {
           margin: 0;
-          grid-column: 2 / 7;
+          grid-column: 2 / 9;
           grid-row: 1 / 3;
           position: relative;
         }
@@ -38,12 +38,12 @@ const TapList = () => {
           right: -350px;
         }
         h3 {
-          font-size: 31vh;
+          font-size: 28vh;
           line-height: 1;
           color: #a73a3a;
           margin: -0.25em 0 0 0;
-          grid-column: 18 / 24;
-          grid-row-start: 2;
+          grid-column: 18 / 25;
+          grid-row: 2 / 8;
           word-wrap: break-word;
           text-transform: uppercase;
         }

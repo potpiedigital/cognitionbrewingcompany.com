@@ -32,7 +32,7 @@ const Events = () => (
     </div>
     <style jsx>{`
       h2 {
-        grid-column: 3 / 9;
+        grid-column: 2 / 8;
         grid-row-start: 1;
         font-size: 60px;
         color: #fff;
@@ -42,16 +42,16 @@ const Events = () => (
         margin: 0;
       }
       h5 {
-        grid-column: 3 / 11;
+        grid-column: 2 / 11;
         grid-row: 6 / 9;
         overflow: hidden;
-        font-size: 21vh;
+        font-size: 23vh;
         line-height: 1;
         text-transform: uppercase;
         color: #973434;
       }
       .event {
-        grid-column: 3 / 8;
+        grid-column: 2 / 8;
         grid-row: 3 / 9;
         overflow: hidden;
         display: flex;
@@ -68,7 +68,7 @@ const Events = () => (
 
       .event-img {
         grid-row-start: 3;
-        grid-column-start: 10;
+        grid-column-start: 9;
         position: relative;
       }
 
@@ -77,6 +77,7 @@ const Events = () => (
         height: 50vh;
         transform: rotate(15deg);
         box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.1);
+        position: absolute;
       }
     `}</style>
   </Grid>
