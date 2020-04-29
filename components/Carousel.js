@@ -96,7 +96,7 @@ const CarouselContainer = () => {
         </a>
       </Nav>
       <Coursel>
-        {/* <Section id="home">
+        <Section id="home">
           <Hero />
         </Section>
         <Section id="about">
@@ -106,7 +106,7 @@ const CarouselContainer = () => {
         <Section id="tap-list">
           <TapList />
         </Section>
-        <ImageBreak src="/Cognition-Brewing-2.jpg" /> */}
+        <ImageBreak src="/Cognition-Brewing-2.jpg" />
         <Section style={fullStyle} id="events">
           <Events />
         </Section>
