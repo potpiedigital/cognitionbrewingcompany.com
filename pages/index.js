@@ -67,6 +67,13 @@ const MainPage = () => (
         font-weight: normal;
         margin: 0;
       }
+
+      @media screen and (max-width: 1280px) {
+        body{
+          font-size: 1rem;
+          line-height: 1.35;
+        }
+      }
     `}</style>
   </div>
 );

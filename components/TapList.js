@@ -47,6 +47,17 @@ const TapList = () => {
           word-wrap: break-word;
           text-transform: uppercase;
         }
+        @media screen and (max-width: 1370px) {
+          img {
+            height: 40vh;
+            right: -300px;
+          }
+          h3 {
+            font-size: 24vh;
+            margin-top: 1rem;
+            grid-row-start: 1;
+          }
+        }
         @media screen and (max-width: 1280px) {
           h3 {
             grid-column: 17 / 23;

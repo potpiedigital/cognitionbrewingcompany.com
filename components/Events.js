@@ -42,7 +42,7 @@ const Events = () => (
         margin: 0;
       }
       h5 {
-        grid-column: 2 / 11;
+        grid-column: 2 / 12;
         grid-row: 6 / 9;
         overflow: hidden;
         font-size: 23vh;
@@ -51,7 +51,7 @@ const Events = () => (
         color: #973434;
       }
       .event {
-        grid-column: 2 / 8;
+        grid-column: 2 / 11;
         grid-row: 3 / 9;
         overflow: hidden;
         display: flex;
@@ -65,19 +65,34 @@ const Events = () => (
         color: #fff;
         z-index: 1;
       }
-
       .event-img {
         grid-row-start: 3;
-        grid-column-start: 9;
+        grid-column-start: 12;
         position: relative;
-      }
-
-      img {
         width: 30vw;
         height: 50vh;
+      }
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
         transform: rotate(15deg);
         box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.1);
         position: absolute;
+      }
+      @media screen and (max-width: 1370px) {
+        h5 {
+          grid-column-end: 13;
+        }
+      }
+      @media screen and (max-width: 1040px) {
+        h2 {
+          grid-column-end: 13;
+        }
+        .event {
+          grid-row-start: 2;
+          margin-top: 2rem;
+        }
       }
     `}</style>
   </Grid>

@@ -28,7 +28,7 @@ const Blog = () => (
     </div>
     <style jsx>{`
       img {
-        width: 500px;
+        width: 26vw;
         height: 100vh;
         object-fit: cover;
         display: block;
@@ -93,6 +93,25 @@ const Blog = () => (
         border-radius: 100%;
         background-color: #a73a3a;
         padding: 0 0.25rem;
+      }
+
+      @media screen and (max-width: 1920px){
+        img {
+          width: 36vw;
+        }
+      }
+      @media screen and (max-width: 1280px){
+        h4 {
+          font-size: 5rem;
+        }
+      }
+      @media screen and (max-width: 1024px){
+        h4 {
+          font-size: 4rem;
+        }
+        .event-copy {
+          grid-column-start: 6; 
+        }
       }
     `}</style>
   </Grid>

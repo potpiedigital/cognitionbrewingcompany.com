@@ -55,6 +55,12 @@ const OnDeck = () => {
           height: 80%;
           margin: 2rem auto;
         }
+
+        @media screen and (max-width: 1370px) {
+          .on-deck {
+            grid-row-end: 6;
+          }
+        }
       `}</style>
     </div>
   );

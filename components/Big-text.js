@@ -1,8 +1,8 @@
-const BigText = ({ className, text }) => (
+const BigText = ({ text }) => (
   <h3>
     {text}
     <style jsx>{`
-      h2 {
+      h3 {
         font-size: 33vh;
         line-height: 0.5;
       }

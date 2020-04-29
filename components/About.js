@@ -33,9 +33,6 @@ const About = () => (
       </p>
     </div>
     <hr />
-    {/* <BigText className="big-text"
-    text= "About"
-    /> */}
     <h2>About</h2>
     <style jsx>{`
       img {
