@@ -6,7 +6,7 @@ import Hero from "./Hero";
 import Events from "./Events";
 import Nav from "../components/Nav";
 import Section from "./Section";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { ImageBreak } from "./Image-break";
 
 const fullStyle = {
@@ -17,12 +17,7 @@ const fullStyle = {
 const Coursel = ({ children }) => (
   <div
     onWheel={(event) => {
-      console.log(
-        event.currentTarget.scrollLeft,
-        event.deltaX,
-        event.deltaY,
-        event.deltaMode
-      );
+      event.currentTarget.scrollLeft += event.deltaY;
     }}
   >
     {children}
