@@ -1,6 +1,6 @@
 import CarouselContainer from "../components/Carousel";
 import Head from "next/head";
-import { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const MainPage = () => (
   <div>
@@ -69,7 +69,7 @@ const MainPage = () => (
       }
 
       @media screen and (max-width: 1280px) {
-        body{
+        body {
           font-size: 1rem;
           line-height: 1.35;
         }

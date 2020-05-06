@@ -21,9 +21,9 @@ const Blog = () => (
       <a href="www.facebook.com">read more</a>
     </p>
     <div className="more-info">
-      <button className="more-posts" href="www.facebook.com">
+      <a className="more-posts" href="/stories">
         More Stories
-      </button>
+      </a>
       <p className="next-block">right Cog Brews</p>
     </div>
     <style jsx>{`
@@ -86,31 +86,34 @@ const Blog = () => (
         background-color: transparent;
         border: none;
       }
-      button:before {
+      .more-posts:before {
         content: "↓";
         color: #fff;
         border: 1px solid #a73a3a;
         border-radius: 100%;
         background-color: #a73a3a;
-        padding: 0 0.25rem;
+        padding: 0 0.75rem;
       }
 
-      @media screen and (max-width: 1920px){
+      @media screen and (max-width: 1920px) {
         img {
           width: 36vw;
         }
       }
-      @media screen and (max-width: 1280px){
+      @media screen and (max-width: 1280px) {
         h4 {
           font-size: 5rem;
         }
+        .next-block {
+          display: none;
+        }
       }
-      @media screen and (max-width: 1024px){
+      @media screen and (max-width: 1024px) {
         h4 {
           font-size: 4rem;
         }
         .event-copy {
-          grid-column-start: 6; 
+          grid-column-start: 6;
         }
       }
     `}</style>

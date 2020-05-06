@@ -1,5 +1,4 @@
 import OnTap from "./On-tap";
-import BarrelOffering from "./barrel-offerings";
 import OnDeck from "./On-deck";
 import { Grid } from "./Grid";
 
@@ -17,7 +16,6 @@ const TapList = () => {
         <img src="/hops.svg" />
       </div>
       <OnTap />
-      <BarrelOffering />
       <OnDeck />
       <h3>Cognition</h3>
       <style jsx>{`
@@ -45,6 +43,8 @@ const TapList = () => {
           grid-column: 18 / 25;
           grid-row: 2 / 8;
           word-wrap: break-word;
+          white-space: pre-wrap;
+          word-break: break-all;
           text-transform: uppercase;
         }
         @media screen and (max-width: 1370px) {
@@ -60,8 +60,13 @@ const TapList = () => {
         }
         @media screen and (max-width: 1280px) {
           h3 {
-            grid-column: 17 / 23;
-            font-size: 32vh;
+            grid-column: 18 / 25;
+            font-size: 28vh;
+            margin-top: 4rem;
+          }
+          img {
+            height: 50vh;
+            right: -250px;
           }
         }
       `}</style>

@@ -1,4 +1,3 @@
-import { Grid } from "./Grid";
 import { ImageBreak } from "./Image-break";
 import Historic from "./Historic";
 import Colab from "./Colab";
@@ -16,6 +15,7 @@ const Brews = () => {
         div {
           display: flex;
           flex-direction: row;
+          overflow: hidden;
           /* width: auto; */
         }
       `}</style>

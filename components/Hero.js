@@ -17,7 +17,7 @@ const Hero = () => (
         <address>113 E Canada St. Ishperming, MI</address>
         <a href="tel:906-204-2724"> (906) 204-2724</a>
       </div>
-      <h4>SCROLL/DRAG</h4>
+      <h4>SCROLL SIDEWAYS TO NAVIGATE</h4>
     </div>
     <style jsx>{`
       .main {
@@ -60,6 +60,10 @@ const Hero = () => (
         color: #fff;
         font-style: normal;
         font-size: 1.5vw;
+      }
+
+      .information h4 {
+        width: 20%;
       }
 
       ul {

@@ -5,31 +5,27 @@ const OnDeck = () => {
     <div className="on-deck">
       <div className="on-deck-content">
         <div className="da-beers">
-        <h4>On Deck</h4>
-        <ListingItem marginTop="1.5rem"
-          title="Bloody Scream"
-          desc="Cream Ale"
-          numbers="5.5% ABV - 45 IBU"
-          rating="beer rating img"
-        />
-        <ListingItem marginTop="1.5rem"
-          title="Tricephalic Head Tripel"
-          desc="Belgian Tripel"
-          numbers="9.4% ABV - 34 IBU"
-          rating="beer rating img"
-        />
-        <ListingItem marginTop="1.5rem"
-          title="Skeleton Wolves Red"
-          desc="Red Ale - American Amber / Red"
-          numbers="4% ABV - 23 IBU"
-          rating="beer rating img"
-        />
-        <ListingItem marginTop="1.5rem"
-          title="Hobjection Your Honor"
-          desc="IPA - American"
-          numbers="6.5% ABV - 45 IBU"
-          rating="beer rating img"
-        />
+          <h4>On Deck</h4>
+          <ListingItem
+            marginTop="1.5rem"
+            title="Bloody Scream"
+            desc="Cream Ale"
+          />
+          <ListingItem
+            marginTop="1.5rem"
+            title="Tricephalic Head Tripel"
+            desc="Belgian Tripel"
+          />
+          <ListingItem
+            marginTop="1.5rem"
+            title="Skeleton Wolves Red"
+            desc="Red Ale - American Amber / Red"
+          />
+          <ListingItem
+            marginTop="1.5rem"
+            title="Hobjection Your Honor"
+            desc="IPA - American."
+          />
         </div>
       </div>
       <style jsx>{`
@@ -59,6 +55,11 @@ const OnDeck = () => {
         @media screen and (max-width: 1370px) {
           .on-deck {
             grid-row-end: 6;
+          }
+        }
+        @media screen and (max-width: 1280px) {
+          .on-deck {
+            grid-row-end: 7;
           }
         }
       `}</style>

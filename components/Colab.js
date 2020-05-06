@@ -21,9 +21,7 @@ const Colab = () => (
       </div>
     </div>
     <img className="colab-img" src="/colab-1.jpg" />
-    <button>
-      <a href="cognitionbrewery.com">Contact Us</a>
-    </button>
+    <a href="cognitionbrewery.com">Contact Us</a>
     <ul className="beer-list">
       <li>The Unicorn in Captivity</li>
       <li>Faded Reality</li>
@@ -80,24 +78,25 @@ const Colab = () => (
         width: 24vw;
         height: auto;
       }
-      button {
-        grid-column: 14 / 16;
-        grid-row: 5 / 7;
-        background-color: #a73a3a;
-        border: none;
-        border-radius: 50%;
-        padding: 0;
-        margin: 1rem 0;
-      }
       a {
         text-decoration: none;
         font-size: 1rem;
         color: #ffff;
+        grid-column-start: 13;
+        grid-row: 5 / 7;
+        background-color: #a73a3a;
+        border: none;
+        border-radius: 50%;
+        padding: 3rem;
+        margin: auto;
+        text-align: center;
       }
       h3 {
         font-size: 28vh;
         line-height: 0.8;
         word-wrap: break-word;
+        white-space: pre-wrap;
+        word-break: break-all;
         color: #a73a3a;
         grid-column: 3 / 16;
         grid-row-start: 5;
@@ -107,7 +106,7 @@ const Colab = () => (
       }
       @media screen and (max-width: 1280px) {
         h3 {
-          font-size: 25.5vh;
+          font-size: 23.5vh;
           margin-top: 2rem;
           grid-column: 2 / 17;
           grid-row-start: 7;
@@ -118,6 +117,9 @@ const Colab = () => (
         .teaser-beer {
           left: -10%;
           top: -540%;
+        }
+        .colab-info {
+          grid-column-end: 9;
         }
       }
     `}</style>

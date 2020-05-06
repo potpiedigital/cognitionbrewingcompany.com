@@ -85,12 +85,17 @@ const Events = () => (
           grid-column-end: 13;
         }
       }
+      @media screen and (max-width: 1280px) {
+        h5 {
+          grid-column-end: 12;
+        }
+      }
       @media screen and (max-width: 1040px) {
         h2 {
           grid-column-end: 13;
         }
         .event {
-          grid-row-start: 2;
+          grid-row: 2 / 8;
           margin-top: 2rem;
         }
       }

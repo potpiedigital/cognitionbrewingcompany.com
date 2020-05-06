@@ -47,12 +47,42 @@ const OnTap = () => {
           numbers="6.3% ABV - 30 IBU"
           rating="beer rating img"
         />
+        <ListingItem
+          title="Gnome Wrecker belgian style Pale"
+          desc="Pale Ale - Belgian"
+          numbers="5.9% ABV - 37 IBU"
+          rating="beer rating img"
+        />
+        <ListingItem
+          title="Deep Scream Cream Ale"
+          desc="Cream Ale"
+          numbers="5.2% ABV - 20 IBU"
+          rating="beer rating img"
+        />
+        <ListingItem
+          title="Oblivion Milk Stour"
+          desc="Stout Milk/Sweet"
+          numbers="5% ABV - 30 IBM"
+          rating="beer rating img"
+        />
+        <ListingItem
+          title="Octopus Was Very Scary"
+          desc="Stout - Other"
+          numbers="7.7% ABV - 17IBU"
+          rating="beer rating img"
+        />
+        <ListingItem
+          title="Neurosis Pils"
+          desc="Pilsner - German"
+          numbers="5.9% ABV - 55 IBU"
+          rating="beer rating img"
+        />
       </div>
       <style jsx>{`
         .on-tap {
           grid-column: 2 / 15;
-          grid-row: 4 / 7;
-          margin-top: -1rem;
+          grid-row: 4 / 9;
+          margin-top: 2rem;
         }
 
         h4 {
@@ -63,7 +93,7 @@ const OnTap = () => {
           display: flex;
           flex-wrap: wrap;
           justify-content: start;
-          height: 80%;
+          height: 90%;
         }
       `}</style>
     </div>

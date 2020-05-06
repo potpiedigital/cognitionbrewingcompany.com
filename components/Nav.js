@@ -5,7 +5,7 @@ const Nav = ({ children, isNavShowing, setIsNavShowing, activeSection }) => (
   <nav className={activeSection}>
     <Hamburger isNavShowing={isNavShowing} setIsNavShowing={setIsNavShowing} />
     <ul className={!isNavShowing && "hiding"}>
-      {React.Children.map(children, child => (
+      {React.Children.map(children, (child) => (
         <li>{child}</li>
       ))}
     </ul>
@@ -25,7 +25,8 @@ const Nav = ({ children, isNavShowing, setIsNavShowing, activeSection }) => (
         /* 4. rotate 90deg counter-clockwise */
         /* 5. translate "left" 100% of its width */
         transform: rotate(90deg) translateY(-100%);
-        background: transparent;
+        background: var(--navBackground);
+        color: var(--navColor);
         border-top: 1px solid #000;
         display: flex;
         align-items: center;
@@ -40,10 +41,10 @@ const Nav = ({ children, isNavShowing, setIsNavShowing, activeSection }) => (
       h1 {
         margin: 0;
         padding: 20px 0;
-        color: #fff;
+        color: inherit;
       }
       p {
-        color: #fff;
+        color: inherit;
       }
       ul {
         margin: auto 0;
@@ -70,6 +71,9 @@ const Nav = ({ children, isNavShowing, setIsNavShowing, activeSection }) => (
         display: flex;
         align-items: center;
         justify-content: space-around;
+      }
+      h6 {
+        color: inherit;
       }
     `}</style>
   </nav>

@@ -101,6 +101,12 @@ const Historic = () => (
         margin-top: 4rem;
         z-index: 1;
       }
+
+      @media screen and (max-width: 1280px) {
+        .beer-list {
+          grid-row-start: 5;
+        }
+      }
     `}</style>
   </Grid>
 );
