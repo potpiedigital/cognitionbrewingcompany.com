@@ -36,15 +36,15 @@ const Colab = () => (
     <h3>Collaboration</h3>
     <style jsx>{`
       .colab-info {
-        grid-row: 2;
+        grid-row: 2 / 5;
         grid-column: 2 / 8;
         position: relative;
       }
 
       .teaser-beer {
         position: absolute;
-        left: 0;
-        top: -340%;
+        left: 13%;
+        top: -110%;
       }
 
       hr {
@@ -62,7 +62,7 @@ const Colab = () => (
         flex-wrap: wrap;
         justify-content: space-between;
         list-style: none;
-        grid-row-start: 4;
+        grid-row: 4 / 6;
         grid-column: 2 / 10;
         padding: 0;
         margin-top: 2rem;
@@ -98,11 +98,27 @@ const Colab = () => (
         white-space: pre-wrap;
         word-break: break-all;
         color: #a73a3a;
-        grid-column: 3 / 16;
+        grid-column: 2 / 12;
         grid-row-start: 5;
         margin-top: 7rem;
         z-index: 1;
         hyphens: auto;
+      }
+      @media screen and (max-width: 1440px) {
+        .teaser-beer {
+          top: -140%;
+          left: 7%;
+        }
+        .colab-info {
+          grid-column-end: 9;
+        }
+        .beer-list {
+          grid-row-start: 5;
+          grid-column-end: 12;
+        }
+        h3 {
+          grid-row-start: 6;
+        }
       }
       @media screen and (max-width: 1280px) {
         h3 {
