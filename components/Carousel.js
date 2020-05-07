@@ -51,20 +51,30 @@ const CarouselContainer = () => {
     const onIntersection = (entries) => {
       entries.forEach((entry) => {
         if (entry.intersectionRatio >= 0.8) {
-          console.log(entry.target.id, entry.intersectionRatio);
+          // console.log(entry.target.id, entry.intersectionRatio);
           // window.location.hash = "#" + entry.target.id;
           history.pushState({}, "", "#" + entry.target.id);
           document.documentElement.style.setProperty(
             "--navBackground",
-            { home: "transparent", about: "#a73a3a", "tap-list": "white" }[
-              entry.target.id
-            ] ?? "white"
+            {
+              home: "transparent",
+              about: "#a73a3a",
+              "tap-list": "white",
+              events: "#a73a3a",
+              brews: "#a73a3a",
+            }[entry.target.id] ?? "white"
           );
           document.documentElement.style.setProperty(
             "--navColor",
-            { home: "white", about: "black", "tap-list": "black" }[
-              entry.target.id
-            ] ?? "white"
+            { "tap-list": "black", blog: "black" }[entry.target.id] ?? "white"
+          );
+          document.documentElement.style.setProperty(
+            "--navBorder",
+            {
+              about: "#a73a3a",
+              events: "#a73a3a",
+              brews: "#a73a3a",
+            }[entry.target.id] ?? "black"
           );
         }
       });

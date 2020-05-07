@@ -27,7 +27,7 @@ const Nav = ({ children, isNavShowing, setIsNavShowing, activeSection }) => (
         transform: rotate(90deg) translateY(-100%);
         background: var(--navBackground);
         color: var(--navColor);
-        border-top: 1px solid #000;
+        border-top: 1px solid var(--navBorder);
         display: flex;
         align-items: center;
         z-index: 3;

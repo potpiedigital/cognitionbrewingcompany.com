@@ -3,7 +3,7 @@ import { Grid } from "./Grid";
 
 const About = () => (
   <Grid backgroundColor="#a73a3a" width="100vw">
-    <img src="/Logo.png" />
+    <img src="/Logo-1.svg" />
     <h3>In the wilderness there is Cognition</h3>
     <div className="text-blocks">
       <p>

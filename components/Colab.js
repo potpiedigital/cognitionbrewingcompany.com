@@ -46,7 +46,6 @@ const Colab = () => (
         left: 13%;
         top: -110%;
       }
-
       hr {
         border: 5px solid #a73a3a;
         width: 100%;
@@ -90,6 +89,10 @@ const Colab = () => (
         padding: 3rem;
         margin: auto;
         text-align: center;
+        box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.1);
+      }
+      a:hover {
+        box-shadow: none;
       }
       h3 {
         font-size: 28vh;
@@ -131,8 +134,8 @@ const Colab = () => (
           grid-row-start: 5;
         }
         .teaser-beer {
-          left: -10%;
-          top: -540%;
+          left: 0;
+          top: -160%;
         }
         .colab-info {
           grid-column-end: 9;

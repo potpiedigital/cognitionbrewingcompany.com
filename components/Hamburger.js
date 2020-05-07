@@ -57,7 +57,7 @@ const Hamburger = ({ isNavShowing, setIsNavShowing }) => (
         height: 2px;
         margin-bottom: 5px;
         position: relative;
-        background: #fff;
+        background: var(--navColor);
         border-radius: 3px;
 
         z-index: 1;
@@ -83,7 +83,7 @@ const Hamburger = ({ isNavShowing, setIsNavShowing }) => (
       .menuToggle input:checked ~ span {
         opacity: 1;
         transform: rotate(-45deg) translate(-12px, 20px);
-        background: #fff;
+        background: var(--navColor);
       }
 
       /*
