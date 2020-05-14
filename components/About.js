@@ -1,4 +1,3 @@
-// import BigText from './Big-text';
 import { Grid } from "./Grid";
 
 const About = () => (
@@ -84,11 +83,6 @@ const About = () => (
         margin: 0 auto;
         padding-top: 3rem;
       }
-      /* .big-text {
-        grid-column: 2 / 6;
-        grid-row-start: 4;
-        margin: 0 auto;
-      } */
 
       @media screen and (max-width: 1280px) {
         p {
@@ -96,13 +90,46 @@ const About = () => (
         }
 
         h2 {
-          font-size: 200px;
+          font-size: 15vw;
+          line-height: 1;
         }
         h3 {
-          font-size: 50px;
+          font-size: 4vw;
         }
         img {
           height: 220px;
+        }
+      }
+      @media screen and (max-width: 768px) {
+        img {
+          grid-column: 1 / 4;
+        }
+        h3 {
+          grid-column: 1 / 5;
+          grid-row: 4 / 6;
+          margin-left: 1rem;
+        }
+        .text-blocks {
+          grid-column: 5 / 9;
+        }
+        p {
+          margin-right: 1rem;
+        }
+        p:last-child {
+          display: none;
+        }
+        hr {
+          grid-row: 6 / 7;
+          margin-top: 4rem;
+          grid-column: 1 / 6;
+          margin-left: 1rem;
+        }
+        h2 {
+          grid-row: 7 / 9;
+          grid-column: 1;
+          margin-left: 1rem;
+          padding-top: 0;
+          font-size: 24vw;
         }
       }
     `}</style>

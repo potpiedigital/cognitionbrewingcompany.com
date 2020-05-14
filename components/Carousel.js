@@ -28,6 +28,12 @@ const Coursel = ({ children }) => (
         height: 100%;
         overflow: auto;
       }
+
+      @media screen and (max-width: 768px) {
+        div {
+          flex-direction: column;
+        }
+      }
     `}</style>
   </div>
 );
@@ -44,6 +50,7 @@ const CarouselContainer = () => {
 
   const onClickNavItem = (event) => {
     setActiveSection(getSection(event));
+    setIsNavShowing(false);
   };
 
   useEffect(() => {
@@ -54,6 +61,7 @@ const CarouselContainer = () => {
           // console.log(entry.target.id, entry.intersectionRatio);
           // window.location.hash = "#" + entry.target.id;
           history.pushState({}, "", "#" + entry.target.id);
+          setActiveSection(entry.target.id);
           document.documentElement.style.setProperty(
             "--navBackground",
             {
@@ -140,9 +148,9 @@ const CarouselContainer = () => {
         </a>
       </Nav>
       <Coursel>
-        <Section id="home">
-          <Hero />
-        </Section>
+        {/* <Section id="home"> */}
+        <Hero />
+        {/* </Section> */}
         <Section id="about">
           <About />
         </Section>

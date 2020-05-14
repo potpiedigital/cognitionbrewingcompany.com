@@ -4,7 +4,7 @@ const Section = ({ id, children, style }) => (
     <style jsx>{`
       section {
         height: 100vh;
-        height: calc(var(--vh, 1vh) * 100);
+        /* height: calc(var(--vh, 1vh) * 100); */
         overflow-y: hidden;
         background-color: white;
         display: flex;
@@ -14,6 +14,14 @@ const Section = ({ id, children, style }) => (
       }
       h1 {
         margin: 0;
+      }
+      @media screen and (max-width: 768px) {
+        #home {
+          height: 50vh;
+        }
+        #about {
+          height: 70vh;
+        }
       }
     `}</style>
   </section>

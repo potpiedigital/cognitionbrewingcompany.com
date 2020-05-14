@@ -27,11 +27,6 @@ const Hamburger = ({ isNavShowing, setIsNavShowing }) => (
 
         transition: color 0.3s ease;
       }
-
-      /* .menuToggle a:hover {
-        color: tomato;
-      } */
-
       .menuToggle input {
         display: block;
         width: 40px;
@@ -47,10 +42,6 @@ const Hamburger = ({ isNavShowing, setIsNavShowing }) => (
 
         -webkit-touch-callout: none;
       }
-
-      /*
- * Just a quick hamburger
- */
       .menuToggle span {
         display: block;
         width: 33px;
@@ -75,60 +66,25 @@ const Hamburger = ({ isNavShowing, setIsNavShowing }) => (
       .menuToggle span:nth-last-child(2) {
         transform-origin: 0% 100%;
       }
-
-      /*
- * Transform all the slices of hamburger
- * into a crossmark.
- */
       .menuToggle input:checked ~ span {
         opacity: 1;
         transform: rotate(-45deg) translate(-12px, 20px);
         background: var(--navColor);
       }
-
-      /*
- * But let's hide the middle one.
- */
       .menuToggle input:checked ~ span:nth-last-child(1) {
         opacity: 0;
         transform: rotate(0deg) scale(0.2, 0.2);
       }
-
-      /*
- * Ohyeah and the last one should go the other direction
- */
       .menuToggle input:checked ~ span:nth-last-child(2) {
         transform: rotate(45deg) translate(0, -8px);
       }
-
-      /* .menu {
-        position: absolute;
-        width: 400px;
-        margin: -100px 0 0 -50px;
-        padding: 50px;
-        padding-top: 125px;
-
-        background: #ededed;
-        list-style-type: none;
-        -webkit-font-smoothing: antialiased;
-        /* to stop flickering of text in safari
-
-        transform-origin: 0% 0%;
-        transform: translate(-100%, 0);
-
-        transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
-      }
-
-      .menu li {
-        padding: 10px 0;
-        font-size: 22px;
-      } */
-
-      /*
- * And let's slide it in from the left
- */
       .menuToggle input:checked ~ ul {
         transform: none;
+      }
+      @media screen and (max-width: 768px) {
+        .menuToggle {
+          transform: rotate(0deg);
+        }
       }
     `}</style>
   </div>

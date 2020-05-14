@@ -2,7 +2,6 @@ export const Grid = ({
   children,
   backgroundColor,
   columns = 12,
-  rows = 8,
   width = "100%",
 }) => (
   <>
@@ -12,11 +11,16 @@ export const Grid = ({
         width: ${width};
         display: grid;
         grid-template-columns: repeat(${columns}, 1fr);
-        grid-template-rows: repeat(${rows}, minmax(0, 1fr));
+        grid-template-rows: repeat(8, minmax(0, 1fr));
         min-height: 0;
         min-width: 0;
         grid-gap: 1em;
         background-color: ${backgroundColor};
+      }
+      @media screen and (max-width: 768px) {
+        div {
+          grid-template-columns: repeat(8, 1fr);
+        }
       }
     `}</style>
   </>

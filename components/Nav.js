@@ -75,6 +75,12 @@ const Nav = ({ children, isNavShowing, setIsNavShowing, activeSection }) => (
       h6 {
         color: inherit;
       }
+      @media screen and (max-width: 768px) {
+        nav {
+          transform: rotate(0deg);
+          width: 100vw;
+        }
+      }
     `}</style>
   </nav>
 );
