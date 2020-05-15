@@ -116,6 +116,40 @@ const Blog = () => (
           grid-column-start: 6;
         }
       }
+      @media screen and (max-width: 768px) {
+        img {
+          grid-column-end: 9;
+          grid-row: 1 / 4;
+          width: 100vw;
+          height: 100%;
+        }
+        h2 {
+          grid-column: 1 / 8;
+          grid-row: 4;
+          margin-top: 0;
+          padding-left: 2rem;
+        }
+        .date-title {
+          grid-column: 1 / 8;
+          grid-row: 5;
+          padding-left: 2rem;
+        }
+        hr {
+          grid-column: 1 / 6;
+          grid-row: 6;
+          margin-top: 4rem;
+          margin-left: 2rem;
+        }
+        .event-copy {
+          grid-column: 1 / 9;
+          grid-row: 6 / 9;
+          padding-top: 6rem;
+          padding-left: 2rem;
+        }
+        .more-info {
+          grid-column-end: 9;
+        }
+      }
     `}</style>
   </Grid>
 );

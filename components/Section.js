@@ -22,6 +22,9 @@ const Section = ({ id, children, style }) => (
         #about {
           height: 70vh;
         }
+        #tap-list {
+          height: 200vh;
+        }
       }
     `}</style>
   </section>

@@ -69,6 +69,22 @@ const TapList = () => {
             right: -250px;
           }
         }
+        @media screen and (max-width: 768px) {
+          .intro {
+            grid-column: 1 /8;
+            grid-row: 1 / 2;
+            margin: 0 2rem;
+          }
+          h3 {
+            grid-column: 1 / 9;
+            grid-row: 5 / 9;
+            margin-top: 6rem;
+            margin-left: 2rem;
+          }
+          img {
+            display: none;
+          }
+        }
       `}</style>
     </Grid>
   );

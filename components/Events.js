@@ -99,6 +99,30 @@ const Events = () => (
           margin-top: 2rem;
         }
       }
+      @media screen and (max-width: 768px) {
+        h2 {
+          grid-column-end: 9;
+        }
+
+        .event-img {
+          grid-row: 2 / 4;
+          grid-column: 3 / 6;
+          width: 50vw;
+          height: 30vh;
+          margin-top: 2rem;
+        }
+        img {
+          transform: rotate(-20deg);
+        }
+        .event {
+          grid-row-start: 5;
+          grid-column: 2 / 8;
+          overflow: visible;
+        }
+        h5 {
+          grid-column: 1 / 9;
+        }
+      }
     `}</style>
   </Grid>
 );

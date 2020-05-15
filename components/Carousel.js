@@ -10,7 +10,7 @@ import { useState, useEffect } from "react";
 import { ImageBreak } from "./Image-break";
 
 const fullStyle = {
-  width: "90vw",
+  width: "100vw",
   overflow: "visible",
 };
 

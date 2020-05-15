@@ -81,7 +81,7 @@ const OnTap = () => {
       <style jsx>{`
         .on-tap {
           grid-column: 2 / 15;
-          grid-row: 4 / 9;
+          grid-row: 4 / 8;
           margin-top: 2rem;
         }
 
@@ -94,6 +94,13 @@ const OnTap = () => {
           flex-wrap: wrap;
           justify-content: start;
           height: 90%;
+        }
+        @media screen and (max-width: 768px) {
+          .on-tap {
+            grid-column: 1 / 8;
+            grid-row: 2 / 4;
+            margin-left: 2rem;
+          }
         }
       `}</style>
     </div>

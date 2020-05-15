@@ -1,4 +1,11 @@
-const ListingItem = ({ title, desc, numbers, rating, marginTop="0" }) => (
+const ListingItem = ({
+  title,
+  desc,
+  numbers,
+  rating,
+  marginTop = "0",
+  width = "20%",
+}) => (
   <div className="listing">
     <h5>{title}</h5>
     <p>{desc}</p>
@@ -9,9 +16,9 @@ const ListingItem = ({ title, desc, numbers, rating, marginTop="0" }) => (
         display: flex;
         flex-direction: column;
         height: auto;
-        width: auto;
+        width: ${width};
         padding-right: 2rem;
-        margin-top:${marginTop};
+        margin-top: ${marginTop};
       }
       p {
         margin: 0;

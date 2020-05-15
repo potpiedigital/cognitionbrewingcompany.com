@@ -8,21 +8,25 @@ const OnDeck = () => {
           <h4>On Deck</h4>
           <ListingItem
             marginTop="1.5rem"
+            width="100%"
             title="Bloody Scream"
             desc="Cream Ale"
           />
           <ListingItem
             marginTop="1.5rem"
+            width="100%"
             title="Tricephalic Head Tripel"
             desc="Belgian Tripel"
           />
           <ListingItem
             marginTop="1.5rem"
+            width="100%"
             title="Skeleton Wolves Red"
             desc="Red Ale - American Amber / Red"
           />
           <ListingItem
             marginTop="1.5rem"
+            width="100%"
             title="Hobjection Your Honor"
             desc="IPA - American."
           />
@@ -60,6 +64,12 @@ const OnDeck = () => {
         @media screen and (max-width: 1280px) {
           .on-deck {
             grid-row-end: 7;
+          }
+        }
+        @media screen and (max-width: 768px) {
+          .on-deck {
+            grid-column: 1 / 9;
+            grid-row: 4 / 6;
           }
         }
       `}</style>
