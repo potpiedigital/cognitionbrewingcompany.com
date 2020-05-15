@@ -1,4 +1,7 @@
-import Brews from "./Brews";
+// import Brews from "./Brews";
+import Forage from "./Forage";
+import Historic from "./Historic";
+import Colab from "./Colab";
 import Blog from "./Blog";
 import About from "./About";
 import TapList from "./TapList";
@@ -8,11 +11,6 @@ import Nav from "../components/Nav";
 import Section from "./Section";
 import { useState, useEffect } from "react";
 import { ImageBreak } from "./Image-break";
-
-const fullStyle = {
-  width: "100vw",
-  overflow: "visible",
-};
 
 const Coursel = ({ children }) => (
   <div
@@ -148,28 +146,20 @@ const CarouselContainer = () => {
         </a>
       </Nav>
       <Coursel>
-        {/* <Section id="home"> */}
         <Hero />
-        {/* </Section> */}
-        <Section id="about">
-          <About />
-        </Section>
+        <About />
         <ImageBreak src="/Cognition-Brewing-1.jpg" />
-        <Section id="tap-list">
-          <TapList />
-        </Section>
+        <TapList />
         <ImageBreak src="/Cognition-Brewing-2.jpg" />
-        <Section style={fullStyle} id="events">
-          <Events />
-        </Section>
+        <Events />
         <ImageBreak src="/Cognition-Brewing-1.jpg" />
-        <Section id="blog">
-          <Blog />
-        </Section>
+        <Blog />
         <ImageBreak src="/Cognition-Brewing-2.jpg" />
-        <Section id="brews">
-          <Brews />
-        </Section>
+        <Forage />
+        <ImageBreak src="/Cognition-Brewing-2.jpg" />
+        <Historic />
+        <ImageBreak src="/Cognition-Brewing-2.jpg" />
+        <Colab />
       </Coursel>
       <style jsx>{`
         a {
