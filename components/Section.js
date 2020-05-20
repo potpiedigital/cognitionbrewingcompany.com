@@ -25,6 +25,17 @@ const Section = ({ id, children, style }) => (
         #tap-list {
           height: 200vh;
         }
+        #brews {
+          height: 120vh;
+          overflow: hidden;
+        }
+        #historic {
+          overflow: hidden;
+        }
+        #colab {
+          height: 120vh;
+          overflow: hidden;
+        }
       }
     `}</style>
   </section>

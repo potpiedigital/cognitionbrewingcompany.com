@@ -14,9 +14,11 @@ const Forage = () => (
           that will be featured very briefly in the pub and mostly at beer
           festivals.
         </p>
-        <img className="gear" src="/gear.png" />
       </div>
-      <img className="main-img" src="/forage-1.png" />
+      <div className="photos">
+        <img className="gear" src="/gear.png" />
+        <img className="main-img" src="/forage-1.png" />
+      </div>
       <hr />
       <div className="forage-text">
         <p>
@@ -50,7 +52,10 @@ const Forage = () => (
           grid-row: 1;
           display: flex;
           flex-direction: column;
+        }
+        .photos {
           position: relative;
+          grid-column: 12;
         }
         .main-img {
           grid-column: 10 / 15;
@@ -66,7 +71,7 @@ const Forage = () => (
           position: absolute;
           width: auto;
           height: 35vh;
-          left: 135%;
+          left: 30%;
           top: -85%;
         }
         hr {
@@ -107,6 +112,51 @@ const Forage = () => (
           grid-row-start: 6;
           margin-top: 4rem;
           color: #a73a3a;
+        }
+        @media screen and (max-width: 768px) {
+          .brew-main-content {
+            grid-column: 1 / 6;
+            margin-left: 2rem;
+          }
+          .photos {
+            grid-column: 5 /9;
+            grid-row: 3 / 6;
+            margin-top: 2rem;
+          }
+          .main-img {
+            margin-top: 0;
+          }
+          .gear {
+            top: -50%;
+          }
+          .forage-text {
+            grid-column: 1 / 9;
+            grid-row: 7 / 8;
+            width: 90%;
+            margin: 0 auto;
+            padding-top: 1rem;
+          }
+          .forage-text p:last-child {
+            padding-right: 0;
+          }
+          .beer-list {
+            grid-row: 8 / 9;
+            grid-column: 1 / 9;
+            margin: 2rem 2rem 1rem;
+          }
+          h3 {
+            font-size: 21vh;
+            grid-column: 1 / 9;
+            margin-left: 2rem;
+            grid-row: 5;
+            margin-top: 1rem;
+          }
+          hr {
+            grid-column: 1 / 8;
+            grid-row: 7;
+            margin-left: 2rem;
+            margin-top: 0;
+          }
         }
       `}</style>
     </Grid>

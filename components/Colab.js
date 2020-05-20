@@ -2,10 +2,10 @@ import { Grid } from "./Grid";
 import Section from "./Section";
 
 const Colab = () => (
-  <Section>
+  <Section id="colab">
     <Grid columns={14} width="90vw">
+      <img className="teaser-beer" src="/beer-glass.png" />
       <div className="colab-info">
-        <img className="teaser-beer" src="/beer-glass.png" />
         <hr />
         <div className="colab-text">
           <p>
@@ -42,11 +42,11 @@ const Colab = () => (
           grid-column: 2 / 8;
           position: relative;
         }
-
         .teaser-beer {
-          position: absolute;
-          left: 13%;
-          top: -110%;
+          grid-row: 1;
+          grid-column: 1 / 3;
+          margin-left: 7rem;
+          margin-top: -16rem;
         }
         hr {
           border: 5px solid #a73a3a;
@@ -110,10 +110,6 @@ const Colab = () => (
           hyphens: auto;
         }
         @media screen and (max-width: 1440px) {
-          .teaser-beer {
-            top: -140%;
-            left: 7%;
-          }
           .colab-info {
             grid-column-end: 9;
           }
@@ -126,6 +122,10 @@ const Colab = () => (
           }
         }
         @media screen and (max-width: 1280px) {
+          .teaser-beer {
+            margin-top: -18rem;
+            margin-left: 5rem;
+          }
           h3 {
             font-size: 23.5vh;
             margin-top: 2rem;
@@ -135,12 +135,35 @@ const Colab = () => (
           .beer-list {
             grid-row-start: 5;
           }
-          .teaser-beer {
-            left: 0;
-            top: -160%;
-          }
           .colab-info {
             grid-column-end: 9;
+          }
+        }
+        @media screen and (max-width: 768px) {
+          h3 {
+            font-size: 21vw;
+            grid-row: 2;
+            grid-column: 1 / 9;
+          }
+          .colab-info {
+            grid-row: 4;
+            grid-column: 2 / 8;
+          }
+          .colab-img {
+            grid-column: 6 / 8;
+            width: 38vw;
+          }
+          .teaser-beer {
+            grid-row: 8;
+            margin-top: -5rem;
+          }
+          .beer-list {
+            grid-column: 2 / 8;
+            grid-row: 6;
+          }
+          a {
+            grid-column: 8 / 9;
+            grid-row: 6;
           }
         }
       `}</style>

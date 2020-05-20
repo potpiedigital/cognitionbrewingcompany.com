@@ -2,7 +2,7 @@ import { Grid } from "./Grid";
 import Section from "./Section";
 
 const Historic = () => (
-  <Section>
+  <Section id="historic">
     <Grid backgroundColor="#a73a3a" columns={14} width="90vw">
       <hr />
       <div className="historic-text">
@@ -107,6 +107,41 @@ const Historic = () => (
         @media screen and (max-width: 1280px) {
           .beer-list {
             grid-row-start: 5;
+          }
+        }
+        @media screen and (max-width: 768px) {
+          h3 {
+            grid-column: 1 / 9;
+            grid-row: 1;
+            font-size: 21vh;
+            margin-top: 0;
+            margin-left: -2rem;
+          }
+          hr,
+          .historic-text {
+            grid-row: 5;
+          }
+          .beer-list {
+            grid-row: 7;
+            margin-top: 2rem;
+          }
+          .historic-imgs {
+            grid-column: 2 / 8;
+            grid-row: 1 / 4;
+          }
+          .history-img-1 {
+            width: 36vw;
+          }
+          .history-img-2 {
+            width: 40vw;
+            bottom: -30%;
+            left: -5%;
+          }
+          .history-img-3 {
+            width: 24vw;
+            bottom: -40%;
+            right: -5%;
+            transform: rotate(15deg);
           }
         }
       `}</style>
