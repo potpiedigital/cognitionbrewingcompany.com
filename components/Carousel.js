@@ -27,7 +27,7 @@ const Coursel = ({ children }) => (
         overflow: auto;
       }
 
-      @media screen and (max-width: 768px) {
+      @media screen and (orientation: portrait) {
         div {
           flex-direction: column;
         }

@@ -17,7 +17,7 @@ export const Grid = ({
         grid-gap: 1em;
         background-color: ${backgroundColor};
       }
-      @media screen and (max-width: 768px) {
+      @media screen and (orientation: portrait) {
         div {
           grid-template-columns: repeat(8, 1fr);
           width: 100vw;
