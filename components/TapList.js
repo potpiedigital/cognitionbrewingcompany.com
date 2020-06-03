@@ -3,7 +3,7 @@ import OnDeck from "./On-deck";
 import { Grid } from "./Grid";
 import Section from "./Section";
 
-const TapList = () => {
+const TapList = ({ items }) => {
   return (
     <Section id="tap-list">
       <Grid columns={24} width="125vw">
@@ -17,7 +17,7 @@ const TapList = () => {
           </p>
           <img src="/hops.svg" />
         </div>
-        <OnTap />
+        <OnTap items={items} />
         <OnDeck />
         <h3>Cognition</h3>
         <style jsx>{`
