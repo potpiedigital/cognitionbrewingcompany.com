@@ -95,11 +95,34 @@ const OnTap = () => {
           justify-content: start;
           height: 90%;
         }
+        @media screen and (max-width: 1024px) and (orientation: portrait) {
+          .on-tap {
+            grid-column: 2 / 9;
+            grid-row: 3 / 5;
+          }
+        }
         @media screen and (max-width: 768px) {
           .on-tap {
             grid-column: 1 / 8;
-            grid-row: 2 / 4;
             margin-left: 2rem;
+            grid-row: 2 / 5;
+          }
+        }
+        @media screen and (max-width: 414px) {
+          .on-tap {
+            margin-top: 3rem;
+            grid-row-end: 6;
+            grid-column-end: 6;
+            margin-left: 0;
+          }
+          .flow {
+            justify-content: center;
+          }
+          h4 {
+            font-size: 5.5vw;
+            padding-left: 1.25rem;
+            padding-bottom: 0.5rem;
+            padding-top: 1rem;
           }
         }
       `}</style>

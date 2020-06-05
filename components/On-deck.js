@@ -4,8 +4,8 @@ const OnDeck = () => {
   return (
     <div className="on-deck">
       <div className="on-deck-content">
+        <h4>On Deck</h4>
         <div className="da-beers">
-          <h4>On Deck</h4>
           <ListingItem
             marginTop="1.5rem"
             width="100%"
@@ -55,6 +55,9 @@ const OnDeck = () => {
           height: 80%;
           margin: 2rem auto;
         }
+        h4 {
+          padding-left: 2rem;
+        }
 
         @media screen and (max-width: 1370px) {
           .on-deck {
@@ -66,10 +69,33 @@ const OnDeck = () => {
             grid-row-end: 7;
           }
         }
+        @media screen and (max-width: 1024px) and (orientation: portrait) {
+          .on-deck {
+            grid-column: 7 / 9;
+            grid-row: 1 / 3;
+          }
+        }
         @media screen and (max-width: 768px) {
           .on-deck {
-            grid-column: 1 / 9;
-            grid-row: 4 / 6;
+            grid-column: 6 / 9;
+          }
+        }
+        @media screen and (max-width: 414px) {
+          .on-deck {
+            grid-column: 1 / 6;
+            grid-row: 6 / 8;
+          }
+          h4 {
+            font-size: 5.5vw;
+            padding-bottom: 0.5rem;
+            padding-top: 1rem;
+          }
+          .da-beers {
+            display: flex;
+            flex-wrap: wrap;
+            width: 80%;
+            height: 50%;
+            margin: 0 auto;
           }
         }
       `}</style>

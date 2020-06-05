@@ -24,6 +24,14 @@ const ListingItem = ({
         margin: 0;
         font-size: 0.825rem;
       }
+      @media screen and (max-width: 414px) {
+        .listing {
+          width: 36%;
+        }
+        h5 {
+          font-size: 1rem;
+        }
+      }
     `}</style>
   </div>
 );

@@ -15,26 +15,84 @@ const Section = ({ id, children, style }) => (
       h1 {
         margin: 0;
       }
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 1024px) and (orientation: portrait) {
         #home {
-          height: 50vh;
+          height: 60vh;
         }
         #about {
           height: 70vh;
+        }
+        #tap-list {
+          height: 120vh;
+        }
+        #blog {
+          height: 65vh;
+        }
+        #brews {
+          overflow: hidden;
+        }
+      }
+      @media screen and (max-width: 768px) {
+        #home {
+          height: 50vh;
         }
         #tap-list {
           height: 200vh;
         }
         #brews {
           height: 120vh;
-          overflow: hidden;
         }
         #historic {
-          overflow: hidden;
+          overflow-y: visible;
         }
         #colab {
           height: 120vh;
+          overflow-y: visible;
+          /* overflow: hidden; */
+        }
+        #blog {
+          height: 100vh;
+        }
+      }
+      @media screen and (max-width: 414px) {
+        #about {
+          height: 120vh;
+        }
+        #tap-list {
+          height: 220vh;
           overflow: hidden;
+        }
+        #events {
+          height: 140vh;
+        }
+        #blog {
+          height: 140vh;
+        }
+        #brews {
+          height: 160vh;
+        }
+        #historic {
+          height: 140vh;
+        }
+        #colab {
+          height: 160vh;
+        }
+      }
+      @media screen and (max-width: 375px) {
+        #about {
+          height: 130vh;
+        }
+        #tap-list {
+          height: 230vh;
+        }
+        #blog {
+          height: 150vh;
+        }
+        #brews {
+          height: 170vh;
+        }
+        #colab {
+          height: 200vh;
         }
       }
     `}</style>

@@ -181,6 +181,12 @@ const CarouselContainer = () => {
           top: 50%;
           left: 0;
         }
+        @media screen and (max-width: 414px) {
+          a {
+            font-size: 5vh;
+            line-height: 20px;
+          }
+        }
       `}</style>
     </main>
   );

@@ -135,8 +135,34 @@ const Colab = () => (
           .beer-list {
             grid-row-start: 5;
           }
+        }
+        @media screen and (max-width: 1024px) and (orientation: portrait) {
           .colab-info {
-            grid-column-end: 9;
+            grid-row: 1 / 3;
+            grid-column: 3 / 8;
+            margin-top: 4rem;
+          }
+          .teaser-beer {
+            margin-top: 0rem;
+            margin-left: -15rem;
+          }
+          .beer-list {
+            grid-row: 3;
+            grid-column: 3 / 7;
+          }
+          .colab-img {
+            grid-column: 6 / 9;
+            grid-row: 4;
+            width: 34vw;
+          }
+          a {
+            grid-column: 2;
+            grid-row: 5;
+          }
+          h3 {
+            grid-column: 1 / 9;
+            grid-row: 6 / 9;
+            font-size: 21.5vh;
           }
         }
         @media screen and (max-width: 768px) {
@@ -148,22 +174,76 @@ const Colab = () => (
           .colab-info {
             grid-row: 4;
             grid-column: 2 / 8;
+            margin-top: 0;
           }
           .colab-img {
             grid-column: 6 / 8;
+            grid-row: 1;
             width: 38vw;
           }
           .teaser-beer {
             grid-row: 8;
             margin-top: -5rem;
+            margin-left: 0;
           }
           .beer-list {
             grid-column: 2 / 8;
             grid-row: 6;
           }
           a {
-            grid-column: 8 / 9;
-            grid-row: 6;
+            grid-column: 7 / 8;
+            grid-row: 7;
+          }
+        }
+        @media screen and (max-width: 414px) {
+          .teaser-beer {
+            display: none;
+          }
+
+          .colab-img {
+            grid-column: 2 / 6;
+            width: 49vw;
+            margin-left: 7rem;
+            z-index: 2;
+          }
+          .colab-info {
+            grid-column: 1 / 5;
+            grid-row: 3 / 6;
+            margin-top: 4rem;
+            padding-left: 1rem;
+          }
+          a {
+            grid-column: 3;
+            grid-row: 7;
+            margin-top: 6rem;
+          }
+          h3 {
+            grid-column: 1 / 6;
+            font-size: 26vw;
+            margin-top: 3rem;
+          }
+          .beer-list {
+            grid-column: 1 / 6;
+            padding-left: 1rem;
+            flex-direction: column;
+            grid-row: 5 / 8;
+            margin: 5rem 0;
+          }
+        }
+        @media screen and (max-width: 375px) {
+          h3 {
+            margin-top: 1rem;
+          }
+          hr {
+            margin-top: 0;
+          }
+          .colab-img {
+            margin-top: 1rem;
+          }
+          .beer-list {
+            margin-top: 2rem;
+            margin-bottom: 0;
+            grid-row-end: 7;
           }
         }
       `}</style>

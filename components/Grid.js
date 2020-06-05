@@ -25,6 +25,11 @@ export const Grid = ({
         #tap-list {
           grid-template-rows: repeat(12, minmax(0, 1fr));
         }
+        @media screen and (max-width: 414px) {
+          div {
+            grid-template-columns: repeat(5, 1fr);
+          }
+        }
       }
     `}</style>
   </>

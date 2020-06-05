@@ -55,11 +55,9 @@ const Forage = () => (
         }
         .photos {
           position: relative;
-          grid-column: 12;
+          grid-column: 11 / 13;
         }
         .main-img {
-          grid-column: 10 / 15;
-          grid-row: 1;
           width: auto;
           height: 32vh;
           margin-top: 4rem;
@@ -113,21 +111,51 @@ const Forage = () => (
           margin-top: 4rem;
           color: #a73a3a;
         }
+        @media screen and (max-width: 1024px) and (orientation: portrait) {
+          .brew-main-content {
+            grid-column: 2 / 6;
+          }
+          hr {
+            margin-top: 5rem;
+          }
+          .forage-text {
+            grid-column: 2 / 8;
+            padding-top: 7rem;
+          }
+          .beer-list {
+            grid-column-end: 9;
+          }
+          .photos {
+            grid-column: 6 / 9;
+          }
+          .main-img {
+            height: 24vh;
+          }
+          h3 {
+            font-size: 24vh;
+            grid-column: 1 / 9;
+            margin-left: -2rem;
+            grid-row: 6;
+            margin-top: 6rem;
+          }
+        }
         @media screen and (max-width: 768px) {
           .brew-main-content {
             grid-column: 1 / 6;
             margin-left: 2rem;
           }
           .photos {
-            grid-column: 5 /9;
+            grid-column: 4 /9;
             grid-row: 3 / 6;
             margin-top: 2rem;
           }
           .main-img {
             margin-top: 0;
+            height: 32vh;
           }
           .gear {
             top: -50%;
+            left: 50%;
           }
           .forage-text {
             grid-column: 1 / 9;
@@ -149,13 +177,62 @@ const Forage = () => (
             grid-column: 1 / 9;
             margin-left: 2rem;
             grid-row: 5;
-            margin-top: 1rem;
+            margin-top: 0;
           }
           hr {
             grid-column: 1 / 8;
             grid-row: 7;
             margin-left: 2rem;
             margin-top: 0;
+          }
+        }
+        @media screen and (max-width: 414px) {
+          .brew-main-content {
+            margin-left: 1rem;
+            grid-column-end: 5;
+          }
+          .brew-main-content h2 {
+            margin-top: 2rem;
+          }
+          .photos {
+            grid-column: 3 / 6;
+            margin-top: 0;
+          }
+          .gear {
+            top: -25%;
+          }
+          h3 {
+            grid-column-end: 6;
+            grid-row: 4;
+            margin-top: 1rem;
+            margin-left: -1rem;
+            font-size: 18vh;
+          }
+          hr {
+            grid-column: 2 / 5;
+            margin-left: -3rem;
+            width: 130%;
+            grid-row: 5;
+            margin-top: 3rem;
+          }
+          .forage-text {
+            grid-row: 5 / 6;
+            grid-column-end: 6;
+            margin: 4rem 0 0 1rem;
+            width: 90%;
+            flex-direction: column;
+            padding-top: 0;
+          }
+          .beer-list {
+            grid-row: 7 / 9;
+            grid-column: 1 / 4;
+            margin-top: 4rem;
+            margin-left: 1rem;
+            flex-direction: column;
+          }
+          li {
+            width: 100%;
+            font-size: 14px;
           }
         }
       `}</style>

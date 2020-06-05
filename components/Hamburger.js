@@ -81,7 +81,7 @@ const Hamburger = ({ isNavShowing, setIsNavShowing }) => (
       .menuToggle input:checked ~ ul {
         transform: none;
       }
-      @media screen and (max-width: 768px) {
+      @media screen and (orientation: portrait) {
         .menuToggle {
           transform: rotate(0deg);
         }

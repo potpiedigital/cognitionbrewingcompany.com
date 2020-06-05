@@ -71,20 +71,48 @@ const TapList = () => {
               right: -250px;
             }
           }
-          @media screen and (max-width: 768px) {
+          @media screen and (max-width: 1024px) and (orientation: portrait) {
             .intro {
-              grid-column: 1 /8;
+              grid-column: 2 /7;
               grid-row: 1 / 2;
-              margin: 0 2rem;
+            }
+            img {
+              top: 0px;
+              right: -320px;
+              height: 38vh;
             }
             h3 {
               grid-column: 1 / 9;
+              font-size: 23vh;
               grid-row: 5 / 9;
-              margin-top: 6rem;
               margin-left: 2rem;
             }
             img {
               display: none;
+            }
+          }
+          @media screen and (max-width: 768px) {
+            .intro {
+              grid-column: 1 /5;
+              margin-left: 2rem;
+            }
+            h3 {
+              font-size: 26vh;
+            }
+          }
+          @media screen and (max-width: 414px) {
+            .intro {
+              grid-column: 1/ 5;
+              margin-left: 0;
+              padding-left: 1rem;
+            }
+            h2 {
+              margin-top: 2rem;
+            }
+            h3 {
+              font-size: 20vh;
+              grid-column-end: 6;
+              grid-row-start: 7;
             }
           }
         `}</style>

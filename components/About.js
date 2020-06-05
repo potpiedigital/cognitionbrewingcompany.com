@@ -99,39 +99,90 @@ const About = () => (
             font-size: 4vw;
           }
           img {
-            height: 220px;
+            height: 33vh;
           }
         }
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 1024px) and (orientation: portrait) {
           img {
             grid-column: 1 / 4;
+            height: 350px;
+          }
+          h2 {
+            grid-column: 1 / 9;
+            padding-top: 6rem;
+            font-size: 26vw;
+            margin-left: 1rem;
           }
           h3 {
             grid-column: 1 / 5;
-            grid-row: 4 / 6;
-            margin-left: 1rem;
+            margin-left: 2rem;
+            font-size: 5vw;
+          }
+          hr {
+            grid-column: 1 / 6;
+            margin-left: 2rem;
           }
           .text-blocks {
             grid-column: 5 / 9;
           }
           p {
             margin-right: 1rem;
+            font-size: 16px;
           }
           p:last-child {
             display: none;
           }
+        }
+        @media screen and (max-width: 768px) {
+          img {
+            height: 28vh;
+          }
+          h3 {
+            grid-row: 4 / 6;
+            font-size: 4vw;
+            margin-top: 3rem;
+          }
+          p {
+            font-size: 14px;
+          }
           hr {
             grid-row: 6 / 7;
             margin-top: 4rem;
-            grid-column: 1 / 6;
-            margin-left: 1rem;
           }
           h2 {
             grid-row: 7 / 9;
             grid-column: 1;
-            margin-left: 1rem;
             padding-top: 0;
             font-size: 24vw;
+          }
+        }
+        @media screen and (max-width: 414px) {
+          img {
+            grid-column: 2 / 4;
+            margin-top: 1rem;
+          }
+          h3 {
+            display: none;
+          }
+          hr {
+            grid-row: 3;
+            grid-column-end: 4;
+            margin-top: 2rem;
+          }
+          h2 {
+            grid-row: 3;
+            grid-column: 1 / 6;
+            margin-top: 3rem;
+            overflow: visible;
+          }
+          .text-blocks {
+            grid-column: 1 / 6;
+            grid-row-start: 4;
+            margin-top: 3rem;
+          }
+          p {
+            margin-right: 0;
+            padding: 0 2rem;
           }
         }
       `}</style>

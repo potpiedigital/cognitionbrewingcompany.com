@@ -44,7 +44,7 @@ const Social = () => (
         transform: rotate(-90deg);
         fill: var(--navColor);
       }
-      @media screen and (max-width: 768px) {
+      @media screen and (orientation: portrait) {
         svg {
           transform: rotate(0deg);
         }

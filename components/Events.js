@@ -105,7 +105,7 @@ const Events = () => (
             margin-top: 2rem;
           }
         }
-        @media screen and (max-width: 768px) {
+        @media screen and (orientation: portrait) {
           h2 {
             grid-column-end: 9;
           }
@@ -121,12 +121,43 @@ const Events = () => (
             transform: rotate(-20deg);
           }
           .event {
-            grid-row-start: 5;
+            margin-top: 12rem;
+            grid-row-start: 4;
             grid-column: 2 / 8;
             overflow: visible;
           }
           h5 {
             grid-column: 1 / 9;
+          }
+        }
+        @media screen and (max-width: 414px) {
+          h2 {
+            grid-column: 1 / 6;
+            padding-left: 1rem;
+          }
+          .event {
+            grid-column: 1 / 6;
+          }
+          .event-img {
+            margin-top: 4rem;
+            grid-column: 2 / 5;
+          }
+          h3,
+          p,
+          a {
+            padding-left: 1rem;
+          }
+          .event {
+            margin-top: 6rem;
+          }
+        }
+        @media screen and (max-width: 375px) {
+          h2 {
+            grid-column-end: 7;
+          }
+          .event,
+          .event-img {
+            margin-top: 2rem;
           }
         }
       `}</style>

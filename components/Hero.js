@@ -97,18 +97,45 @@ const Hero = () => (
             width: 50%;
           }
         }
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 1024px) and (orientation: portrait) {
           .main {
             height: 100%;
           }
           h1 {
             line-height: 1;
+            margin-top: 10rem;
           }
           h4 {
             display: none;
           }
+        }
+        @media screen and (max-width: 768px) {
+          h1 {
+            line-height: 1;
+            margin-top: 5rem;
+          }
+
           .information div {
             width: 50%;
+          }
+        }
+        @media screen and (max-width: 414px) {
+          h1 {
+            margin-top: 4rem;
+          }
+
+          .information div {
+            width: 100%;
+            text-align: center;
+          }
+          div ul {
+            width: 60%;
+            margin: 1rem auto;
+          }
+          .information address,
+          .information a,
+          li {
+            font-size: 3vw;
           }
         }
       `}</style>

@@ -118,6 +118,39 @@ const Blog = () => (
             grid-column-start: 6;
           }
         }
+        @media screen and (max-width: 1024px) and (orientation: portrait) {
+          img {
+            height: 65vh;
+          }
+          h2 {
+            grid-column: 4 / 9;
+            margin-left: 2rem;
+            margin-top: 2rem;
+          }
+          .date-title {
+            grid-column: 4 / 8;
+            grid-row: 2;
+            margin-top: 6rem;
+            margin-left: 2rem;
+          }
+          hr {
+            grid-column: 4 / 9;
+            grid-row: 3;
+            margin-top: 12rem;
+            margin-left: 2rem;
+          }
+          .event-copy {
+            grid-column: 4 / 9;
+            grid-row: 5 / 7;
+            padding-left: 2rem;
+            padding-top: 0;
+            margin-top: 2rem;
+          }
+          .more-info {
+            grid-column: 7 / 9;
+            grid-row: 8;
+          }
+        }
         @media screen and (max-width: 768px) {
           img {
             grid-column-end: 9;
@@ -129,12 +162,11 @@ const Blog = () => (
             grid-column: 1 / 8;
             grid-row: 4;
             margin-top: 0;
-            padding-left: 2rem;
           }
           .date-title {
             grid-column: 1 / 8;
             grid-row: 5;
-            padding-left: 2rem;
+            margin-top: 0;
           }
           hr {
             grid-column: 1 / 6;
@@ -149,7 +181,56 @@ const Blog = () => (
             padding-left: 2rem;
           }
           .more-info {
-            grid-column-end: 9;
+            grid-column: 6/9;
+            grid-row: 8;
+          }
+        }
+        @media screen and (max-width: 414px) {
+          img {
+            grid-column-end: 6;
+          }
+          .date-title {
+            grid-column: 1 / 5;
+            margin-left: 0;
+            padding-left: 1rem;
+          }
+          h2 {
+            grid-column-end: 6;
+            margin-left: 1rem;
+          }
+          h4 {
+            font-size: 2.75rem;
+            line-height: 1;
+          }
+          hr {
+            margin-top: 1rem;
+            margin-left: 1rem;
+          }
+          .event-copy {
+            margin-top: 3rem;
+            grid-column: 1 / 6;
+            padding: 0 1rem 0 1rem;
+          }
+          .more-info {
+            grid-column: 2 / 5;
+          }
+          .more-posts {
+            padding-left: 3rem;
+          }
+          .more-posts:before {
+            display: none;
+          }
+        }
+        @media screen and (max-width: 375px) {
+          h4 {
+            font-size: 2.5rem;
+          }
+          .more-posts {
+            padding-left: 1.5rem;
+          }
+          h5 {
+            grid-column-end: 7;
+            grid-row-start: 7;
           }
         }
       `}</style>
