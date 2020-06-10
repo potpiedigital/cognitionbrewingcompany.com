@@ -68,7 +68,7 @@ const Historic = () => (
           color: #000000;
         }
         .historic-imgs {
-          grid-column: 10 / 17;
+          grid-column: 10 / 15;
           grid-row: 1 / 6;
           position: relative;
         }
@@ -107,6 +107,7 @@ const Historic = () => (
         h3 {
           font-size: 28vh;
           margin-top: 0;
+          margin-bottom: 0;
         }
 
         @media screen and (max-width: 1280px) {

@@ -1,8 +1,26 @@
 import CarouselContainer from "../components/Carousel";
 import Head from "next/head";
 import React, { useState, useEffect } from "react";
+import { btoa } from "abab";
 
-const MainPage = () => (
+export async function getStaticProps() {
+  const untappdApi = "https://business.untappd.com/api/v1";
+  const auth = btoa(`${process.env.UNTAPPD_USER}:${process.env.UNTAPPD_TOKEN}`);
+  const opts = { headers: { Authorization: `Basic ${auth}` } };
+
+  const [items, onDeck] = await Promise.all([
+    fetch(`${untappdApi}/sections/90568/items`, opts),
+    fetch(`${untappdApi}/sections/90575/items`, opts),
+    fetch(`${untappdApi}/sections/90567/items`, opts),
+  ])
+    .then(([a, b, c]) => Promise.all([a.json(), b.json(), c.json()]))
+    .then(([a, b, c]) => [[...a.items, ...b.items], c.items]);
+  return {
+    props: { items, onDeck },
+  };
+}
+
+const MainPage = ({ items, onDeck }) => (
   <div>
     <Head>
       <link
@@ -10,7 +28,7 @@ const MainPage = () => (
         rel="stylesheet"
       />
     </Head>
-    <CarouselContainer />
+    <CarouselContainer items={items} onDeck={onDeck} />
     <style jsx global>{`
       html,
       body,

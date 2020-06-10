@@ -42,7 +42,7 @@ const getSection = (event) => {
   return href.substring(indexOf);
 };
 
-const CarouselContainer = () => {
+const CarouselContainer = ({ items, onDeck }) => {
   const [isNavShowing, setIsNavShowing] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
 
@@ -149,7 +149,7 @@ const CarouselContainer = () => {
         <Hero />
         <About />
         <ImageBreak src="/Cognition-Brewing-1.jpg" />
-        <TapList />
+        <TapList items={items} onDeck={onDeck} />
         <ImageBreak src="/Cognition-Brewing-2.jpg" />
         <Events />
         <ImageBreak src="/Cognition-Brewing-1.jpg" />
