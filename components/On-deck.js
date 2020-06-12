@@ -71,13 +71,12 @@ const OnDeck = ({ onDeck }) => (
         }
         h4 {
           font-size: 5.5vw;
-          padding-bottom: 0.5rem;
-          padding-top: 1rem;
+          padding: 1rem 0 0.5rem 1rem;
         }
         .da-beers {
           display: flex;
           flex-wrap: wrap;
-          width: 80%;
+          width: 90%;
           height: 50%;
           margin: 0 auto;
         }

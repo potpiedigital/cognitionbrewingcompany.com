@@ -34,7 +34,7 @@ const Section = ({ id, children, style }) => (
       }
       @media screen and (max-width: 768px) {
         #home {
-          height: 50vh;
+          height: 70vh;
         }
         #tap-list {
           height: 200vh;
@@ -63,7 +63,7 @@ const Section = ({ id, children, style }) => (
           overflow: hidden;
         }
         #events {
-          height: 140vh;
+          height: 150vh;
         }
         #blog {
           height: 140vh;
@@ -72,7 +72,7 @@ const Section = ({ id, children, style }) => (
           height: 160vh;
         }
         #historic {
-          height: 140vh;
+          height: 130vh;
         }
         #colab {
           height: 160vh;
@@ -80,16 +80,16 @@ const Section = ({ id, children, style }) => (
       }
       @media screen and (max-width: 375px) {
         #about {
-          height: 130vh;
+          height: 140vh;
         }
         #tap-list {
           height: 230vh;
         }
         #blog {
-          height: 150vh;
+          height: 160vh;
         }
         #brews {
-          height: 170vh;
+          height: 190vh;
         }
         #colab {
           height: 200vh;

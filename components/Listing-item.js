@@ -26,7 +26,11 @@ const ListingItem = ({
       }
       @media screen and (max-width: 414px) {
         .listing {
-          width: 36%;
+          width: 43%;
+          padding-right: 0;
+        }
+        .listing:nth-child(odd) {
+          padding-right: 1rem;
         }
         h5 {
           font-size: 1rem;

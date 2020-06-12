@@ -193,6 +193,7 @@ const Historic = () => (
           }
           .historic-imgs {
             grid-column: 1 / 6;
+            grid-row-end: 3;
           }
           .history-img-1 {
             width: 45vw;
@@ -201,34 +202,37 @@ const Historic = () => (
           }
           .history-img-2 {
             width: 50vw;
-            bottom: 10%;
+            bottom: -55%;
             left: 5%;
           }
           .history-img-3 {
             width: 29vw;
-            bottom: 5%;
+            bottom: -45%;
             right: 5%;
           }
           hr {
             grid-row: 4;
             grid-column: 2 / 5;
             margin-left: -3rem;
+            margin-top: 2rem;
             width: 130%;
             margin-top: 0;
           }
           .historic-text {
             grid-row: 4 / 5;
-            grid-column: 1 / 5;
-            margin-left: 1rem;
-            margin-top: 2rem;
+            grid-column: 1 / 6;
+            margin-left: 0;
+            margin-top: 1rem;
+          }
+          .historic-text p {
+            padding: 0 1rem;
           }
           .beer-list {
-            grid-row: 6 / 9;
+            grid-row: 7 / 9;
             grid-column: 1 / 6;
+            margin-top: 0;
             margin-left: 1rem;
             flex-direction: column;
-            margin-bottom: 1rem;
-            margin-top: 4rem;
           }
         }
       `}</style>

@@ -141,6 +141,8 @@ const Events = () => (
           .event-img {
             margin-top: 4rem;
             grid-column: 2 / 5;
+            width: 60vw;
+            height: 35vh;
           }
           h3,
           p,
@@ -149,6 +151,9 @@ const Events = () => (
           }
           .event {
             margin-top: 6rem;
+          }
+          h5 {
+            grid-column-end: 6;
           }
         }
         @media screen and (max-width: 375px) {

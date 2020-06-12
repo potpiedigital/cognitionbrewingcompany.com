@@ -87,10 +87,6 @@ const About = () => (
         }
 
         @media screen and (max-width: 1280px) {
-          p {
-            font-size: 14px;
-          }
-
           h2 {
             font-size: 15vw;
             line-height: 1;
@@ -127,7 +123,6 @@ const About = () => (
           }
           p {
             margin-right: 1rem;
-            font-size: 16px;
           }
           p:last-child {
             display: none;
@@ -139,11 +134,16 @@ const About = () => (
           }
           h3 {
             grid-row: 4 / 6;
+            grid-column-end: 4;
+            margin-left: 1rem;
             font-size: 4vw;
             margin-top: 3rem;
           }
-          p {
-            font-size: 14px;
+          .text-blocks {
+            grid-column-start: 4;
+          }
+          .text-blocks p {
+            padding-left: 3rem;
           }
           hr {
             grid-row: 6 / 7;
@@ -167,22 +167,22 @@ const About = () => (
           hr {
             grid-row: 3;
             grid-column-end: 4;
-            margin-top: 2rem;
+            margin-top: 0;
           }
           h2 {
             grid-row: 3;
             grid-column: 1 / 6;
-            margin-top: 3rem;
+            margin-top: 1rem;
             overflow: visible;
           }
           .text-blocks {
             grid-column: 1 / 6;
             grid-row-start: 4;
-            margin-top: 3rem;
+            margin-top: 1rem;
           }
           p {
             margin-right: 0;
-            padding: 0 2rem;
+            padding: 0 1rem;
           }
         }
       `}</style>

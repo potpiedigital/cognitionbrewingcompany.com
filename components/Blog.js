@@ -215,7 +215,8 @@ const Blog = () => (
             grid-column: 2 / 5;
           }
           .more-posts {
-            padding-left: 3rem;
+            padding-left: 1rem;
+            padding-top: 2rem;
           }
           .more-posts:before {
             display: none;

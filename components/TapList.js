@@ -102,12 +102,15 @@ const TapList = ({ items, onDeck }) => {
           }
           @media screen and (max-width: 414px) {
             .intro {
-              grid-column: 1/ 5;
+              grid-column: 1/ 6;
               margin-left: 0;
-              padding-left: 1rem;
             }
             h2 {
               margin-top: 2rem;
+              padding-left: 1rem;
+            }
+            p {
+              padding: 0 1rem;
             }
             h3 {
               font-size: 20vh;

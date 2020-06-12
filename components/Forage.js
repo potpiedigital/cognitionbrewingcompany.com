@@ -189,22 +189,30 @@ const Forage = () => (
         @media screen and (max-width: 414px) {
           .brew-main-content {
             margin-left: 1rem;
-            grid-column-end: 5;
+            grid-column-end: 6;
           }
           .brew-main-content h2 {
             margin-top: 2rem;
+          }
+          .brew-main-content p {
+            padding-right: 2rem;
           }
           .photos {
             grid-column: 3 / 6;
             margin-top: 0;
           }
+          .main-img {
+            margin-top: 0;
+            height: 28vh;
+          }
           .gear {
-            top: -25%;
+            height: 28vh;
+            top: -10%;
           }
           h3 {
             grid-column-end: 6;
             grid-row: 4;
-            margin-top: 1rem;
+            margin-top: -1rem;
             margin-left: -1rem;
             font-size: 18vh;
           }
@@ -213,26 +221,28 @@ const Forage = () => (
             margin-left: -3rem;
             width: 130%;
             grid-row: 5;
-            margin-top: 3rem;
+            margin-top: 1rem;
           }
           .forage-text {
             grid-row: 5 / 6;
             grid-column-end: 6;
-            margin: 4rem 0 0 1rem;
+            margin: 2rem 0 0 1rem;
             width: 90%;
             flex-direction: column;
             padding-top: 0;
           }
+          .forage-text p {
+            padding-right: 0;
+          }
           .beer-list {
             grid-row: 7 / 9;
             grid-column: 1 / 4;
-            margin-top: 4rem;
+            margin-top: 3rem;
             margin-left: 1rem;
             flex-direction: column;
           }
           li {
             width: 100%;
-            font-size: 14px;
           }
         }
       `}</style>

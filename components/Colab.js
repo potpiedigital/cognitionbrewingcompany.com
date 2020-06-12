@@ -223,11 +223,11 @@ const Colab = () => (
             margin-top: 3rem;
           }
           .beer-list {
+            grid-row: 6 / 8;
             grid-column: 1 / 6;
-            padding-left: 1rem;
+            margin-top: 0;
+            margin-left: 1rem;
             flex-direction: column;
-            grid-row: 5 / 8;
-            margin: 5rem 0;
           }
         }
         @media screen and (max-width: 375px) {
@@ -241,9 +241,9 @@ const Colab = () => (
             margin-top: 1rem;
           }
           .beer-list {
-            margin-top: 2rem;
-            margin-bottom: 0;
-            grid-row-end: 7;
+            grid-row: 5 / 8;
+            margin-top: 6rem;
+            margin-bottom: 5rem;
           }
         }
       `}</style>
