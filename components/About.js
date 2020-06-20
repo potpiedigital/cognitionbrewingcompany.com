@@ -180,7 +180,7 @@ const About = () => (
             grid-row-start: 4;
             margin-top: 1rem;
           }
-          p {
+          .text-blocks p {
             margin-right: 0;
             padding: 0 1rem;
           }

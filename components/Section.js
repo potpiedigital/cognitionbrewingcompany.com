@@ -55,6 +55,9 @@ const Section = ({ id, children, style }) => (
         }
       }
       @media screen and (max-width: 414px) {
+        #home {
+          height: auto;
+        }
         #about {
           height: 120vh;
         }
@@ -72,7 +75,7 @@ const Section = ({ id, children, style }) => (
           height: 160vh;
         }
         #historic {
-          height: 130vh;
+          height: 135vh;
         }
         #colab {
           height: 160vh;

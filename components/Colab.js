@@ -23,7 +23,9 @@ const Colab = () => (
         </div>
       </div>
       <img className="colab-img" src="/colab-1.jpg" />
-      <a href="cognitionbrewery.com">Contact Us</a>
+      <a href="mailto:kris@cognitionbrewing.com?subject=Mail from Our Site">
+        Contact Us
+      </a>
       <ul className="beer-list">
         <li>The Unicorn in Captivity</li>
         <li>Faded Reality</li>

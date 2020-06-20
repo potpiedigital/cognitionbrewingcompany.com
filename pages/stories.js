@@ -2,7 +2,8 @@ import SingleStory from "../components/Single-story";
 
 const Stories = () => {
   return (
-    <>
+    <section>
+      <h1>More Stories</h1>
       <SingleStory
         image="https://source.unsplash.com/random"
         title="Story title Number 1"
@@ -39,7 +40,13 @@ const Stories = () => {
       commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
       velit esse cillum dolore eu fugiat nulla pariatur."
       />
-    </>
+      <style jsx>{`
+        section {
+          width: 90vw;
+          margin: 1em auto;
+        }
+      `}</style>
+    </section>
   );
 };
 

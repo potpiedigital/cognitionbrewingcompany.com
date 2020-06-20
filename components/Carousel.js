@@ -52,12 +52,11 @@ const CarouselContainer = ({ items, onDeck }) => {
   };
 
   useEffect(() => {
+    //how do I make this mobile responsive? right now background stays transparent throughout
     const options = { root: document.querySelector("main"), threshold: 0.8 };
     const onIntersection = (entries) => {
       entries.forEach((entry) => {
         if (entry.intersectionRatio >= 0.8) {
-          // console.log(entry.target.id, entry.intersectionRatio);
-          // window.location.hash = "#" + entry.target.id;
           history.pushState({}, "", "#" + entry.target.id);
           setActiveSection(entry.target.id);
           document.documentElement.style.setProperty(

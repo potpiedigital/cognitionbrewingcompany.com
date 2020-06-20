@@ -79,6 +79,7 @@ const Nav = ({ children, isNavShowing, setIsNavShowing, activeSection }) => (
         nav {
           transform: rotate(0deg);
           width: 100vw;
+          border-top: none;
         }
         ul {
           bottom: inherit;

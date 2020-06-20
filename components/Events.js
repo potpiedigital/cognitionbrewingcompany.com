@@ -157,7 +157,8 @@ const Events = () => (
           }
         }
         @media screen and (max-width: 375px) {
-          h2 {
+          h2,
+          h5 {
             grid-column-end: 7;
           }
           .event,

@@ -230,7 +230,7 @@ const Historic = () => (
           .beer-list {
             grid-row: 7 / 9;
             grid-column: 1 / 6;
-            margin-top: 0;
+            margin-top: -2rem;
             margin-left: 1rem;
             flex-direction: column;
           }

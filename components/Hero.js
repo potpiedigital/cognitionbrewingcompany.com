@@ -122,6 +122,7 @@ const Hero = () => (
         @media screen and (max-width: 414px) {
           h1 {
             margin-top: 4rem;
+            font-size: 16vw;
           }
 
           .information div {
@@ -135,7 +136,11 @@ const Hero = () => (
           .information address,
           .information a,
           li {
-            font-size: 3vw;
+            font-size: 4vw;
+          }
+          .information {
+            margin-bottom: 10vh;
+            margin-top: 5vh;
           }
         }
       `}</style>
