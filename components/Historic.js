@@ -1,42 +1,31 @@
 import { Grid } from "./Grid";
 import Section from "./Section";
 
-const Historic = () => (
-  <Section id="historic">
-    <Grid backgroundColor="#a73a3a" columns={14} width="90vw">
+const fullStyle = {
+  width: "100vw",
+  overflow: "visible",
+};
+
+const Historic = ({ page }) => (
+  <Section style={fullStyle} id="historic">
+    <Grid backgroundColor="#a73a3a" columns={14}>
       <hr />
       <div className="historic-text">
-        <p>
-          To truly experience our Cognition Brewing Company offerings, come and
-          see us and enjoy a pint right were it was created. Share a memory of
-          the “old” tap room. Please support our local downtown restaurants and
-          share a pizza like you won’t find anywhere else.
-        </p>
-        <p>
-          To truly experience our Cognition Brewing Company offerings, come and
-          see us and enjoy a pint right were it was created. Share a memory of
-          the “old” tap room. Please support our local downtown restaurants and
-          share a pizza like you won’t find anywhere else.
-        </p>
+        <p>{page.acf.descriptive_text_left}</p>
+        <p>{page.acf.descriptive_text_right}</p>
       </div>
       <ul className="beer-list">
-        <li>The Unicorn in Captivity</li>
-        <li>Faded Reality</li>
-        <li>Rett Farm</li>
-        <li>Storm the castle</li>
-        <li>Kamadhenu’s Milk</li>
-        <li>Nowhere / Catastrophe</li>
-        <li>The Unicorn in Captivity</li>
-        <li>Storm the castle</li>
-        <li>Kamadhenu’s Milk</li>
+        {page.acf.beer_list.map((beer) => (
+          <li key={beer.beer_name}>{beer.beer_name}</li>
+        ))}
       </ul>
       <div className="historic-imgs">
-        <img className="history-img-1" src="/historic-1.jpg" />
-        <img className="history-img-2" src="/historic-2.jpg" />
-        <img className="history-img-3" src="/historic-3.jpg" />
+        <img className="history-img-1" src={page.acf.forage_images[0]} />
+        <img className="history-img-2" src={page.acf.forage_images[1]} />
+        <img className="history-img-3" src={page.acf.forage_images[2]} />
       </div>
       <div className="big-text-container">
-        <h3>Historic</h3>
+        <h3>{page.acf.large_text}</h3>
       </div>
       <style jsx>{`
         hr {
@@ -100,17 +89,18 @@ const Historic = () => (
         }
         .big-text-container {
           grid-column: 2 / 12;
-          grid-row: 6 / 9;
+          grid-row: 7 / 9;
+          overflow: hidden;
           z-index: 1;
-          margin-top: 3rem;
         }
         h3 {
           font-size: 28vh;
           margin-top: 0;
           margin-bottom: 0;
+          /* line-height: 1; */
         }
 
-        @media screen and (max-width: 1280px) {
+        @media screen and (max-width: 1440px) {
           .beer-list {
             grid-row-start: 5;
           }
@@ -139,8 +129,8 @@ const Historic = () => (
             grid-column: 2 / 8;
           }
           .big-text-container {
-            grid-column: 1 / 7;
-            margin-left: -4rem;
+            grid-column: 1 / 9;
+            margin-left: 0;
             margin-top: 0;
           }
           h3 {

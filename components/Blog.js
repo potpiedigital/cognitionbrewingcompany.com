@@ -1,27 +1,26 @@
 import { Grid } from "./Grid";
 import Section from "./Section";
+import { Parser } from "html-to-react";
 
-const Blog = () => (
+const parser = new Parser();
+
+const Blog = ({ post }) => (
   <Section id="blog">
     <Grid width="90vw">
-      <img src="https://source.unsplash.com/random" />
+      <img src={post.acf.post_image} />
       <h2>Cog Blog</h2>
       <div className="date-title">
-        <span>October 23rd, 2019</span>
-        <h4>Hell Town Whale Slayers</h4>
+        <span>
+          {new Date(post.date).toLocaleString(undefined, {
+            year: "numeric",
+            month: "long",
+            day: "numeric",
+          })}
+        </span>
+        <h4>{post.title.rendered}</h4>
       </div>
       <hr />
-      <p className="event-copy">
-        Cognition Brewing Company is the newest addition to the growing craft
-        beer scene here in Michigan’s Upper Peninsula. We are located right in
-        the heart of the U.P. where the winters are long but enjoyed. We are
-        proud to be located in an area that has such strong appreciation for
-        community. To truly experience our Cognition Brewing Company offerings,
-        come and see us and enjoy a pint right were it was created. Share a
-        memory of the “old” tap room. Please support our local downtown
-        restaurants and share a pizza like you won’t find anywhere else.{" "}
-        <a href="www.facebook.com">read more</a>
-      </p>
+      <div className="event-copy">{parser.parse(post.excerpt.rendered)}</div>
       <div className="more-info">
         <a className="more-posts" href="/stories">
           More Stories

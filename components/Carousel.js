@@ -8,7 +8,6 @@ import TapList from "./TapList";
 import Hero from "./Hero";
 import Events from "./Events";
 import Nav from "../components/Nav";
-import Section from "./Section";
 import { useState, useEffect } from "react";
 import { ImageBreak } from "./Image-break";
 
@@ -42,7 +41,7 @@ const getSection = (event) => {
   return href.substring(indexOf);
 };
 
-const CarouselContainer = ({ items, onDeck }) => {
+const CarouselContainer = ({ items, onDeck, pages, posts }) => {
   const [isNavShowing, setIsNavShowing] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
 
@@ -145,20 +144,42 @@ const CarouselContainer = ({ items, onDeck }) => {
         </a>
       </Nav>
       <Coursel>
-        <Hero />
-        <About />
-        <ImageBreak src="/Cognition-Brewing-1.jpg" />
-        <TapList items={items} onDeck={onDeck} />
-        <ImageBreak src="/Cognition-Brewing-2.jpg" />
-        <Events />
-        <ImageBreak src="/Cognition-Brewing-1.jpg" />
-        <Blog />
-        <ImageBreak src="/Cognition-Brewing-2.jpg" />
-        <Forage />
-        <ImageBreak src="/Cognition-Brewing-2.jpg" />
-        <Historic />
-        <ImageBreak src="/Cognition-Brewing-2.jpg" />
-        <Colab />
+        <Hero page={pages.find((p) => p.slug === "hero")} />
+        <About page={pages.find((p) => p.slug === "about")} />
+        <ImageBreak
+          page={pages.find((p) => p.slug === "image-dividers")}
+          src="img_one"
+        />
+        <TapList
+          page={pages.find((p) => p.slug === "tap-list")}
+          items={items}
+          onDeck={onDeck}
+        />
+        <ImageBreak
+          page={pages.find((p) => p.slug === "image-dividers")}
+          src="img_two"
+        />
+        <Events page={pages.find((p) => p.slug === "cog-events")} />
+        <ImageBreak
+          page={pages.find((p) => p.slug === "image-dividers")}
+          src="img_three"
+        />
+        <Blog post={posts[0]} />
+        <ImageBreak
+          page={pages.find((p) => p.slug === "image-dividers")}
+          src="img_four"
+        />
+        <Forage page={pages.find((p) => p.slug === "forage")} />
+        <ImageBreak
+          page={pages.find((p) => p.slug === "image-dividers")}
+          src="img_five"
+        />
+        <Historic page={pages.find((p) => p.slug === "historic")} />
+        <ImageBreak
+          page={pages.find((p) => p.slug === "image-dividers")}
+          src="img_six"
+        />
+        <Colab page={pages.find((p) => p.slug === "collaboration")} />
       </Coursel>
       <style jsx>{`
         a {

@@ -1,40 +1,43 @@
 import { Grid } from "./Grid";
 import Section from "./Section";
+import HtmlToReact, { Parser } from "html-to-react";
+import WhiteParagraph from "./White-paragraph";
+
+const parser = new Parser();
+const nodeDefinitions = new HtmlToReact.ProcessNodeDefinitions(React);
+
+const processingInstructions = [
+  {
+    shouldProcessNode: (node) => node.type === "tag" && node.name === "p",
+    processNode: (node, children, index) =>
+      React.createElement(WhiteParagraph, { key: index }, children),
+  },
+  {
+    shouldProcessNode: () => true,
+    processNode: nodeDefinitions.processDefaultNode,
+  },
+];
 
 const fullStyle = {
   width: "100vw",
   overflow: "visible",
 };
 
-const Events = () => (
+const Events = ({ page }) => (
   <Section style={fullStyle} id="events">
     <Grid backgroundColor="#a73a3a">
-      <h2>Cog Events</h2>
+      <h2>{page.title.rendered}</h2>
       <div className="event">
-        <h3>Event Title</h3>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-        <a href="www.facebook.com">More Details</a>
+        <h3>{page.acf.event_title}</h3>
+        {parser.parseWithInstructions(
+          page.acf.event_description,
+          () => true,
+          processingInstructions
+        )}
       </div>
       <h5>Cog Events</h5>
       <div className="event-img">
-        <img src="https://source.unsplash.com/random/beer" />
+        <img src={page.acf.event_image} />
       </div>
       <style jsx>{`
         h2 {

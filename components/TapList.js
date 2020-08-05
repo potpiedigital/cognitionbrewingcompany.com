@@ -2,19 +2,17 @@ import OnTap from "./On-tap";
 import OnDeck from "./On-deck";
 import { Grid } from "./Grid";
 import Section from "./Section";
+import { Parser } from "html-to-react";
 
-const TapList = ({ items, onDeck }) => {
+const parser = new Parser();
+
+const TapList = ({ items, onDeck, page }) => {
   return (
     <Section id="tap-list">
       <Grid columns={24} width="125vw">
         <div className="intro">
-          <h2>Tap List</h2>
-          <p>
-            To truly experience our Cognition Brewing Company offerings, come
-            and see us and enjoy a pint right were it was created. Share a
-            memory of the “old” tap room. Please support our local downtown
-            restaurants and share a pizza like you won’t find anywhere else.
-          </p>
+          <h2>{page.title.rendered}</h2>
+          <div>{parser.parse(page.content.rendered)}</div>
           <img src="/hops.svg" />
         </div>
         <OnTap items={items} />

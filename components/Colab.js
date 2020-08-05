@@ -1,43 +1,27 @@
 import { Grid } from "./Grid";
 import Section from "./Section";
 
-const Colab = () => (
+const Colab = ({ page }) => (
   <Section id="colab">
     <Grid columns={14} width="90vw">
       <img className="teaser-beer" src="/beer-glass.png" />
       <div className="colab-info">
         <hr />
         <div className="colab-text">
-          <p>
-            To truly experience our Cognition Brewing Company offerings, come
-            and see us and enjoy a pint right were it was created. Share a
-            memory of the “old” tap room. Please support our local downtown
-            restaurants and share a pizza like you won’t find anywhere else.
-          </p>
-          <p>
-            To truly experience our Cognition Brewing Company offerings, come
-            and see us and enjoy a pint right were it was created. Share a
-            memory of the “old” tap room. Please support our local downtown
-            restaurants and share a pizza like you won’t find anywhere else.
-          </p>
+          <p>{page.acf.descriptive_text_left}</p>
+          <p>{page.acf.descriptive_text_right}</p>
         </div>
       </div>
-      <img className="colab-img" src="/colab-1.jpg" />
+      <img className="colab-img" src={page.acf.forage_images[0]} />
       <a href="mailto:kris@cognitionbrewing.com?subject=Mail from Our Site">
         Contact Us
       </a>
       <ul className="beer-list">
-        <li>The Unicorn in Captivity</li>
-        <li>Faded Reality</li>
-        <li>Rett Farm</li>
-        <li>Storm the castle</li>
-        <li>Kamadhenu’s Milk</li>
-        <li>Nowhere / Catastrophe</li>
-        <li>The Unicorn in Captivity</li>
-        <li>Storm the castle</li>
-        <li>Kamadhenu’s Milk</li>
+        {page.acf.beer_list.map((beer) => (
+          <li key={beer.beer_name}>{beer.beer_name}</li>
+        ))}
       </ul>
-      <h3>Collaboration</h3>
+      <h3>{page.acf.large_text}</h3>
       <style jsx>{`
         .colab-info {
           grid-row: 2 / 5;
@@ -135,7 +119,7 @@ const Colab = () => (
             grid-row-start: 7;
           }
           .beer-list {
-            grid-row-start: 5;
+            margin-top: 5rem;
           }
         }
         @media screen and (max-width: 1024px) and (orientation: portrait) {

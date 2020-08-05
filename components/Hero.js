@@ -1,6 +1,6 @@
 import Section from "./Section";
 
-const Hero = () => (
+const Hero = ({ page }) => (
   <Section id="home">
     <div className="main">
       <h1>Cognition Brewing Company</h1>
@@ -8,23 +8,35 @@ const Hero = () => (
         <div>
           <ul>
             <li>
-              Mon - Thur <span>4pm - 10pm</span>
+              {page.acf.schedule[0].day}{" "}
+              <span>
+                {page.acf.schedule[0].opening_time} -{" "}
+                {page.acf.schedule[0].closing_time}
+              </span>
             </li>
             <li>
-              Fri and Sat <span>12pm - 12am</span>
+              {page.acf.schedule[1].day}{" "}
+              <span>
+                {page.acf.schedule[1].opening_time} -{" "}
+                {page.acf.schedule[1].closing_time}
+              </span>
             </li>
             <li>
-              Sun <span>12pm - 10pm</span>
+              {page.acf.schedule[2].day}{" "}
+              <span>
+                {page.acf.schedule[2].opening_time} -{" "}
+                {page.acf.schedule[2].closing_time}
+              </span>
             </li>
           </ul>
-          <address>113 E Canada St. Ishperming, MI</address>
-          <a href="tel:906-204-2724"> (906) 204-2724</a>
+          <address>{page.acf.address}</address>
+          <a href={page.acf.phone}> {page.acf.phone}</a>
         </div>
         <h4>SCROLL SIDEWAYS TO NAVIGATE</h4>
       </div>
       <style jsx>{`
         .main {
-          background-image: url("/Cognition-Brewing-hero.png");
+          background-image: url(${page.acf.background_image});
           box-shadow: inset 0 0 0 50vw rgba(0, 0, 0, 0.3);
           background-repeat: no-repeat;
           background-position: center;

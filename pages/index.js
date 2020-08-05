@@ -1,26 +1,45 @@
 import CarouselContainer from "../components/Carousel";
 import Head from "next/head";
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { btoa } from "abab";
 
-export async function getStaticProps() {
+function getUntappd() {
   const untappdApi = "https://business.untappd.com/api/v1";
   const auth = btoa(`${process.env.UNTAPPD_USER}:${process.env.UNTAPPD_TOKEN}`);
   const opts = { headers: { Authorization: `Basic ${auth}` } };
 
-  const [items, onDeck] = await Promise.all([
+  return Promise.all([
     fetch(`${untappdApi}/sections/90568/items`, opts),
     fetch(`${untappdApi}/sections/90575/items`, opts),
     fetch(`${untappdApi}/sections/90567/items`, opts),
   ])
     .then(([a, b, c]) => Promise.all([a.json(), b.json(), c.json()]))
     .then(([a, b, c]) => [[...a.items, ...b.items], c.items]);
+}
+
+function getWordPress() {
+  const wordPressApi =
+    "https://cog-wordpress-6e69c4.ingress-bonde.easywp.com/wp-json/wp/v2";
+
+  return Promise.all([
+    fetch(`${wordPressApi}/pages`),
+    fetch(`${wordPressApi}/posts`),
+  ])
+    .then(([pagesResponse, postsResponse]) =>
+      Promise.all([pagesResponse.json(), postsResponse.json()])
+    )
+    .then(([pagesJson, postsJson]) => [pagesJson, postsJson]);
+}
+
+export async function getStaticProps() {
+  const [items, onDeck] = await getUntappd();
+  const [pages, posts] = await getWordPress();
   return {
-    props: { items, onDeck },
+    props: { items, onDeck, pages, posts },
   };
 }
 
-const MainPage = ({ items, onDeck }) => (
+const MainPage = ({ items, onDeck, pages, posts }) => (
   <div>
     <Head>
       <link
@@ -28,7 +47,12 @@ const MainPage = ({ items, onDeck }) => (
         rel="stylesheet"
       />
     </Head>
-    <CarouselContainer items={items} onDeck={onDeck} />
+    <CarouselContainer
+      items={items}
+      onDeck={onDeck}
+      pages={pages}
+      posts={posts}
+    />
     <style jsx global>{`
       html,
       body,
@@ -84,6 +108,13 @@ const MainPage = ({ items, onDeck }) => (
         color: #fff;
         font-weight: normal;
         margin: 0;
+      }
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+      a:hover {
+        text-decoration: underline;
       }
 
       @media screen and (max-width: 1280px) {

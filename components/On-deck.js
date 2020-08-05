@@ -58,6 +58,12 @@ const OnDeck = ({ onDeck }) => (
           grid-column: 7 / 9;
           grid-row: 1 / 3;
         }
+        .da-beers {
+          margin: 1rem;
+        }
+        h4 {
+          padding-left: 1rem;
+        }
       }
       @media screen and (max-width: 768px) {
         .on-deck {

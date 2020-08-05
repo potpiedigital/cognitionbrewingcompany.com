@@ -1,39 +1,54 @@
-import { Grid } from "../components/Grid";
+import { Parser } from "html-to-react";
 
-const SingleStory = ({ image, title, text }) => (
-  <div>
-    <img src={image} />
-    <h2>{title}</h2>
-    <p>{text}</p>
+const parser = new Parser();
+
+const SingleStory = ({ date, image, title, text }) => (
+  <div className="story-container">
+    <div className="image-container">
+      <img src={image} />
+    </div>
+    <div className="text-container">
+      <span>{date}</span>
+      <h4>{title}</h4>
+      <div className="blogtext">{parser.parse(text)}</div>
+    </div>
     <style jsx>{`
-      div {
+      .story-container {
         width: 100%;
-        margin-bottom: 1rem;
+        margin-bottom: 2rem;
         display: grid;
         grid-template-columns: repeat(12, 1fr);
-        grid-template-rows: repeat(2, minmax(0, 1fr));
+        grid-template-rows: repeat(6, minmax(0, 1fr));
         min-height: 0;
         min-width: 0;
         grid-gap: 1em;
       }
-      img {
-        height: 100%;
-        width: 100%;
+      .image-container {
         object-fit: cover;
         overflow: hidden;
         grid-column: 1 / 6;
-        grid-row: 1 / 3;
+        grid-row: 1 / 2;
       }
-      h2,
-      p {
+      img {
+        height: 100%;
+        width: 100%;
+      }
+      .text-container {
         grid-column: 6 / 13;
-        grid-row: 1;
+        grid-row: 1 / 4;
       }
-      p {
-        margin-top: 4rem;
+      .blogtext {
+        margin-top: 3rem;
+      }
+      h4 {
+        font-size: 1.5vw;
+        margin: 2rem 0;
+      }
+      span {
+        color: #a73a3a;
       }
       @media screen and (max-width: 414px) {
-        div {
+        .story-container {
           grid-template-columns: repeat(5, 1fr);
           grid-template-rows: repeat(5, 1fr);
         }
@@ -42,13 +57,11 @@ const SingleStory = ({ image, title, text }) => (
           grid-column: 1 / 6;
           grid-row: 1 / 4;
         }
-        h2,
-        p {
+        h4,
+        span,
+        .blogtext {
           grid-column: 1 / 6;
           grid-row: 4 / 6;
-        }
-        h2 {
-          margin-top: 0;
         }
       }
     `}</style>

@@ -1,7 +1,13 @@
 import Hamburger from "./Hamburger";
 import Social from "./Social-icons.js";
 
-const Nav = ({ children, isNavShowing, setIsNavShowing, activeSection }) => (
+const Nav = ({
+  rotate = true,
+  children,
+  isNavShowing,
+  setIsNavShowing = () => {},
+  activeSection,
+}) => (
   <nav className={activeSection}>
     <Hamburger isNavShowing={isNavShowing} setIsNavShowing={setIsNavShowing} />
     <ul className={!isNavShowing && "hiding"}>
@@ -24,7 +30,7 @@ const Nav = ({ children, isNavShowing, setIsNavShowing, activeSection }) => (
         transform-origin: top left;
         /* 4. rotate 90deg counter-clockwise */
         /* 5. translate "left" 100% of its width */
-        transform: rotate(90deg) translateY(-100%);
+        ${rotate && "transform: rotate(90deg) translateY(-100%);"}
         background: var(--navBackground);
         color: var(--navColor);
         border-top: 1px solid var(--navBorder);
