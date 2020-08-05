@@ -34,7 +34,8 @@ const Stories = ({ posts }) => (
             day: "numeric",
           })}
           title={post.title.rendered}
-          text={post.content.rendered}
+          text={post.excerpt.rendered}
+          slug={post.slug}
         />
       ))}
       <style jsx global>{`

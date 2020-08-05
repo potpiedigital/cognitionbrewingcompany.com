@@ -1,8 +1,9 @@
 import { Parser } from "html-to-react";
+import Link from "next/link";
 
 const parser = new Parser();
 
-const SingleStory = ({ date, image, title, text }) => (
+const SingleStory = ({ date, image, title, text, slug }) => (
   <div className="story-container">
     <div className="image-container">
       <img src={image} />
@@ -11,6 +12,11 @@ const SingleStory = ({ date, image, title, text }) => (
       <span>{date}</span>
       <h4>{title}</h4>
       <div className="blogtext">{parser.parse(text)}</div>
+      {slug && (
+        <Link href="/[slug]" as={slug}>
+          <a>read more</a>
+        </Link>
+      )}
     </div>
     <style jsx>{`
       .story-container {

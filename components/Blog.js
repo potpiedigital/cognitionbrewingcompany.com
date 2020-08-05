@@ -1,6 +1,7 @@
 import { Grid } from "./Grid";
 import Section from "./Section";
 import { Parser } from "html-to-react";
+import Link from "next/link";
 
 const parser = new Parser();
 
@@ -20,7 +21,12 @@ const Blog = ({ post }) => (
         <h4>{post.title.rendered}</h4>
       </div>
       <hr />
-      <div className="event-copy">{parser.parse(post.excerpt.rendered)}</div>
+      <div className="event-copy">
+        {parser.parse(post.excerpt.rendered)}
+        <Link href="/[slug]" as={post.slug}>
+          <a>read more</a>
+        </Link>
+      </div>
       <div className="more-info">
         <a className="more-posts" href="/stories">
           More Stories

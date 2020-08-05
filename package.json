@@ -12,13 +12,13 @@
     "export": "yarn build && next export"
   },
   "dependencies": {
-    "abab": "^2.0.3",
-    "html-to-react": "^1.4.3",
-    "isomorphic-unfetch": "^3.0.0",
-    "next": "^9.4.1",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "react-markdown": "^4.3.1",
-    "react-snaplist-carousel": "^3.0.0"
+    "abab": "2.0.4",
+    "html-to-react": "1.4.3",
+    "isomorphic-unfetch": "3.0.0",
+    "next": "9.5.1",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "react-markdown": "4.3.1",
+    "react-snaplist-carousel": "3.2.2"
   }
 }
