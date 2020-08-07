@@ -140,10 +140,10 @@ const Forage = ({ page }) => {
             }
             .forage-text {
               grid-column: 1 / 9;
-              grid-row: 7 / 8;
+              grid-row: 6 / 7;
               width: 90%;
               margin: 0 auto;
-              padding-top: 1rem;
+              padding-top: 5rem;
             }
             .forage-text p:last-child {
               padding-right: 0;
@@ -151,26 +151,29 @@ const Forage = ({ page }) => {
             .beer-list {
               grid-row: 8 / 9;
               grid-column: 1 / 9;
-              margin: 2rem 2rem 1rem;
+              margin: 0 2rem 4rem;
             }
             h3 {
               font-size: 21vh;
               grid-column: 1 / 9;
               margin-left: 2rem;
-              grid-row: 5;
-              margin-top: 0;
+              grid-row: 4;
+              margin-top: 6rem;
             }
             hr {
               grid-column: 1 / 8;
-              grid-row: 7;
+              grid-row: 6;
               margin-left: 2rem;
-              margin-top: 0;
+              margin-top: 3rem;
             }
           }
           @media screen and (max-width: 414px) {
             .brew-main-content {
               margin-left: 1rem;
               grid-column-end: 6;
+            }
+            .brew-text {
+              width: 92%;
             }
             .brew-main-content h2 {
               margin-top: 2rem;
@@ -217,13 +220,27 @@ const Forage = ({ page }) => {
             }
             .beer-list {
               grid-row: 7 / 9;
-              grid-column: 1 / 4;
+              grid-column: 1 / 5;
               margin-top: 3rem;
               margin-left: 1rem;
+              margin-bottom: 1rem;
               flex-direction: column;
             }
             li {
               width: 100%;
+            }
+          }
+          @media screen and (max-width: 375px) {
+            .photos {
+              grid-column-start: 2;
+            }
+            .gear {
+              top: -15%;
+              left: 30%;
+            }
+            .beer-list {
+              margin-top: 0;
+              margin-bottom: 3rem;
             }
           }
         `}</style>

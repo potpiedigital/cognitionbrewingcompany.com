@@ -145,7 +145,7 @@ const Blog = ({ post }) => (
             margin-left: 2rem;
           }
           .event-copy {
-            grid-column: 4 / 9;
+            grid-column: 4 / 8;
             grid-row: 5 / 7;
             padding-left: 2rem;
             padding-top: 0;
@@ -180,7 +180,7 @@ const Blog = ({ post }) => (
             margin-left: 2rem;
           }
           .event-copy {
-            grid-column: 1 / 9;
+            grid-column: 1 / 8;
             grid-row: 6 / 9;
             padding-top: 6rem;
             padding-left: 2rem;
@@ -213,7 +213,7 @@ const Blog = ({ post }) => (
           }
           .event-copy {
             margin-top: 3rem;
-            grid-column: 1 / 6;
+            grid-column: 1 / 5;
             padding: 0 1rem 0 1rem;
           }
           .more-info {

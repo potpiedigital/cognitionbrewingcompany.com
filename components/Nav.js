@@ -86,6 +86,8 @@ const Nav = ({
           transform: rotate(0deg);
           width: 100vw;
           border-top: none;
+          background: #a73a3a;
+          color: "white";
         }
         ul {
           bottom: inherit;

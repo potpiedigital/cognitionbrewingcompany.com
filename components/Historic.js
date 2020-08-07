@@ -161,6 +161,8 @@ const Historic = ({ page }) => (
           }
           .history-img-1 {
             width: 36vw;
+            top: -5%;
+            right: 5%;
           }
           .history-img-2 {
             width: 40vw;
@@ -223,6 +225,17 @@ const Historic = ({ page }) => (
             margin-top: -2rem;
             margin-left: 1rem;
             flex-direction: column;
+          }
+        }
+        @media screen and (max-width: 375px) {
+          .history-img-2 {
+            width: 65vw;
+          }
+          h3 {
+            line-height: 0.8;
+            word-wrap: break-word;
+            white-space: pre-wrap;
+            word-break: break-all;
           }
         }
       `}</style>

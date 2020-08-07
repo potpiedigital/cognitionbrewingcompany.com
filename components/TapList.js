@@ -12,7 +12,9 @@ const TapList = ({ items, onDeck, page }) => {
       <Grid columns={24} width="125vw">
         <div className="intro">
           <h2>{page.title.rendered}</h2>
-          <div>{parser.parse(page.content.rendered)}</div>
+          <div className="intro-text">
+            {parser.parse(page.content.rendered)}
+          </div>
           <img src="/hops.svg" />
         </div>
         <OnTap items={items} />
@@ -25,7 +27,7 @@ const TapList = ({ items, onDeck, page }) => {
             grid-row: 1 / 3;
             position: relative;
           }
-          .intro p {
+          .intro-text {
             margin-bottom: 0;
           }
           img {
@@ -96,6 +98,7 @@ const TapList = ({ items, onDeck, page }) => {
             }
             h3 {
               font-size: 26vh;
+              margin-top: 0;
             }
           }
           @media screen and (max-width: 414px) {
@@ -107,13 +110,24 @@ const TapList = ({ items, onDeck, page }) => {
               margin-top: 2rem;
               padding-left: 1rem;
             }
-            p {
+            .intro-text {
               padding: 0 1rem;
+              width: 95%;
+              margin: 0 auto;
             }
             h3 {
-              font-size: 20vh;
+              font-size: 24vh;
               grid-column-end: 6;
-              grid-row-start: 7;
+              grid-row-start: 8;
+              margin: 0;
+            }
+          }
+          @media screen and (max-width: 375px) {
+            h3 {
+              font-size: 20vh;
+            }
+            .intro-text {
+              width: 90%;
             }
           }
         `}</style>

@@ -37,7 +37,7 @@ const Section = ({ id, children, style }) => (
           height: 70vh;
         }
         #tap-list {
-          height: 200vh;
+          height: 170vh;
         }
         #brews {
           height: 120vh;
@@ -95,7 +95,7 @@ const Section = ({ id, children, style }) => (
           height: 190vh;
         }
         #colab {
-          height: 200vh;
+          height: 150vh;
         }
       }
     `}</style>

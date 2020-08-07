@@ -185,7 +185,6 @@ const Colab = ({ page }) => (
           .teaser-beer {
             display: none;
           }
-
           .colab-img {
             grid-column: 2 / 6;
             width: 49vw;
@@ -211,7 +210,7 @@ const Colab = ({ page }) => (
           .beer-list {
             grid-row: 6 / 8;
             grid-column: 1 / 6;
-            margin-top: 0;
+            margin-top: 3rem;
             margin-left: 1rem;
             flex-direction: column;
           }
@@ -227,9 +226,9 @@ const Colab = ({ page }) => (
             margin-top: 1rem;
           }
           .beer-list {
-            grid-row: 5 / 8;
-            margin-top: 6rem;
-            margin-bottom: 5rem;
+            grid-row: 6 / 8;
+            margin-top: 0;
+            margin-bottom: 3rem;
           }
         }
       `}</style>

@@ -66,11 +66,15 @@ const CarouselContainer = ({ items, onDeck, pages, posts }) => {
               "tap-list": "white",
               events: "#a73a3a",
               brews: "#a73a3a",
+              historic: "white",
+              colab: "#a73a3a",
             }[entry.target.id] ?? "white"
           );
           document.documentElement.style.setProperty(
             "--navColor",
-            { "tap-list": "black", blog: "black" }[entry.target.id] ?? "white"
+            { "tap-list": "black", blog: "black", historic: "black" }[
+              entry.target.id
+            ] ?? "white"
           );
           document.documentElement.style.setProperty(
             "--navBorder",
@@ -78,6 +82,7 @@ const CarouselContainer = ({ items, onDeck, pages, posts }) => {
               about: "#a73a3a",
               events: "#a73a3a",
               brews: "#a73a3a",
+              historic: "black",
             }[entry.target.id] ?? "black"
           );
         }

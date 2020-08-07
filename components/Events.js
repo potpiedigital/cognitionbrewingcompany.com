@@ -168,6 +168,10 @@ const Events = ({ page }) => (
           .event-img {
             margin-top: 2rem;
           }
+          .event-img {
+            width: 65vw;
+            height: 30vh;
+          }
         }
       `}</style>
     </Grid>

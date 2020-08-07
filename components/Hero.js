@@ -133,7 +133,7 @@ const Hero = ({ page }) => (
         }
         @media screen and (max-width: 414px) {
           h1 {
-            margin-top: 4rem;
+            margin-top: 6rem;
             font-size: 16vw;
           }
 

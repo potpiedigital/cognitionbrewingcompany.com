@@ -164,6 +164,18 @@ const About = ({ page }) => (
             margin-top: 1rem;
           }
         }
+        @media screen and (max-width: 375px) {
+          img {
+            margin-left: -2rem;
+            height: 30vh;
+          }
+          h2 {
+            font-size: 30vw;
+          }
+          hr {
+            grid-column-end: 5;
+          }
+        }
       `}</style>
     </Grid>
   </Section>

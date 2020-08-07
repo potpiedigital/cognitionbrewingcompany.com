@@ -41,13 +41,13 @@ const OnTap = ({ items }) => (
         .on-tap {
           grid-column: 1 / 8;
           margin-left: 2rem;
-          grid-row: 2 / 5;
+          margin-top: 0;
         }
       }
       @media screen and (max-width: 414px) {
         .on-tap {
           margin-top: 3rem;
-          grid-row-end: 6;
+          grid-row: 2 / 6;
           grid-column-end: 6;
           margin-left: 0;
         }

@@ -16,7 +16,6 @@ const WhiteParagraph = ({ children }) => (
       }
       @media screen and (max-width: 768px) {
         p {
-          padding-left: 3rem;
           padding-right: 0;
         }
       }
