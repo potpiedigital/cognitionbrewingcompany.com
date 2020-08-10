@@ -148,11 +148,12 @@ const Hero = ({ page }) => (
           .information address,
           .information a,
           li {
-            font-size: 4vw;
+            font-size: 5vw;
           }
           .information {
             margin-bottom: 10vh;
             margin-top: 5vh;
+            width: 100%;
           }
         }
       `}</style>

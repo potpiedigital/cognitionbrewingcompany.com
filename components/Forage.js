@@ -233,13 +233,14 @@ const Forage = ({ page }) => {
           @media screen and (max-width: 375px) {
             .photos {
               grid-column-start: 2;
+              margin-top: 1rem;
             }
             .gear {
-              top: -15%;
+              top: -10%;
               left: 30%;
             }
             .beer-list {
-              margin-top: 0;
+              margin-top: 2rem;
               margin-bottom: 3rem;
             }
           }

@@ -223,7 +223,7 @@ const Colab = ({ page }) => (
             margin-top: 0;
           }
           .colab-img {
-            margin-top: 1rem;
+            margin-top: -2rem;
           }
           .beer-list {
             grid-row: 6 / 8;

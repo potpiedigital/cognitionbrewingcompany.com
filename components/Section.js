@@ -88,6 +88,9 @@ const Section = ({ id, children, style }) => (
         #tap-list {
           height: 230vh;
         }
+        #events {
+          height: 160vh;
+        }
         #blog {
           height: 160vh;
         }
@@ -95,7 +98,10 @@ const Section = ({ id, children, style }) => (
           height: 190vh;
         }
         #colab {
-          height: 150vh;
+          height: 170vh;
+        }
+        #historic {
+          height: 160vh;
         }
       }
     `}</style>

@@ -164,6 +164,9 @@ const Events = ({ page }) => (
           h5 {
             grid-column-end: 7;
           }
+          h3 {
+            font-size: 45px;
+          }
           .event,
           .event-img {
             margin-top: 2rem;

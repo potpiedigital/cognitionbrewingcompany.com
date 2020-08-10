@@ -143,13 +143,14 @@ const About = ({ page }) => (
           img {
             grid-column: 2 / 4;
             margin-top: 1rem;
+            height: 30vh;
           }
           h3 {
             display: none;
           }
           hr {
             grid-row: 3;
-            grid-column-end: 4;
+            grid-column-end: 5;
             margin-top: 0;
           }
           h2 {
@@ -157,23 +158,12 @@ const About = ({ page }) => (
             grid-column: 1 / 6;
             margin-top: 1rem;
             overflow: visible;
+            font-size: 30vw;
           }
           .text-blocks {
             grid-column: 1 / 6;
             grid-row-start: 4;
             margin-top: 1rem;
-          }
-        }
-        @media screen and (max-width: 375px) {
-          img {
-            margin-left: -2rem;
-            height: 30vh;
-          }
-          h2 {
-            font-size: 30vw;
-          }
-          hr {
-            grid-column-end: 5;
           }
         }
       `}</style>

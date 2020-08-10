@@ -231,11 +231,10 @@ const Historic = ({ page }) => (
           .history-img-2 {
             width: 65vw;
           }
-          h3 {
-            line-height: 0.8;
-            word-wrap: break-word;
-            white-space: pre-wrap;
-            word-break: break-all;
+
+          .beer-list {
+            margin-top: 1rem;
+            margin-bottom: 2rem;
           }
         }
       `}</style>

@@ -123,9 +123,6 @@ const TapList = ({ items, onDeck, page }) => {
             }
           }
           @media screen and (max-width: 375px) {
-            h3 {
-              font-size: 20vh;
-            }
             .intro-text {
               width: 90%;
             }

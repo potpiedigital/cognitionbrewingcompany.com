@@ -61,6 +61,11 @@ const OnTap = ({ items }) => (
           padding-top: 1rem;
         }
       }
+      @media screen and (max-width: 375px) {
+        .on-tap {
+          margin-top: 4rem;
+        }
+      }
     `}</style>
   </div>
 );
