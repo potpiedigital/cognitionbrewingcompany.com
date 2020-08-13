@@ -241,7 +241,7 @@ const Forage = ({ page }) => {
             }
             .beer-list {
               margin-top: 2rem;
-              margin-bottom: 3rem;
+              margin-bottom: 1rem;
             }
           }
         `}</style>

@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const parser = new Parser();
 
-const SingleStory = ({ date, image, title, text, slug }) => (
+const SingleStory = ({ date, image, title, text, slug, rows = 6 }) => (
   <div className="story-container">
     <div className="image-container">
       <img src={image} />
@@ -24,7 +24,7 @@ const SingleStory = ({ date, image, title, text, slug }) => (
         margin-bottom: 2rem;
         display: grid;
         grid-template-columns: repeat(12, 1fr);
-        grid-template-rows: repeat(6, minmax(0, 1fr));
+        grid-template-rows: repeat(${rows}, minmax(0, 1fr));
         min-height: 0;
         min-width: 0;
         grid-gap: 1em;

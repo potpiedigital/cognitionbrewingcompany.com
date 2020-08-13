@@ -26,6 +26,7 @@ const Stories = ({ posts }) => (
       <h2>More Stories</h2>
       {posts.map((post) => (
         <SingleStory
+          rows="1"
           key={post.id}
           image={post.acf.post_image}
           date={new Date(post.date).toLocaleString(undefined, {
@@ -53,6 +54,14 @@ const Stories = ({ posts }) => (
           font-size: 7.8vh;
           margin-bottom: 0;
           font-family: "Libre Franklin";
+          text-align: center;
+          padding-bottom: 2rem;
+        }
+        .back-link {
+          background-color: #a73a3a;
+          padding: 1rem;
+          color: #fff;
+          text-decoration: none;
         }
       `}</style>
     </section>

@@ -227,8 +227,8 @@ const Colab = ({ page }) => (
           }
           .beer-list {
             grid-row: 6 / 8;
-            margin-top: 0;
-            margin-bottom: 3rem;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
           }
         }
       `}</style>

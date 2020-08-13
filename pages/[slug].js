@@ -51,17 +51,22 @@ export async function getStaticProps({ params: { slug } }) {
 }
 
 const Story = ({ post }) => (
-  <SingleStory
-    key={post.id}
-    image={post.acf.post_image}
-    date={new Date(post.date).toLocaleString(undefined, {
-      year: "numeric",
-      month: "long",
-      day: "numeric",
-    })}
-    title={post.title.rendered}
-    text={post.content.rendered}
-  />
+  <section>
+    <a className="back-link" href="http://localhost:3000/#blog">
+      Back to Cog
+    </a>
+    <SingleStory
+      key={post.id}
+      image={post.acf.post_image}
+      date={new Date(post.date).toLocaleString(undefined, {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+      })}
+      title={post.title.rendered}
+      text={post.content.rendered}
+    />
+  </section>
 );
 
 export default Story;
