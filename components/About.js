@@ -166,6 +166,12 @@ const About = ({ page }) => (
             margin-top: 1rem;
           }
         }
+        @media screen and (min-height: 812px) {
+          img {
+            grid-column-start: 1;
+            margin-left: 3rem;
+          }
+        }
       `}</style>
     </Grid>
   </Section>

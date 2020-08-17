@@ -18,7 +18,7 @@ const Nav = ({
     <div className="bar-content">
       <h6>Cognition Brewery</h6>
       <Social />
-      <p>Ishperming | Michigan</p>
+      <p>Ishpeming | Michigan</p>
     </div>
     <style jsx>{`
       nav {

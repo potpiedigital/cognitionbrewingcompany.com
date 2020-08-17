@@ -127,6 +127,11 @@ const TapList = ({ items, onDeck, page }) => {
               width: 90%;
             }
           }
+          @media screen and (min-height: 812px) {
+            h3 {
+              font-size: 20vh;
+            }
+          }
         `}</style>
       </Grid>
     </Section>

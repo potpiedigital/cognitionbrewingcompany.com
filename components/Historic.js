@@ -236,6 +236,11 @@ const Historic = ({ page }) => (
             margin-bottom: 2rem;
           }
         }
+        @media screen and (min-height: 812px) {
+          .history-img-1 {
+            top: 35%;
+          }
+        }
       `}</style>
     </Grid>
   </Section>
