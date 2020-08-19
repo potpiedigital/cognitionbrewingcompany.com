@@ -63,6 +63,11 @@ const Stories = ({ posts }) => (
           color: #fff;
           text-decoration: none;
         }
+        @media screen and (min-height: 812px) {
+          h2 {
+            font-size: 6vh;
+          }
+        }
       `}</style>
     </section>
   </>

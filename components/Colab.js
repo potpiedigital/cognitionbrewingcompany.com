@@ -231,6 +231,13 @@ const Colab = ({ page }) => (
             margin-bottom: 1rem;
           }
         }
+        @media screen and (min-height: 812px) {
+          .beer-list {
+            grid-row: 5 / 7;
+            margin-top: 7rem;
+            margin-bottom: -6rem;
+          }
+        }
       `}</style>
     </Grid>
   </Section>

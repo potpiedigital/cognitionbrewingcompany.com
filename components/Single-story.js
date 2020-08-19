@@ -53,13 +53,43 @@ const SingleStory = ({ date, image, title, text, slug, rows = 6 }) => (
       span {
         color: #a73a3a;
       }
+      @media screen and (max-width: 768px) {
+        .image-container {
+          grid-column: 1 / 13;
+          grid-row: 1 / 2;
+        }
+        .text-container {
+          grid-column: 1 / 12;
+          grid-row: 5 / 6;
+          margin-top: -4rem;
+          margin-bottom: 5rem;
+        }
+        h4 {
+          font-size: 5vw;
+          margin-bottom: 0;
+        }
+        .blogtext {
+          margin-top: 1rem;
+        }
+      }
       @media screen and (max-width: 414px) {
         .story-container {
           grid-template-columns: repeat(5, 1fr);
-          grid-template-rows: repeat(5, 1fr);
+          /* grid-template-rows: repeat(5, 1fr); */
+        }
+        .image-container {
+          grid-column: 1 / 6;
         }
 
-        img {
+        .text-container {
+          grid-row: 2 / 6;
+          margin-top: 1rem;
+        }
+        h4 {
+          margin-top: 0;
+        }
+
+        /* img {
           grid-column: 1 / 6;
           grid-row: 1 / 4;
         }
@@ -68,6 +98,11 @@ const SingleStory = ({ date, image, title, text, slug, rows = 6 }) => (
         .blogtext {
           grid-column: 1 / 6;
           grid-row: 4 / 6;
+        } */
+      }
+      @media screen and (min-height: 812px) {
+        .story-container {
+          grid-template-rows: repeat(1, minmax(0, 1fr));
         }
       }
     `}</style>

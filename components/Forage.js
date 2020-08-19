@@ -244,6 +244,11 @@ const Forage = ({ page }) => {
               margin-bottom: 1rem;
             }
           }
+          @media screen and (min-height: 812px) {
+            .beer-list {
+              margin-top: 0;
+            }
+          }
         `}</style>
       </Grid>
     </Section>

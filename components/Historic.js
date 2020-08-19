@@ -240,6 +240,10 @@ const Historic = ({ page }) => (
           .history-img-1 {
             top: 35%;
           }
+          .beer-list {
+            grid-row-start: 6;
+            margin-top: 5rem;
+          }
         }
       `}</style>
     </Grid>
