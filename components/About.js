@@ -19,7 +19,7 @@ const processingInstructions = [
 ];
 
 const About = ({ page }) => (
-  <Section id="about">
+  <Section id={page.slug}>
     <Grid backgroundColor="#a73a3a" width="100vw">
       <img src="/Logo-1.svg" />
       <h3>{page.acf.tag_line}</h3>

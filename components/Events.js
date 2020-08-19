@@ -24,7 +24,7 @@ const fullStyle = {
 };
 
 const Events = ({ page }) => (
-  <Section style={fullStyle} id="events">
+  <Section style={fullStyle} id={page.slug}>
     <Grid backgroundColor="#a73a3a">
       <h2>{page.title.rendered}</h2>
       <div className="event">

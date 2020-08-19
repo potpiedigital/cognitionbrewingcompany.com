@@ -8,7 +8,7 @@ const parser = new Parser();
 
 const TapList = ({ items, onDeck, page }) => {
   return (
-    <Section id="tap-list">
+    <Section id={page.slug}>
       <Grid columns={24} width="125vw">
         <div className="intro">
           <h2>{page.title.rendered}</h2>

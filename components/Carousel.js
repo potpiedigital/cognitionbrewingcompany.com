@@ -50,6 +50,10 @@ const CarouselContainer = ({ items, onDeck, pages, posts }) => {
     setIsNavShowing(false);
   };
 
+  const eventsPage = pages.find((p) => p.slug === "cog-events");
+  const aboutPage = pages.find((p) => p.slug === "about");
+  const tapListPage = pages.find((p) => p.slug === "tap-list");
+
   useEffect(() => {
     //how do I make this mobile responsive? right now background stays transparent throughout
     const options = { root: document.querySelector("main"), threshold: 0.8 };
@@ -62,9 +66,9 @@ const CarouselContainer = ({ items, onDeck, pages, posts }) => {
             "--navBackground",
             {
               home: "transparent",
-              about: "#a73a3a",
-              "tap-list": "white",
-              events: "#a73a3a",
+              [aboutPage.slug]: "#a73a3a",
+              [tapListPage.slug]: "white",
+              [eventsPage.slug]: "#a73a3a",
               brews: "#a73a3a",
               historic: "white",
               colab: "#a73a3a",
@@ -72,15 +76,15 @@ const CarouselContainer = ({ items, onDeck, pages, posts }) => {
           );
           document.documentElement.style.setProperty(
             "--navColor",
-            { "tap-list": "black", blog: "black", historic: "black" }[
+            { [tapListPage.slug]: "black", blog: "black", historic: "black" }[
               entry.target.id
             ] ?? "white"
           );
           document.documentElement.style.setProperty(
             "--navBorder",
             {
-              about: "#a73a3a",
-              events: "#a73a3a",
+              [aboutPage.slug]: "#a73a3a",
+              [eventsPage.slug]: "#a73a3a",
               brews: "#a73a3a",
               historic: "black",
             }[entry.target.id] ?? "black"
@@ -110,42 +114,36 @@ const CarouselContainer = ({ items, onDeck, pages, posts }) => {
           onClick={onClickNavItem}
           href="#home"
         >
-          Home
+          {pages.find((p) => p.slug === "hero").title.rendered}
         </a>
-        <a
-          className={activeSection === "about" && "active"}
-          onClick={onClickNavItem}
-          href="#about"
-        >
-          About
-        </a>
-        <a
-          className={activeSection === "tap-list" && "active"}
-          onClick={onClickNavItem}
-          href="#tap-list"
-        >
-          Tap List
-        </a>
-        <a
-          className={activeSection === "events" && "active"}
-          onClick={onClickNavItem}
-          href="#events"
-        >
-          Cog Events
-        </a>
-        <a
-          className={activeSection === "blog" && "active"}
-          onClick={onClickNavItem}
-          href="#blog"
-        >
-          Cog Blog
-        </a>
+        {[aboutPage, tapListPage, eventsPage].map(
+          (page) =>
+            page && (
+              <a
+                className={activeSection === page.slug && "active"}
+                onClick={onClickNavItem}
+                href={`#${page.slug}`}
+                key={page.slug}
+              >
+                {page.title.rendered}
+              </a>
+            )
+        )}
+        {posts.length > 0 && (
+          <a
+            className={activeSection === "blog" && "active"}
+            onClick={onClickNavItem}
+            href="#blog"
+          >
+            Cog Blog
+          </a>
+        )}
         <a
           className={activeSection === "brews" && "active"}
           onClick={onClickNavItem}
           href="#brews"
         >
-          Cog Brews
+          {pages.find((p) => p.slug === "forage").title.rendered}
         </a>
       </Nav>
       <Coursel>
@@ -164,12 +162,12 @@ const CarouselContainer = ({ items, onDeck, pages, posts }) => {
           page={pages.find((p) => p.slug === "image-dividers")}
           src="img_two"
         />
-        <Events page={pages.find((p) => p.slug === "cog-events")} />
+        {eventsPage && <Events page={eventsPage} />}
         <ImageBreak
           page={pages.find((p) => p.slug === "image-dividers")}
           src="img_three"
         />
-        <Blog post={posts[0]} />
+        {posts.length > 0 && <Blog post={posts[0]} />}
         <ImageBreak
           page={pages.find((p) => p.slug === "image-dividers")}
           src="img_four"
