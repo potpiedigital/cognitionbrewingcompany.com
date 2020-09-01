@@ -1,4 +1,5 @@
 import SingleStory from "../components/Single-story";
+import NavStories from "../components/Nav-stories";
 
 function getWordPress() {
   const wordPressApi =
@@ -18,11 +19,8 @@ export async function getStaticProps() {
 
 const Stories = ({ posts }) => (
   <>
-    {/* <Nav rotate={false} /> */}
     <section>
-      <a className="back-link" href="http://localhost:3000/#blog">
-        Back to Cog
-      </a>
+      <NavStories />
       <h2>More Stories</h2>
       {posts.map((post) => (
         <SingleStory
@@ -66,6 +64,11 @@ const Stories = ({ posts }) => (
         @media screen and (min-height: 812px) {
           h2 {
             font-size: 6vh;
+          }
+        }
+        @media screen and (max-width: 414px) {
+          section {
+            width: 100vw;
           }
         }
       `}</style>

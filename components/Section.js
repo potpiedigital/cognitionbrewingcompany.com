@@ -65,7 +65,7 @@ const Section = ({ id, children, style }) => (
           height: 220vh;
           overflow: hidden;
         }
-        #events {
+        #cog-events {
           height: 150vh;
         }
         #blog {
@@ -88,7 +88,7 @@ const Section = ({ id, children, style }) => (
         #tap-list {
           height: 230vh;
         }
-        #events {
+        #cog-events {
           height: 160vh;
         }
         #blog {

@@ -69,8 +69,7 @@ const Blog = ({ post }) => (
         .event-copy {
           grid-column: 9 / 13;
           grid-row-start: 5;
-          padding-top: 0;
-          padding: 2rem 2rem 0 0;
+          padding-top: 2rem;
           margin: 0;
         }
         .more-info {

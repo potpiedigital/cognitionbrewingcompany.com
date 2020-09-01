@@ -1,4 +1,5 @@
 import SingleStory from "../components/Single-story";
+import NavStories from "../components/Nav-stories";
 
 function fetchWordPress(route) {
   const wordPressApi =
@@ -52,14 +53,7 @@ export async function getStaticProps({ params: { slug } }) {
 
 const Story = ({ post }) => (
   <section>
-    <div className="link-backs">
-      <a className="back-to-stories" href="http://localhost:3000/stories">
-        Back to Stories
-      </a>
-      <a className="back-link" href="http://localhost:3000/#blog">
-        Back to Cognition
-      </a>
-    </div>
+    <NavStories />
     <SingleStory
       key={post.id}
       image={post.acf.post_image}
@@ -71,15 +65,25 @@ const Story = ({ post }) => (
       title={post.title.rendered}
       text={post.content.rendered}
     />
-    <style jsx>{`
+    <style jsx global>{`
+      body {
+        margin: 0;
+        font-family: "Source Serif Pro", serif;
+        font-size: 1.125rem;
+      }
+      section {
+        width: 90vw;
+        margin: 1em auto;
+      }
       .link-backs {
         display: flex;
         justify-content: space-between;
         padding: 1rem 0;
       }
-      a {
-        text-decoration: none;
-        font-size: 3vw;
+      @media screen and (max-width: 414px) {
+        section {
+          width: 100vw;
+        }
       }
     `}</style>
   </section>
