@@ -1,5 +1,8 @@
-import SingleStory from "../components/Single-story";
+// import SingleStory from "../components/Single-story";
 import NavStories from "../components/Nav-stories";
+import { Parser } from "html-to-react";
+
+const parser = new Parser();
 
 function fetchWordPress(route) {
   const wordPressApi =
@@ -54,7 +57,7 @@ export async function getStaticProps({ params: { slug } }) {
 const Story = ({ post }) => (
   <section>
     <NavStories />
-    <SingleStory
+    {/* <SingleStory
       key={post.id}
       image={post.acf.post_image}
       date={new Date(post.date).toLocaleString(undefined, {
@@ -64,7 +67,19 @@ const Story = ({ post }) => (
       })}
       title={post.title.rendered}
       text={post.content.rendered}
-    />
+    /> */}
+    <div className="blog-content">
+      <img src={post.acf.post_image} />
+      <span>
+        {new Date(post.date).toLocaleString(undefined, {
+          year: "numeric",
+          month: "long",
+          day: "numeric",
+        })}
+      </span>
+      <h2>{post.title.rendered}</h2>
+      <div className="post-text">{parser.parse(post.content.rendered)}</div>
+    </div>
     <style jsx global>{`
       body {
         margin: 0;
@@ -80,6 +95,25 @@ const Story = ({ post }) => (
         justify-content: space-between;
         padding: 1rem 0;
       }
+      .blog-content {
+        width: 60vw;
+        margin: 4rem auto 0;
+      }
+      img {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+        display: block;
+        overflow: visible;
+        padding-bottom: 2rem;
+      }
+      h2 {
+        margin-top: 0;
+      }
+      span {
+        color: #a73a3a;
+      }
+
       @media screen and (max-width: 414px) {
         section {
           width: 100vw;

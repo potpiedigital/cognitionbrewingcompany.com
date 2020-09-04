@@ -116,6 +116,11 @@ const Nav = ({
           padding-left: 3rem;
         }
       }
+      @media screen and (max-width: 320px) {
+        p {
+          font-size: 12px;
+        }
+      }
     `}</style>
   </nav>
 );

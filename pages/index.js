@@ -123,11 +123,6 @@ const MainPage = ({ items, onDeck, pages, posts }) => (
           line-height: 1.35;
         }
       }
-      /* @media screen and (max-width: 414px) {
-        body {
-          font-size: 0.9rem;
-        }
-      } */
     `}</style>
   </div>
 );

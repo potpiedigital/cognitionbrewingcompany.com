@@ -63,7 +63,10 @@ const Colab = ({ page }) => (
           transform: rotate(15deg);
           box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.1);
           width: 24vw;
-          height: auto;
+          height: 40vh;
+          object-fit: cover;
+          display: block;
+          overflow: visible;
         }
         a {
           text-decoration: none;
@@ -140,6 +143,7 @@ const Colab = ({ page }) => (
             grid-column: 6 / 9;
             grid-row: 4;
             width: 34vw;
+            height: 25vh;
           }
           a {
             grid-column: 2;
@@ -231,13 +235,13 @@ const Colab = ({ page }) => (
             margin-bottom: 1rem;
           }
         }
-        @media screen and (min-height: 812px) {
+        /* @media screen and (min-height: 812px) {
           .beer-list {
             grid-row: 5 / 7;
             margin-top: 7rem;
             margin-bottom: -6rem;
           }
-        }
+        } */
       `}</style>
     </Grid>
   </Section>

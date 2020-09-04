@@ -5,7 +5,7 @@ const OnDeck = ({ onDeck }) => (
     <div className="on-deck-content">
       <h4>On Deck</h4>
       <div className="da-beers">
-        {onDeck.map((onDeck) => (
+        {onDeck.reverse().map((onDeck) => (
           <ListingItem
             marginTop="1.5rem"
             width="100%"

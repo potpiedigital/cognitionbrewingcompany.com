@@ -40,6 +40,9 @@ const Forage = ({ page }) => {
           }
           .main-img {
             width: auto;
+            object-fit: cover;
+            display: block;
+            overflow: visible;
             height: 32vh;
             margin-top: 4rem;
             transform: rotate(-15deg);
@@ -242,6 +245,14 @@ const Forage = ({ page }) => {
             .beer-list {
               margin-top: 2rem;
               margin-bottom: 1rem;
+            }
+          }
+          @media screen and (max-width: 320px) {
+            h3 {
+              display: none;
+            }
+            .photos {
+              margin-top: 5rem;
             }
           }
           @media screen and (min-height: 812px) {

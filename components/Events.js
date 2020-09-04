@@ -85,6 +85,8 @@ const Events = ({ page }) => (
           height: 100%;
           width: 100%;
           object-fit: cover;
+          display: block;
+          overflow: visible;
           transform: rotate(15deg);
           box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.1);
           position: absolute;

@@ -63,7 +63,10 @@ const Historic = ({ page }) => (
         }
         .history-img-1 {
           width: 24vw;
-          height: auto;
+          height: 61vh;
+          object-fit: cover;
+          display: block;
+          overflow: visible;
           transform: rotate(15deg);
           box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.1);
           position: absolute;
@@ -72,7 +75,10 @@ const Historic = ({ page }) => (
         }
         .history-img-2 {
           width: 26vw;
-          height: auto;
+          height: 37vh;
+          object-fit: cover;
+          display: block;
+          overflow: visible;
           transform: rotate(-15deg);
           box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.1);
           position: absolute;
@@ -81,7 +87,10 @@ const Historic = ({ page }) => (
         }
         .history-img-3 {
           width: 13vw;
-          height: auto;
+          height: 24vh;
+          object-fit: cover;
+          display: block;
+          overflow: visible;
           box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.1);
           position: absolute;
           bottom: -25%;
@@ -113,16 +122,19 @@ const Historic = ({ page }) => (
           .history-img-1 {
             top: -21%;
             right: 35%;
+            height: 25vh;
           }
           .history-img-2 {
             bottom: 20%;
             left: 8%;
             width: 30vw;
+            height: 18vh;
           }
           .history-img-3 {
             bottom: 0%;
             right: 10%;
             width: 25vw;
+            height: 18vh;
             transform: rotate(-15deg);
           }
           .beer-list {
@@ -230,13 +242,15 @@ const Historic = ({ page }) => (
         @media screen and (max-width: 375px) {
           .history-img-2 {
             width: 65vw;
+            height: 27vh;
+            bottom: -30%;
           }
 
           .beer-list {
             margin-bottom: 2rem;
           }
         }
-        @media screen and (min-height: 812px) {
+        /* @media screen and (min-height: 812px) {
           .history-img-1 {
             top: 35%;
           }
@@ -244,7 +258,7 @@ const Historic = ({ page }) => (
             grid-row-start: 6;
             margin-top: 5rem;
           }
-        }
+        } */
       `}</style>
     </Grid>
   </Section>

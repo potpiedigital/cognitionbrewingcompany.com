@@ -55,7 +55,6 @@ const CarouselContainer = ({ items, onDeck, pages, posts }) => {
   const tapListPage = pages.find((p) => p.slug === "tap-list");
 
   useEffect(() => {
-    //how do I make this mobile responsive? right now background stays transparent throughout
     const options = { root: document.querySelector("main"), threshold: 0.8 };
     const onIntersection = (entries) => {
       entries.forEach((entry) => {

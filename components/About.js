@@ -116,10 +116,10 @@ const About = ({ page }) => (
         }
         @media screen and (max-width: 768px) {
           img {
-            height: 28vh;
+            height: 25vh;
           }
           h3 {
-            grid-row: 4 / 6;
+            grid-row: 5 / 6;
             grid-column-end: 4;
             margin-left: 1rem;
             font-size: 4vw;
@@ -166,7 +166,7 @@ const About = ({ page }) => (
             margin-top: 1rem;
           }
         }
-        @media screen and (min-height: 812px) {
+        @media screen and (max-height: 812px) {
           img {
             grid-column-start: 1;
             margin-left: 3rem;
