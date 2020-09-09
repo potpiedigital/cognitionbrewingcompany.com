@@ -98,7 +98,7 @@ const Events = ({ page }) => (
         }
         @media screen and (max-width: 1280px) {
           h5 {
-            grid-column-end: 12;
+            grid-column-end: 13;
           }
         }
         @media screen and (max-width: 1040px) {

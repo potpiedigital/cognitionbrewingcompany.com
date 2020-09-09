@@ -120,10 +120,10 @@ const About = ({ page }) => (
           }
           h3 {
             grid-row: 5 / 6;
-            grid-column-end: 4;
+            grid-column-end: 8;
             margin-left: 1rem;
             font-size: 4vw;
-            margin-top: 3rem;
+            margin-top: 6rem;
           }
           .text-blocks {
             grid-column-start: 4;

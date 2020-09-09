@@ -100,7 +100,7 @@ const Colab = ({ page }) => (
         }
         @media screen and (max-width: 1440px) {
           .colab-info {
-            grid-column-end: 9;
+            grid-column-end: 10;
           }
           .beer-list {
             grid-row-start: 5;
@@ -142,8 +142,8 @@ const Colab = ({ page }) => (
           .colab-img {
             grid-column: 6 / 9;
             grid-row: 4;
-            width: 34vw;
-            height: 25vh;
+            width: 30vw;
+            height: 22vh;
           }
           a {
             grid-column: 2;

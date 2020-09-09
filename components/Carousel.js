@@ -203,6 +203,11 @@ const CarouselContainer = ({ items, onDeck, pages, posts }) => {
           top: 50%;
           left: 0;
         }
+        @media screen and (orientation: portrait) {
+          a {
+            font-size: 8vh;
+          }
+        }
         @media screen and (max-width: 414px) {
           a {
             font-size: 5vh;

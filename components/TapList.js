@@ -97,7 +97,7 @@ const TapList = ({ items, onDeck, page }) => {
               margin-left: 2rem;
             }
             h3 {
-              font-size: 26vh;
+              font-size: 28vh;
               margin-top: 0;
             }
           }

@@ -81,6 +81,15 @@ const Nav = ({
       h6 {
         color: inherit;
       }
+      @media screen and (max-width: 1024px) and (orientation: landscape) {
+        nav {
+          width: 100%;
+        }
+        .bar-content {
+          width: 60%;
+          justify-content: space-evenly;
+        }
+      }
       @media screen and (orientation: portrait) {
         nav {
           transform: rotate(0deg);
@@ -99,7 +108,7 @@ const Nav = ({
           width: 100vw;
         }
         li {
-          padding-top: 3rem;
+          padding-top: 1rem;
         }
       }
       @media screen and (max-width: 414px) {

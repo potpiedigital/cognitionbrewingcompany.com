@@ -41,7 +41,7 @@ const Hero = ({ page }) => (
           background-repeat: no-repeat;
           background-position: center;
           background-size: cover;
-          height: 100vh;
+          height: 100%;
           width: 100vw;
           display: flex;
           align-items: center;
@@ -119,6 +119,16 @@ const Hero = ({ page }) => (
           }
           h4 {
             display: none;
+          }
+          li,
+          span {
+            font-size: 1rem;
+          }
+          .information address {
+            font-size: 1rem;
+          }
+          ul {
+            width: 70%;
           }
         }
         @media screen and (max-width: 768px) {

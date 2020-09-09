@@ -2,11 +2,16 @@ import { Grid } from "./Grid";
 import Section from "./Section";
 import { Parser } from "html-to-react";
 
+const fullStyle = {
+  width: "100vw",
+  overflow: "visible",
+};
+
 const parser = new Parser();
 
 const Forage = ({ page }) => {
   return (
-    <Section id="brews">
+    <Section style={fullStyle} id="brews">
       <Grid columns={14} width="90vw">
         <div className="brew-main-content">
           <h2>{page.title.rendered}</h2>
@@ -26,8 +31,16 @@ const Forage = ({ page }) => {
             <li key={beer.beer_name}>{beer.beer_name}</li>
           ))}
         </ul>
-        <h3>{page.acf.large_text}</h3>
+        <div className="big-text-container">
+          <h3>{page.acf.large_text}</h3>
+        </div>
         <style jsx>{`
+          .big-text-container {
+            grid-column: 2 / 14;
+            grid-row: 6 / 9;
+            overflow: hidden;
+            z-index: 1;
+          }
           .brew-main-content {
             grid-column: 2 / 9;
             grid-row: 1;
@@ -36,25 +49,27 @@ const Forage = ({ page }) => {
           }
           .photos {
             position: relative;
-            grid-column: 11 / 13;
+            grid-column: 11 / 15;
+            grid-row: 1 / 5;
           }
           .main-img {
-            width: auto;
+            width: 24vw;
+            height: 32vh;
             object-fit: cover;
             display: block;
             overflow: visible;
-            height: 32vh;
-            margin-top: 4rem;
-            transform: rotate(-15deg);
+            transform: rotate(15deg);
             box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.1);
-            z-index: 1;
+            position: absolute;
+            top: 10%;
+            right: 0;
           }
           .gear {
             position: absolute;
             width: auto;
             height: 35vh;
             left: 30%;
-            top: -85%;
+            top: -10%;
           }
           hr {
             grid-row: 4;
@@ -114,6 +129,10 @@ const Forage = ({ page }) => {
             }
             .main-img {
               height: 24vh;
+              width: 32vw;
+            }
+            .gear {
+              left: -40%;
             }
             h3 {
               font-size: 24vh;
@@ -129,16 +148,18 @@ const Forage = ({ page }) => {
               margin-left: 2rem;
             }
             .photos {
-              grid-column: 4 /9;
+              grid-column: 2 /7;
               grid-row: 3 / 6;
               margin-top: 2rem;
+              z-index: 2;
             }
             .main-img {
               margin-top: 0;
               height: 32vh;
+              width: 43vw;
             }
             .gear {
-              top: -50%;
+              top: -10%;
               left: 50%;
             }
             .forage-text {
@@ -156,11 +177,13 @@ const Forage = ({ page }) => {
               grid-column: 1 / 9;
               margin: 0 2rem 4rem;
             }
+            .big-text-container {
+              grid-column: 1 / 9;
+              grid-row: 4 / 7;
+            }
             h3 {
               font-size: 21vh;
-              grid-column: 1 / 9;
               margin-left: 2rem;
-              grid-row: 4;
               margin-top: 6rem;
             }
             hr {

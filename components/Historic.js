@@ -97,7 +97,7 @@ const Historic = ({ page }) => (
           right: -10%;
         }
         .big-text-container {
-          grid-column: 2 / 12;
+          grid-column: 2 / 14;
           grid-row: 7 / 9;
           overflow: hidden;
           z-index: 1;
@@ -115,20 +115,24 @@ const Historic = ({ page }) => (
           }
         }
         @media screen and (max-width: 1024px) and (orientation: portrait) {
+          .beer-list {
+            grid-row-start: 6;
+          }
           .historic-imgs {
             grid-column: 1 / 9;
             grid-row: 3 / 5;
           }
           .history-img-1 {
             top: -21%;
-            right: 35%;
-            height: 25vh;
+            right: 30%;
+            height: 35vh;
+            width: 35vw;
           }
           .history-img-2 {
             bottom: 20%;
             left: 8%;
             width: 30vw;
-            height: 18vh;
+            height: 24vh;
           }
           .history-img-3 {
             bottom: 0%;

@@ -3,7 +3,7 @@ const Section = ({ id, children, style }) => (
     {children}
     <style jsx>{`
       section {
-        height: 100vh;
+        height: 100%;
         /* height: calc(var(--vh, 1vh) * 100); */
         overflow-y: hidden;
         background-color: white;

@@ -4,8 +4,8 @@ export const ImageBreak = ({ src, page }) => {
       <img src={page.acf[src]} />
       <style jsx>{`
         img {
-          height: 100vh;
-          width: 100vw;
+          height: 100%;
+          width: 100%;
           object-fit: cover;
           display: block;
           overflow: visible;
