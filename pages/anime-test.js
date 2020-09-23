@@ -73,6 +73,7 @@ const AnimeTest = () => {
       <style jsx global>{`
         body {
           text-align: center;
+          background-color: pink;
         }
         .compositions {
           position: absolute;
