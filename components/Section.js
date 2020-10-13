@@ -101,7 +101,50 @@ const Section = ({ id, children, style }) => (
           height: 170vh;
         }
         #historic {
+          height: 150vh;
+        }
+      }
+      @media screen and (max-width: 360px) {
+        #about {
+          height: 150vh;
+        }
+        #cog-events {
+          height: 175vh;
+        }
+        #blog {
+          height: 170vh;
+        }
+        #brews {
+          height: 210vh;
+        }
+        #historic {
           height: 160vh;
+        }
+        #colab {
+          height: 190vh;
+        }
+      }
+      @media screen and (max-width: 320px) {
+        #about {
+          height: 190vh;
+        }
+        #tap-list {
+          height: 260vh;
+        }
+        #cog-events {
+          height: 215vh;
+        }
+        #blog {
+          height: 200vh;
+        }
+        #brews {
+          height: 240vh;
+        }
+        #historic {
+          height: 195vh;
+        }
+        #colab {
+          height: 230vh;
         }
       }
     `}</style>

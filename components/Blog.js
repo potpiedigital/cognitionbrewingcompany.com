@@ -231,7 +231,7 @@ const Blog = ({ post }) => (
             font-size: 2.5rem;
           }
           .more-posts {
-            padding-left: 1.5rem;
+            padding-left: 0;
           }
           h5 {
             grid-column-end: 7;

@@ -235,13 +235,11 @@ const Colab = ({ page }) => (
             margin-bottom: 1rem;
           }
         }
-        /* @media screen and (min-height: 812px) {
-          .beer-list {
-            grid-row: 5 / 7;
-            margin-top: 7rem;
-            margin-bottom: -6rem;
+        @media screen and (max-width: 320px) { 
+          .colab-img {
+            grid-column: 1 / 3;
           }
-        } */
+        }
       `}</style>
     </Grid>
   </Section>

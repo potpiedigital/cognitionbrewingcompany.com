@@ -254,15 +254,6 @@ const Historic = ({ page }) => (
             margin-bottom: 2rem;
           }
         }
-        /* @media screen and (min-height: 812px) {
-          .history-img-1 {
-            top: 35%;
-          }
-          .beer-list {
-            grid-row-start: 6;
-            margin-top: 5rem;
-          }
-        } */
       `}</style>
     </Grid>
   </Section>
