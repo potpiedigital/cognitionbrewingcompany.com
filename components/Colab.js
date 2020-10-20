@@ -49,7 +49,7 @@ const Colab = ({ page }) => (
           flex-wrap: wrap;
           justify-content: space-between;
           list-style: none;
-          grid-row: 4 / 6;
+          grid-row: 5 / 6;
           grid-column: 2 / 10;
           padding: 0;
           margin-top: 2rem;
@@ -92,8 +92,8 @@ const Colab = ({ page }) => (
           white-space: pre-wrap;
           word-break: break-all;
           color: #a73a3a;
-          grid-column: 2 / 12;
-          grid-row-start: 5;
+          grid-column: 2 / 14;
+          grid-row-start: 6;
           margin-top: 7rem;
           z-index: 1;
           hyphens: auto;
@@ -105,9 +105,6 @@ const Colab = ({ page }) => (
           .beer-list {
             grid-row-start: 5;
             grid-column-end: 12;
-          }
-          h3 {
-            grid-row-start: 6;
           }
         }
         @media screen and (max-width: 1280px) {
